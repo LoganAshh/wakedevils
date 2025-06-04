@@ -20,7 +20,7 @@ export default function MerchPage() {
         <div className={`transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Merch Coming Soon 👀</h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-xl mx-auto">
-            We're working on some fresh gear for the Wake Devils. Check back soon to get your hands on official merch!
+            We&apos;re working on some fresh gear for the Wake Devils. Check back soon to get your hands on official merch!
           </p>
         </div>
       </main>
