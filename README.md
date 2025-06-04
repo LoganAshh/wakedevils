@@ -1,1 +1,1 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Official website for the ASU Wake Devils — Arizona State University’s premier wakeboarding club. Built with Next.js and Tailwind CSS to showcase events, merch, and more.
