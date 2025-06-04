@@ -191,7 +191,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-4">Who Are We?</h2>
           <p className="text-lg text-gray-700">
             ASU Wake Devils is a tight-knit group of students who ride together, grow together, and have a blast on
-            and off the lake. Whether you're new or experienced, you're welcome here.
+            and off the lake. Whether you&apos;re new or experienced, you&apos;re welcome here.
           </p>
           <a
             href="/about"

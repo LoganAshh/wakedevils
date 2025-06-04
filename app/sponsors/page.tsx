@@ -83,7 +83,7 @@ export default function SponsorsPage() {
         <div className="mt-10">
           <h2 className="text-3xl font-semibold mb-3">Interested in Sponsoring?</h2>
           <p className="text-md text-gray-600 mb-6">
-            We’re always looking for new partnerships!
+            We&apos;re always looking for new partnerships!
           </p>
 
           <div className="flex justify-center">
