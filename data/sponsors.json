@@ -1,0 +1,26 @@
+{
+  "current": [
+    {
+      "name": "Ronix",
+      "logo": "/images/sponsors/ronix.png",
+      "url": "https://ronixwake.com"
+    },
+    {
+      "name": "Action Water Sports",
+      "logo": "/images/sponsors/aws.png",
+      "url": "https://www.actionwatersportsaz.com"
+    },
+    {
+      "name": "Manera",
+      "logo": "/images/sponsors/manera.png",
+      "url": "https://www.manera.com/en/home.html"
+    }
+  ],
+  "interested": [
+    {
+      "name": "Your Company Here",
+      "logo": "/images/sponsors/placeholder.png",
+      "url": "mailto:wakedevils@asu.edu"
+    }
+  ]
+}
