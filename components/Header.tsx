@@ -28,7 +28,7 @@ export default function Header() {
           aria-label="Scroll to top"
         >
           <Image
-            src="/images/logo.PNG"
+            src="/images/logo.png"
             alt="Wake Devils Logo"
             width={128}
             height={128}
