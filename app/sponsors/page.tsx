@@ -45,7 +45,7 @@ export default function SponsorsPage() {
             target="_blank"
             rel="noopener noreferrer"
             style={{ transitionDelay: `${i * 100}ms` }}
-            className={`bg-white aspect-square rounded-3xl shadow-xl border border-gray-300 ${paddingClass} flex items-center justify-center transition-all duration-700 ease-out transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl ${
+            className={`w-[140px] mx-auto bg-white aspect-square rounded-3xl shadow-xl border border-gray-300 ${paddingClass} flex items-center justify-center transition-all duration-700 ease-out transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl ${
               loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
