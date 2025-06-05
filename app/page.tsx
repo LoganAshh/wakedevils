@@ -33,8 +33,30 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <link rel="preload" as="image" href="/images/hero.PNG" />
-      </Head>
+  {/* Preload primary hero image */}
+  <link rel="preload" as="image" href="/images/heros/hero.PNG" />
+
+  {/* Basic SEO */}
+  <title>ASU Wake Devils | Home</title>
+  <meta name="description" content="Arizona State University's premier wakeboarding club. Join the Wake Devils for lake days, competitions, and an unforgettable community." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+
+  {/* Open Graph for social media previews */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ASU Wake Devils" />
+  <meta property="og:description" content="Ride, compete, and connect with Arizona State University's official wakeboarding club." />
+  <meta property="og:image" content="/images/heros/hero.PNG" />
+  <meta property="og:url" content="https://asuwakedevils.com" />
+
+  {/* Social Profiles */}
+  <meta property="og:see_also" content="https://instagram.com/wakedevils" />
+  <meta property="og:see_also" content="https://tiktok.com/@wakedevils" />
+  <meta property="og:see_also" content="https://www.youtube.com/channel/UCs1d49zxe1kYA2w43Ih7fSQ/videos" />
+
+  {/* Favicon (optional but good for branding) */}
+  <link rel="icon" href="/favicon.ico" />
+</Head>
 
       <style>{`
         @keyframes subtle-bounce {
