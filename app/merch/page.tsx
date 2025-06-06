@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Head from 'next/head'
 import { useEffect, useState } from 'react'
 
 export default function MerchPage() {
@@ -14,6 +15,36 @@ export default function MerchPage() {
 
   return (
     <>
+      <Head>
+        <title>Merch | ASU Wake Devils</title>
+        <meta
+          name="description"
+          content="Shop official ASU Wake Devils merch including t-shirts, hoodies, hats, and more. Rep the squad on and off the water!"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Merch | ASU Wake Devils" />
+        <meta
+          property="og:description"
+          content="Browse and buy official ASU Wake Devils gear. Show your support for ASU's premier wakeboarding club."
+        />
+        <meta property="og:image" content="/images/heros/hero2.PNG" />
+        <meta property="og:url" content="https://asuwakedevils.com/merch" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Merch | ASU Wake Devils" />
+        <meta
+          name="twitter:description"
+          content="Get your official ASU Wake Devils merch today. Limited drops, stylish designs, and club pride!"
+        />
+        <meta name="twitter:image" content="/images/heros/hero2.PNG" />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Header />
 
       <main className="flex items-center justify-center h-[70vh] text-center px-4">
