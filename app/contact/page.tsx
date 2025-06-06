@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -47,6 +48,36 @@ export default function ContactPage() {
 
   return (
     <>
+      <Head>
+        <title>Contact | ASU Wake Devils</title>
+        <meta
+          name="description"
+          content="Have questions about ASU Wake Devils? Reach out to our team using our contact form."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Contact | ASU Wake Devils" />
+        <meta
+          property="og:description"
+          content="Shoot us a message if you're interested in joining or collaborating with ASU's premier wakeboarding club."
+        />
+        <meta property="og:image" content="/images/heros/hero4.jpg" />
+        <meta property="og:url" content="https://asuwakedevils.com/contact" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact | ASU Wake Devils" />
+        <meta
+          name="twitter:description"
+          content="Get in touch with the ASU Wake Devils board and learn how to get involved."
+        />
+        <meta name="twitter:image" content="/images/heros/hero4.jpg" />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Header />
       <main className="max-w-2xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-bold mb-4 text-center">Contact Us</h1>
