@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -23,6 +24,34 @@ export default function EventsPage() {
 
   return (
     <>
+      <Head>
+        <title>Events | ASU Wake Devils</title>
+        <meta
+          name="description"
+          content="Check out upcoming ASU Wake Devils events including lake days, socials, and competitions. Don’t miss the fun!"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:title" content="Events | ASU Wake Devils" />
+        <meta
+          property="og:description"
+          content="Stay up to date with all upcoming lake days, socials, and tournaments hosted by ASU Wake Devils."
+        />
+        <meta property="og:image" content="/images/heros/hero5.jpg" />
+        <meta property="og:url" content="https://asuwakedevils.com/events" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Events | ASU Wake Devils" />
+        <meta
+          name="twitter:description"
+          content="Explore upcoming ASU Wake Devils events – from competitions to hangouts on the lake."
+        />
+        <meta name="twitter:image" content="/images/heros/hero5.jpg" />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Header />
 
       <main className="max-w-4xl mx-auto px-4 py-8 md:py-8">
@@ -72,7 +101,6 @@ export default function EventsPage() {
 
         {/* MOBILE content */}
         <div className="block md:hidden min-h-screen flex flex-col justify-start pt-6 pb-6 gap-y-30">
-          {/* Title + subtext */}
           <div className="text-center">
             <h1 className="text-3xl font-bold leading-tight mt-10">Upcoming Events</h1>
             <p className="text-base leading-snug mt-20 px-2">
@@ -80,7 +108,6 @@ export default function EventsPage() {
             </p>
           </div>
 
-          {/* Button right under subtext */}
           <div className="text-center">
             <a
               href="https://calendar.google.com/calendar/u/0/embed?src=asuwakedevils@gmail.com&ctz=America/Phoenix"
@@ -100,7 +127,3 @@ export default function EventsPage() {
     </>
   )
 }
-
-
-
-
