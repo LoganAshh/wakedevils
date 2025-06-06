@@ -32,29 +32,40 @@ export default function HomePage() {
 
   return (
     <>
-      <Head>
-  {/* Preload primary hero image */}
+<Head>
+  {/* Title and Description */}
+  <title>ASU Wake Devils | Official Wakeboarding Club at Arizona State</title>
+  <meta
+    name="description"
+    content="Ride the wave with ASU Wake Devils – Arizona State University's top wakeboarding club. Join us for epic lake days, tournaments, and community!"
+  />
+
+  {/* Viewport */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {/* Preload first hero image for performance */}
   <link rel="preload" as="image" href="/images/heros/hero.PNG" />
 
-  {/* Basic SEO */}
-  <title>ASU Wake Devils | Home</title>
-  <meta name="description" content="Arizona State University's premier wakeboarding club. Join the Wake Devils for lake days, competitions, and an unforgettable community." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="robots" content="index, follow" />
-
-  {/* Open Graph for social media previews */}
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="ASU Wake Devils" />
-  <meta property="og:description" content="Ride, compete, and connect with Arizona State University's official wakeboarding club." />
+  {/* Open Graph (Facebook, LinkedIn, Discord) */}
+  <meta property="og:title" content="ASU Wake Devils | Official Wakeboarding Club at Arizona State" />
+  <meta
+    property="og:description"
+    content="Join ASU Wake Devils for unforgettable lake days, competitive wakeboarding, and an amazing community of ASU students."
+  />
   <meta property="og:image" content="/images/heros/hero.PNG" />
   <meta property="og:url" content="https://asuwakedevils.com" />
+  <meta property="og:type" content="website" />
 
-  {/* Social Profiles */}
-  <meta property="og:see_also" content="https://instagram.com/wakedevils" />
-  <meta property="og:see_also" content="https://tiktok.com/@wakedevils" />
-  <meta property="og:see_also" content="https://www.youtube.com/channel/UCs1d49zxe1kYA2w43Ih7fSQ/videos" />
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ASU Wake Devils | Official Wakeboarding Club at Arizona State" />
+  <meta
+    name="twitter:description"
+    content="Lake days, tournaments, and a tight-knit ASU community. Ride with ASU Wake Devils."
+  />
+  <meta name="twitter:image" content="/images/heros/hero.PNG" />
 
-  {/* Favicon (optional but good for branding) */}
+  {/* Favicon */}
   <link rel="icon" href="/favicon.ico" />
 </Head>
 
