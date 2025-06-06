@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
@@ -44,7 +45,7 @@ export default function AboutPage() {
       name: 'Logan Ashamallah',
       title: 'Event Coordinator',
       image: '/images/board/loganash.jpg',
-      bio: 'Hey I\'m Logan. I am a third year majoring in Computer Science and I\'m from Thousand Oaks, California. I love music, working out, and traveling. Can\'t wait for another year with the Wake Devils!',
+      bio: "Hey I'm Logan. I am a third year majoring in Computer Science and I'm from Thousand Oaks, California. I love music, working out, and traveling. Can't wait for another year with the Wake Devils!",
     },
     {
       name: 'Tristan ???',
@@ -110,6 +111,31 @@ export default function AboutPage() {
 
   return (
     <>
+      <Head>
+        <title>About | ASU Wake Devils</title>
+        <meta
+          name="description"
+          content="Learn about the ASU Wake Devils wakeboarding club – our mission, history, and leadership board. Join our vibrant, lake-loving community today!"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="About | ASU Wake Devils" />
+        <meta
+          property="og:description"
+          content="Discover ASU Wake Devils' story and meet the student leaders behind the scenes. We're more than a club – we're a wakeboarding family."
+        />
+        <meta property="og:image" content="/images/heros/hero1.PNG" />
+        <meta property="og:url" content="https://asuwakedevils.com/about" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About | ASU Wake Devils" />
+        <meta
+          name="twitter:description"
+          content="Get to know the people and passion behind ASU Wake Devils – Arizona State University's official wakeboarding club."
+        />
+        <meta name="twitter:image" content="/images/heros/hero1.PNG" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Header />
       <main className="max-w-5xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-bold text-center mb-8">About Wake Devils</h1>
