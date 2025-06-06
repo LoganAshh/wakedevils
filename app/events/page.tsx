@@ -113,7 +113,7 @@ export default function EventsPage() {
               href="https://calendar.google.com/calendar/u/0/embed?src=asuwakedevils@gmail.com&ctz=America/Phoenix"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded border-b-4 border-blue-700 shadow-xl transition-all duration-700 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl mb-4 ${
+              className={`inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-700 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl mb-4 ${
                 loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
