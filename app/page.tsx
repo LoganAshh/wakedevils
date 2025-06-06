@@ -228,9 +228,12 @@ export default function HomePage() {
           </p>
           <a
             href="/about"
-            className="inline-block mt-6 text-yellow-500 hover:underline font-semibold"
+            className="group inline-block mt-6 text-yellow-500 font-semibold transition-all duration-300 hover:brightness-110 active:translate-y-[2px]"
           >
-            Learn More →
+            Learn More
+            <span className="inline-block ml-1 transform transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
           </a>
         </div>
         <div className="relative w-full h-64 md:h-[400px] overflow-hidden rounded-lg shadow-lg">
