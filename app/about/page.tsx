@@ -48,7 +48,7 @@ export default function AboutPage() {
       bio: "Hey I'm Logan. I am a third year majoring in Computer Science and I'm from Thousand Oaks, California. I love music, working out, and traveling. Can't wait for another year with the Wake Devils!",
     },
     {
-      name: 'Tristan ???',
+      name: 'Tristan Krauskopf',
       title: 'Social Media Chair',
       image: '/images/board/default.jpg',
       bio: 'Description',
@@ -60,7 +60,7 @@ export default function AboutPage() {
       bio: 'Description',
     },
     {
-      name: 'Ellie ???',
+      name: 'Ellie Bjorgvinsdottir',
       title: 'Recruitment Chair',
       image: '/images/board/default.jpg',
       bio: 'Description',
