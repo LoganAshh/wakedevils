@@ -1,19 +1,12 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
 
 export default function SponsorsPage() {
-  const [loaded, setLoaded] = useState(false)
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setLoaded(true), 100)
-    return () => clearTimeout(timeout)
-  }, [])
-
   const currentSponsors = [
     {
       name: 'Ronix',
@@ -38,7 +31,7 @@ export default function SponsorsPage() {
         <title>Sponsors | ASU Wake Devils</title>
         <meta
           name="description"
-          content="Check out the sponsors who support ASU Wake Devils – from top wakeboarding brands to local Arizona partners."
+          content="Meet the amazing sponsors who support the ASU Wake Devils. Check out the brands that help fuel our passion for wakeboarding."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -46,9 +39,9 @@ export default function SponsorsPage() {
         <meta property="og:title" content="Sponsors | ASU Wake Devils" />
         <meta
           property="og:description"
-          content="Meet the sponsors helping drive ASU Wake Devils to success on and off the water."
+          content="Support the brands that support us! ASU Wake Devils' sponsors make our lake days and tournaments possible."
         />
-        <meta property="og:image" content="/images/heros/hero3.jpg" />
+        <meta property="og:image" content="/images/heros/hero4.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/sponsors" />
         <meta property="og:type" content="website" />
 
@@ -57,53 +50,48 @@ export default function SponsorsPage() {
         <meta name="twitter:title" content="Sponsors | ASU Wake Devils" />
         <meta
           name="twitter:description"
-          content="Meet our incredible sponsors who support collegiate wakeboarding at ASU."
+          content="Check out the official sponsors of ASU Wake Devils, Arizona State University's wakeboarding club."
         />
-        <meta name="twitter:image" content="/images/heros/hero3.jpg" />
+        <meta name="twitter:image" content="/images/heros/hero4.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
 
-      <main className="max-w-5xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-4">Our Sponsors</h1>
-        <p className="text-lg text-center text-gray-600 mb-10">
-          Big thanks to our sponsors for supporting the ASU Wake Devils community.
+      <main className="max-w-5xl mx-auto px-6 py-16 text-center">
+        <h1 className="text-4xl font-bold mb-6">Our Sponsors</h1>
+        <p className="text-lg text-gray-700 mb-10">
+          We’re proud to be supported by brands who believe in our mission. Show them some love!
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {currentSponsors.map((sponsor, index) => (
             <a
               key={index}
               href={sponsor.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center justify-center p-${
-                sponsor.name === 'Ronix' ? '0' : sponsor.name === 'Manera' ? '3' : '1'
-              } transition-opacity duration-1000 ease-in-out opacity-0 animate-fadeIn`}
-              style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
+              className="block hover:scale-105 transition-transform duration-300"
             >
-              <Image
-                src={sponsor.logo}
-                alt={sponsor.name}
-                width={200}
-                height={100}
-                className="object-contain max-h-20"
-              />
+              <div className="relative w-full h-28 md:h-32">
+                <Image
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </a>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-gray-700 mb-2">Want to sponsor us?</p>
-          <a
-            href="/contact"
-            className="inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
-          >
-            Reach out to be featured here!
+        <p className="mt-10 text-gray-600 text-sm">
+          Want to sponsor us?{' '}
+          <a href="/contact" className="text-blue-600 underline hover:text-blue-800">
+            Reach out here.
           </a>
-        </div>
+        </p>
       </main>
 
       <Footer />
