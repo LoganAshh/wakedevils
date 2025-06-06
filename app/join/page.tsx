@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -10,13 +11,41 @@ export default function JoinPage() {
 
   useEffect(() => {
     if (!isLoading) {
-      const timeout = setTimeout(() => setIsVisible(false), 300) // match transition duration
+      const timeout = setTimeout(() => setIsVisible(false), 300)
       return () => clearTimeout(timeout)
     }
   }, [isLoading])
 
   return (
     <>
+      <Head>
+        <title>Join | ASU Wake Devils</title>
+        <meta
+          name="description"
+          content="Ready to ride? Join ASU Wake Devils today and be part of Arizona State’s premier wakeboarding community."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta property="og:title" content="Join | ASU Wake Devils" />
+        <meta
+          property="og:description"
+          content="Join ASU Wake Devils and take part in lake days, tournaments, and the best wakeboarding crew at Arizona State University."
+        />
+        <meta property="og:image" content="/images/heros/hero6.jpg" />
+        <meta property="og:url" content="https://asuwakedevils.com/join" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Join | ASU Wake Devils" />
+        <meta
+          name="twitter:description"
+          content="Become a Wake Devil and make waves! Join the official wakeboarding club at ASU."
+        />
+        <meta name="twitter:image" content="/images/heros/hero6.jpg" />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <Header />
 
       <main className="max-w-4xl mx-auto px-4 py-12">
@@ -46,7 +75,6 @@ export default function JoinPage() {
           </iframe>
         </div>
 
-        {/* Help link */}
         <p className="mt-4 text-center text-sm text-gray-600">
           Trouble viewing the form?{' '}
           <a
@@ -64,4 +92,3 @@ export default function JoinPage() {
     </>
   )
 }
-
