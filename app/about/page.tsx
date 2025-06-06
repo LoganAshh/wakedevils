@@ -25,7 +25,7 @@ export default function AboutPage() {
     },
     {
       name: 'Bryce Hendrickson',
-      title: 'Director',
+      title: 'Head Coach',
       image: '/images/board/default.jpg',
       bio: 'Description',
     },
