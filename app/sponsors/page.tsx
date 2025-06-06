@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
@@ -31,71 +32,80 @@ export default function SponsorsPage() {
     },
   ]
 
-  const renderSponsorGrid = (list: typeof currentSponsors) => (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 max-w-4xl mx-auto">
-      {list.map((sponsor, i) => {
-        const isManera = sponsor.name === 'Manera'
-        const isRonix = sponsor.name === 'Ronix'
-        const paddingClass = isManera ? 'p-13' : isRonix ? 'p-0' : 'p-5'
+  return (
+    <>
+      <Head>
+        <title>Sponsors | ASU Wake Devils</title>
+        <meta
+          name="description"
+          content="Check out the sponsors who support ASU Wake Devils – from top wakeboarding brands to local Arizona partners."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        return (
-          <a
-            key={i}
-            href={sponsor.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ transitionDelay: `${i * 100}ms` }}
-            className={`bg-white aspect-square rounded-3xl shadow-xl border border-gray-300 ${paddingClass} flex items-center justify-center transition-all duration-700 ease-out transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl ${
-              loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}
-          >
-            <div
-              className={`relative w-full h-full ${
-                isManera ? 'rounded-3xl overflow-hidden' : ''
-              }`}
+        {/* Open Graph */}
+        <meta property="og:title" content="Sponsors | ASU Wake Devils" />
+        <meta
+          property="og:description"
+          content="Meet the sponsors helping drive ASU Wake Devils to success on and off the water."
+        />
+        <meta property="og:image" content="/images/heros/hero3.jpg" />
+        <meta property="og:url" content="https://asuwakedevils.com/sponsors" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sponsors | ASU Wake Devils" />
+        <meta
+          name="twitter:description"
+          content="Meet our incredible sponsors who support collegiate wakeboarding at ASU."
+        />
+        <meta name="twitter:image" content="/images/heros/hero3.jpg" />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Header />
+
+      <main className="max-w-5xl mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-center mb-4">Our Sponsors</h1>
+        <p className="text-lg text-center text-gray-600 mb-10">
+          Big thanks to our sponsors for supporting the ASU Wake Devils community.
+        </p>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 max-w-4xl mx-auto">
+          {currentSponsors.map((sponsor, index) => (
+            <a
+              key={index}
+              href={sponsor.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center justify-center p-${
+                sponsor.name === 'Ronix' ? '0' : sponsor.name === 'Manera' ? '3' : '1'
+              } transition-opacity duration-1000 ease-in-out opacity-0 animate-fadeIn`}
+              style={{ animationDelay: `${index * 150}ms`, animationFillMode: 'forwards' }}
             >
               <Image
                 src={sponsor.logo}
                 alt={sponsor.name}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 50vw, 33vw"
-                priority
+                width={200}
+                height={100}
+                className="object-contain max-h-20"
               />
-            </div>
-          </a>
-        )
-      })}
-    </div>
-  )
-
-  return (
-    <>
-      <Header />
-      <main className="max-w-6xl mx-auto px-4 py-12 text-center">
-        <h1 className="text-4xl font-bold mb-4">Our Sponsors</h1>
-        <p className="text-lg mb-8">
-          Huge thanks to the brands that support the ASU Wake Devils!
-        </p>
-
-        {renderSponsorGrid(currentSponsors)}
-
-        <div className="mt-10">
-          <h2 className="text-3xl font-semibold mb-3">Interested in Sponsoring?</h2>
-          <p className="text-md text-gray-600 mb-6">
-            We&apos;re always looking for new partnerships!
-          </p>
-
-          <div className="flex justify-center">
-            <a
-              href="mailto:wakedevils@asu.edu"
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
-            >
-              Reach out to be featured here!
             </a>
-          </div>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-gray-700 mb-2">Want to sponsor us?</p>
+          <a
+            href="/contact"
+            className="inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
+          >
+            Reach out to be featured here!
+          </a>
         </div>
       </main>
+
       <Footer />
     </>
   )
