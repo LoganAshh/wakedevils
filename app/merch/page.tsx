@@ -23,6 +23,9 @@ export default function MerchPage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+	{/* Canonical URL */}
+        <link rel="canonical" href="https://asuwakedevils.com/merch" />
+
         {/* Open Graph */}
         <meta property="og:title" content="Merch | ASU Wake Devils" />
         <meta

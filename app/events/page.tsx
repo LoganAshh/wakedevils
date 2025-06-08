@@ -32,6 +32,10 @@ export default function EventsPage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://asuwakedevils.com/events" />
+
+        {/* Open Graph */}
         <meta property="og:title" content="Events | ASU Wake Devils" />
         <meta
           property="og:description"
@@ -41,6 +45,7 @@ export default function EventsPage() {
         <meta property="og:url" content="https://asuwakedevils.com/events" />
         <meta property="og:type" content="website" />
 
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Events | ASU Wake Devils" />
         <meta

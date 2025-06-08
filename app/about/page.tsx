@@ -118,6 +118,11 @@ export default function AboutPage() {
           content="Learn about the ASU Wake Devils wakeboarding club – our mission, history, and leadership board. Join our vibrant, lake-loving community today!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://asuwakedevils.com/about" />
+
+        {/* Open Graph */}
         <meta property="og:title" content="About | ASU Wake Devils" />
         <meta
           property="og:description"
@@ -126,6 +131,8 @@ export default function AboutPage() {
         <meta property="og:image" content="/images/heros/hero1.PNG" />
         <meta property="og:url" content="https://asuwakedevils.com/about" />
         <meta property="og:type" content="website" />
+        
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About | ASU Wake Devils" />
         <meta
