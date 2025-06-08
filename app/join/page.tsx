@@ -26,6 +26,10 @@ export default function JoinPage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://asuwakedevils.com/join" />
+
+        {/* Open Graph */}
         <meta property="og:title" content="Join | ASU Wake Devils" />
         <meta
           property="og:description"
@@ -35,6 +39,7 @@ export default function JoinPage() {
         <meta property="og:url" content="https://asuwakedevils.com/join" />
         <meta property="og:type" content="website" />
 
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Join | ASU Wake Devils" />
         <meta

@@ -80,6 +80,9 @@ export default function SponsorsPage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://asuwakedevils.com/sponsors" />
+
         {/* Open Graph */}
         <meta property="og:title" content="Sponsors | ASU Wake Devils" />
         <meta

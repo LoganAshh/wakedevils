@@ -56,6 +56,9 @@ export default function ContactPage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://asuwakedevils.com/contact" />
+
         {/* Open Graph */}
         <meta property="og:title" content="Contact | ASU Wake Devils" />
         <meta
