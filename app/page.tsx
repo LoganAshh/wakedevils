@@ -39,6 +39,11 @@ export default function HomePage() {
           name="description"
           content="Ride the wave with ASU Wake Devils – Arizona State University's top wakeboarding club. Join us for epic lake days, tournaments, and community!"
         />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://asuwakedevils.com" />
+
+        {/* Open Graph */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preload" as="image" href="/images/heros/hero.PNG" />
         <meta property="og:title" content="ASU Wake Devils | Official Wakeboarding Club at Arizona State" />
@@ -49,6 +54,8 @@ export default function HomePage() {
         <meta property="og:image" content="/images/heros/hero.PNG" />
         <meta property="og:url" content="https://asuwakedevils.com" />
         <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ASU Wake Devils | Official Wakeboarding Club at Arizona State" />
         <meta
