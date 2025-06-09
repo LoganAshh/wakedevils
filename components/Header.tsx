@@ -11,7 +11,6 @@ export default function Header() {
   const pathname = usePathname()
   const routes = ['home', 'about', 'join', 'events', 'merch', 'dues', 'contact', 'sponsors']
 
-  // Lock scroll when menu is open
   useEffect(() => {
     if (typeof document !== 'undefined') {
       document.body.classList.toggle('overflow-hidden', isOpen)
@@ -58,7 +57,7 @@ export default function Header() {
           })}
         </div>
 
-        {/* Hamburger Icon (symmetric X) */}
+        {/* Hamburger Icon */}
         <button
           className="md:hidden relative w-8 h-8 flex items-center justify-center z-50"
           onClick={() => setIsOpen(!isOpen)}
@@ -98,9 +97,9 @@ export default function Header() {
               exit={{ opacity: 0 }}
             />
 
-            {/* Slide-down Menu */}
+            {/* Scrollable Slide-down Menu */}
             <motion.div
-              className="fixed top-[96px] left-0 right-0 bg-white z-50 flex flex-col items-center gap-5 py-6 shadow-md"
+              className="fixed top-[96px] left-0 right-0 bg-white z-50 flex flex-col items-center gap-5 py-6 shadow-md max-h-screen overflow-y-auto"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -132,6 +131,3 @@ export default function Header() {
     </header>
   )
 }
-
-
-
