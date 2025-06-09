@@ -213,7 +213,7 @@ export default function HomePage() {
             <div>
               <h2 className="text-3xl font-bold mb-4">Who Are We?</h2>
               <p className="text-lg text-gray-700">
-                ASU Wake Devils is a tight-knit group of students who ride together, grow together, and have a blast on and off the lake. Whether you&apos;re new or experienced, you&apos;re welcome here!
+                ASU Wake Devils is a tight-knit group of students who ride together, grow together, and have a blast on and off the lake. Whether you're new or experienced, you're welcome here!
               </p>
               <a
                 href="/about"
@@ -232,21 +232,33 @@ export default function HomePage() {
                   fill
                   quality={100}
                   className="object-cover"
-                  style={{ objectPosition: 'center 63%' }}
+                  style={{ objectPosition: 'center 65%' }}
                 />
               </div>
             </div>
-            <div className="w-full aspect-video">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/npwPSMCpTHc"
-                title="ASU Wake Devils"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="rounded-lg shadow-lg"
-              ></iframe>
+            <div className="w-full flex flex-col items-center">
+              <div className="w-full aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/npwPSMCpTHc"
+                  title="ASU Wake Devils"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="rounded-lg shadow-lg"
+                ></iframe>
+              </div>
+              <div className="w-full h-64 md:h-48 overflow-hidden rounded-lg mt-4 relative">
+                <Image
+                  src="/images/updated_logo.png"
+                  alt="Wake Devils Logo"
+                  fill
+                  quality={100}
+                  className="object-cover"
+                  style={{ objectPosition: 'center' }}
+                />
+              </div>
             </div>
           </div>
         )}
