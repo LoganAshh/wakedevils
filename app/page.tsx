@@ -232,7 +232,7 @@ export default function HomePage() {
                   fill
                   quality={100}
                   className="object-cover"
-                  style={{ objectPosition: 'center 65%' }}
+                  style={{ objectPosition: 'center 63%' }}
                 />
               </div>
             </div>
