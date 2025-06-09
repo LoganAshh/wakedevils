@@ -33,11 +33,11 @@ export default function SponsorsPage() {
   ]
 
   const renderSponsorGrid = (list: typeof currentSponsors) => (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 max-w-4xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 max-w-4xl mx-auto justify-items-center">
       {list.map((sponsor, i) => {
         const isManera = sponsor.name === 'Manera'
         const isRonix = sponsor.name === 'Ronix'
-        const paddingClass = isManera ? 'p-13' : isRonix ? 'p-0' : 'p-5'
+        const paddingClass = isManera ? 'p-7 md:p-13' : isRonix ? 'p-0' : 'p-5'
 
         return (
           <a
@@ -48,12 +48,11 @@ export default function SponsorsPage() {
             style={{ transitionDelay: `${i * 100}ms` }}
             className={`bg-white aspect-square rounded-3xl shadow-xl border border-gray-300 ${paddingClass} flex items-center justify-center transition-all duration-700 ease-out transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl ${
               loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}
+            } w-40 h-40 md:w-full md:h-full`}
           >
             <div
-              className={`relative w-full h-full ${
-                isManera ? 'rounded-3xl overflow-hidden' : ''
-              }`}
+              className={`relative w-full h-full ${isManera ? 'rounded-xl md:rounded-3xl overflow-hidden' : ''
+                }`}
             >
               <Image
                 src={sponsor.logo}
