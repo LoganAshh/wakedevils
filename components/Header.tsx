@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-  const routes = ['home', 'about', 'join', 'events', 'merch', 'contact', 'sponsors']
+  const routes = ['home', 'about', 'join', 'events', 'merch', 'dues', 'contact', 'sponsors']
 
   // Lock scroll when menu is open
   useEffect(() => {
