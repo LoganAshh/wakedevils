@@ -78,10 +78,10 @@ export default function ContactPage() {
 
       <main className="w-full px-4 py-12 md:py-16">
         <div className="max-w-lg mx-auto w-full">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Contact Us
           </h1>
-          <p className="text-base md:text-lg mb-8 text-center text-gray-700">
+          <p className="text-base md:text-lg mb-10 text-center text-gray-700">
             Have questions or want to get involved? Shoot us a message!
           </p>
 
