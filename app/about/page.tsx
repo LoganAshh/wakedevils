@@ -118,11 +118,7 @@ export default function AboutPage() {
           content="Learn about the ASU Wake Devils wakeboarding club – our mission, history, and leadership board. Join our vibrant, lake-loving community today!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Canonical URL */}
         <link rel="canonical" href="https://asuwakedevils.com/about" />
-
-        {/* Open Graph */}
         <meta property="og:title" content="About | ASU Wake Devils" />
         <meta
           property="og:description"
@@ -131,8 +127,6 @@ export default function AboutPage() {
         <meta property="og:image" content="/images/heros/hero1.PNG" />
         <meta property="og:url" content="https://asuwakedevils.com/about" />
         <meta property="og:type" content="website" />
-        
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About | ASU Wake Devils" />
         <meta
@@ -144,7 +138,7 @@ export default function AboutPage() {
       </Head>
 
       <Header />
-      <main className="max-w-5xl mx-auto px-6 py-16">
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <h1 className="text-4xl font-bold text-center mb-8">About Wake Devils</h1>
 
         {/* Mission + History */}
@@ -161,7 +155,7 @@ export default function AboutPage() {
         {/* Board Cards */}
         <section>
           <h2 className="text-3xl font-semibold text-center mb-8">Meet the Board</h2>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {board.map((member, idx) => (
               <div
                 key={idx}
@@ -170,11 +164,11 @@ export default function AboutPage() {
                 }}
                 data-index={idx}
                 style={{ transitionDelay: `${idx * 100}ms` }}
-                className={`bg-white rounded-2xl shadow-lg p-6 text-center transform transition-all duration-700 ease-out ${
+                className={`bg-white rounded-2xl shadow-lg p-4 sm:p-6 text-center transform transition-all duration-700 ease-out ${
                   visibleCards[idx] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 } hover:scale-[1.02]`}
               >
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -183,9 +177,9 @@ export default function AboutPage() {
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-sm font-medium text-gray-600 mb-2">{member.title}</p>
-                <p className="text-sm text-gray-700">{member.bio}</p>
+                <h3 className="text-lg sm:text-xl font-bold">{member.name}</h3>
+                <p className="text-sm font-medium text-gray-600 mb-1 sm:mb-2">{member.title}</p>
+                <p className="text-xs sm:text-sm text-gray-700">{member.bio}</p>
               </div>
             ))}
           </div>
