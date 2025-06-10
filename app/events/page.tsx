@@ -31,8 +31,6 @@ export default function EventsPage() {
           content="Check out upcoming ASU Wake Devils events including lake days, socials, and competitions. Don’t miss the fun!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Canonical URL */}
         <link rel="canonical" href="https://asuwakedevils.com/events" />
 
         {/* Open Graph */}
@@ -105,20 +103,20 @@ export default function EventsPage() {
         </div>
 
         {/* MOBILE content */}
-        <div className="block md:hidden min-h-screen flex flex-col justify-start pt-6 pb-6 gap-y-30">
+        <div className="block md:hidden min-h-screen flex flex-col justify-start pt-6 pb-8 gap-y-8">
           <div className="text-center">
-            <h1 className="text-3xl font-bold leading-tight mt-10">Upcoming Events</h1>
-            <p className="text-base leading-snug mt-20 px-2">
+            <h1 className="text-3xl font-bold leading-tight">Upcoming Events</h1>
+            <p className="text-base leading-snug mt-4 px-2">
               Stay up to date with all our lake days, socials, and competitions.
             </p>
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-8">
             <a
               href="https://calendar.google.com/calendar/u/0/embed?src=asuwakedevils@gmail.com&ctz=America/Phoenix"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-700 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl mb-4 ${
+              className={`inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-700 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl ${
                 loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
