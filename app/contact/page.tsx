@@ -82,7 +82,7 @@ export default function ContactPage() {
             <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">
               Contact Us
             </h1>
-            <p className="text-base md:text-lg mb-10 text-center text-gray-700">
+            <p className="text-base md:text-lg mb-12 text-center text-gray-700">
               Have questions or want to get involved? Shoot us a message!
             </p>
 
@@ -140,7 +140,7 @@ export default function ContactPage() {
                 disabled={loading}
                 className={`w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-700 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl cursor-pointer disabled:cursor-default ${
                   loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                } mb-6`}
+                } mb-4`}
               >
                 {loading ? (
                   <span className="flex items-center justify-center space-x-2 text-white">
