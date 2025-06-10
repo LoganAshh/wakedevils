@@ -47,12 +47,12 @@ export default function DuesPage() {
       </Head>
 
       <Header />
-      <main className="max-w-3xl mx-auto px-6 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">Pay Your Dues</h1>
-        <p className="text-lg mb-4">
+      <main className="max-w-3xl mx-auto px-4 py-12 sm:px-6 sm:py-16 text-center">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4">Pay Your Dues</h1>
+        <p className="text-base sm:text-lg mb-4">
           Help keep Wake Devils running strong! Dues cover lake days, competitions, transportation, and gear.
         </p>
-        <p className="mb-8 text-gray-600">
+        <p className="mb-8 text-sm sm:text-base text-gray-600">
           Secure payment is handled through MidFirst Bank. Click below to pay online.
         </p>
 
@@ -62,7 +62,7 @@ export default function DuesPage() {
             target="_blank"
             rel="noopener noreferrer"
             style={{ transitionDelay: '150ms' }}
-            className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
+            className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
               hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
               ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
@@ -72,18 +72,18 @@ export default function DuesPage() {
 
         {/* Donation Section */}
         <section className="mt-16 text-center">
-          <h2 className="text-4xl font-bold mb-4">Support the Club</h2>
-          <p className="text-lg mb-8 text-gray-700">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Support the Club</h2>
+          <p className="text-base sm:text-lg mb-8 px-2 sm:px-0">
             Even if you’re not a member, you can help us grow by making a donation. Thank you for supporting our lake days, gear, and competition travel — we truly appreciate it!
           </p>
 
           <div className="flex justify-center">
             <a
-              href="https://app.autobooks.co/pay/asu-wake-boarding-team" // can change if you get a separate donation link
+              href="https://app.autobooks.co/pay/asu-wake-boarding-team"
               target="_blank"
               rel="noopener noreferrer"
               style={{ transitionDelay: '250ms' }}
-              className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
+              className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
                 hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
                 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             >
@@ -92,10 +92,9 @@ export default function DuesPage() {
           </div>
         </section>
 
-        <p className="mt-8 text-sm text-gray-500">
+        <p className="mt-12 text-xs sm:text-sm text-gray-500 px-2 sm:px-0">
           Having trouble? Reach out to us at asuwakedevils@gmail.com
         </p>
-
       </main>
       <Footer />
     </>
