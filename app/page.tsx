@@ -209,11 +209,11 @@ export default function HomePage() {
 
       <section ref={whoRef}>
         {showWhoSection && (
-          <div className="max-w-screen-xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12 font-serif items-start">
+          <div className="max-w-screen-xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-12 font-serif items-start">
             <div>
               <h2 className="text-3xl font-bold mb-4">Who Are We?</h2>
               <p className="text-lg text-gray-700">
-                ASU Wake Devils is a tight-knit group of students who ride together, grow together, and have a blast on and off the lake. Whether you&apos;re new or experienced, you&apos;re welcome here!
+                ASU Wake Devils is a tight-knit group of students who ride together, grow together, and have a blast on and off the lake. Whether you're new or experienced, you're welcome here!
               </p>
               <a
                 href="/about"
@@ -236,8 +236,10 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <div className="w-full flex flex-col items-center">
-              <div className="w-full aspect-video">
+
+            {/* Video + Logo Block */}
+            <div className="flex flex-col gap-4 items-center w-full">
+              <div className="w-full aspect-video rounded-lg overflow-hidden">
                 <iframe
                   width="100%"
                   height="100%"
@@ -249,7 +251,7 @@ export default function HomePage() {
                   className="rounded-lg shadow-lg"
                 ></iframe>
               </div>
-              <div className="w-full h-64 md:h-48 overflow-hidden rounded-lg mt-4 relative">
+              <div className="relative w-full h-64 md:h-48 overflow-hidden rounded-lg">
                 <Image
                   src="/images/updated_logo.png"
                   alt="Wake Devils Logo"
