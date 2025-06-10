@@ -25,8 +25,6 @@ export default function JoinPage() {
           content="Ready to ride? Join ASU Wake Devils today and be part of Arizona State’s premier wakeboarding community."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Canonical URL */}
         <link rel="canonical" href="https://asuwakedevils.com/join" />
 
         {/* Open Graph */}
@@ -53,20 +51,22 @@ export default function JoinPage() {
 
       <Header />
 
-      <main className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-4 text-center">Join the Wake Devils!</h1>
-        <p className="text-lg text-center mb-8">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
+          Join the Wake Devils!
+        </h1>
+        <p className="text-base sm:text-lg text-center mb-6 sm:mb-8">
           Fill out the form below to become a part of the crew!
         </p>
 
-        <div className="relative w-full h-[80vh] max-h-[900px]">
+        <div className="relative w-full h-[70vh] sm:h-[80vh] max-h-[900px]">
           {isVisible && (
             <div
               className={`absolute inset-0 flex items-center justify-center bg-white z-10 transition-opacity duration-300 ${
                 isLoading ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
             </div>
           )}
 
@@ -80,7 +80,7 @@ export default function JoinPage() {
           </iframe>
         </div>
 
-        <p className="mt-4 text-center text-sm text-gray-600">
+        <p className="mt-4 text-center text-sm text-gray-600 px-2">
           Trouble viewing the form?{' '}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform"
