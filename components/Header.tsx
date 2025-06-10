@@ -13,9 +13,7 @@ export default function Header() {
 
   // Lock background scroll when menu is open (but allow menu scroll)
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      document.body.style.overflow = isOpen ? 'hidden' : ''
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : ''
     return () => {
       document.body.style.overflow = ''
     }
@@ -23,7 +21,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b-4 border-gray-300 shadow-md">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-8 py-5">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4 md:px-8 md:py-5">
         {/* Logo that scrolls to top smoothly and presses like a button */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -40,7 +38,7 @@ export default function Header() {
         </button>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-2 text-lg items-center">
+        <div className="hidden md:flex gap-2 text-base lg:text-lg items-center">
           {routes.map((route) => {
             const href = route === 'home' ? '/' : `/${route}`
             const isActive = pathname === href
@@ -61,9 +59,9 @@ export default function Header() {
           })}
         </div>
 
-        {/* Hamburger Icon (symmetric X) */}
+        {/* Hamburger Icon */}
         <button
-          className="md:hidden relative w-8 h-8 flex items-center justify-center z-50"
+          className="md:hidden w-10 h-10 flex items-center justify-center z-50"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -103,7 +101,7 @@ export default function Header() {
 
             {/* Slide-down Menu with scroll */}
             <motion.div
-              className="fixed top-[96px] left-0 right-0 bg-white z-50 flex flex-col items-center gap-5 py-6 shadow-md overflow-y-auto max-h-[calc(100vh-96px)] overscroll-contain"
+              className="fixed top-[88px] left-0 right-0 bg-white z-50 flex flex-col items-center gap-2 py-6 px-4 shadow-md overflow-y-auto max-h-[calc(100vh-88px)]"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -118,7 +116,7 @@ export default function Header() {
                     key={route}
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className={`w-full text-center py-3 text-lg transition rounded-md active:scale-95 active:translate-y-[3px] ${
+                    className={`w-full text-center py-4 text-base transition rounded-md active:scale-95 active:translate-y-[3px] ${
                       isActive
                         ? 'bg-[#943728] text-white font-semibold shadow-md'
                         : 'text-black hover:bg-[#943728] hover:text-white'
