@@ -114,7 +114,7 @@ export default function SponsorsPage() {
         {renderSponsorGrid(currentSponsors)}
 
         <div className="mt-10">
-          <h2 className="text-3xl font-semibold mb-3">Interested in Sponsoring?</h2>
+          <h2 className="text-3xl font-semibold mb-4">Interested in Sponsoring?</h2>
           <p className="text-md text-gray-600 mb-6">
             We&apos;re always looking for new partnerships!
           </p>
