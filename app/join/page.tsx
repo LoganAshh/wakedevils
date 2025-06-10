@@ -51,7 +51,7 @@ export default function JoinPage() {
 
       <Header />
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-12">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
           Join the Wake Devils!
         </h1>
