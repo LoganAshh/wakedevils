@@ -19,15 +19,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://asuwakedevils.com/merch</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://asuwakedevils.com/dues</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://asuwakedevils.com/contact</loc>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://asuwakedevils.com/sponsors</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://asuwakedevils.com/merch</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
