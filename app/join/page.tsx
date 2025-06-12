@@ -55,7 +55,7 @@ export default function JoinPage() {
         <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
           Join the Wake Devils!
         </h1>
-        <p className="text-base sm:text-lg text-center mb-2 sm:mb-8">
+        <p className="text-base sm:text-lg text-center mb-3 sm:mb-9">
           Fill out the form below to become a part of the crew!
         </p>
 
