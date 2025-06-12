@@ -52,7 +52,7 @@ export default function DuesPage() {
         <p className="text-base sm:text-lg mb-4">
           Help keep Wake Devils running strong! Dues cover lake days, competitions, transportation, and gear.
         </p>
-        <p className="mb-8 text-sm sm:text-base text-gray-600">
+        <p className="mb-10 text-sm sm:text-base text-gray-600">
           Secure payment is handled through MidFirst Bank. Click below to pay online.
         </p>
 
@@ -71,9 +71,9 @@ export default function DuesPage() {
         </div>
 
         {/* Donation Section */}
-        <section className="mt-16 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Support the Club</h2>
-          <p className="text-base sm:text-lg mb-8 px-2 sm:px-0">
+        <section className="mt-14 text-center">
+          <h2 className="text-3xl sm:text-3xl font-semibold mb-4">Support the Club</h2>
+          <p className="text-base sm:text-lg mb-10 px-2 sm:px-0">
             Even if you’re not a member, you can help us grow by making a donation. Thank you for supporting our lake days, gear, and competition travel — we truly appreciate it!
           </p>
 
@@ -92,7 +92,7 @@ export default function DuesPage() {
           </div>
         </section>
 
-        <p className="mt-12 text-xs sm:text-sm text-gray-500 px-2 sm:px-0">
+        <p className="mt-10 text-xs sm:text-sm text-gray-500 px-2 sm:px-0">
           Having trouble? Reach out to us at asuwakedevils@gmail.com
         </p>
       </main>
