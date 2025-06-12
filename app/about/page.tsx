@@ -143,7 +143,7 @@ export default function AboutPage() {
 
         {/* Mission + History */}
         <section className="mb-8 text-center">
-          <p className="text-lg mb-2 sm:mb-4">
+          <p className="text-lg mb-0 sm:mb-4">
             ASU Wake Devils is Arizona State University&apos;s premier wakeboarding club, bringing together students who share a love for adventure, community,
             and life on the water. Since our founding in 2010, we&apos;ve built a legacy of unforgettable lake days, exciting competitions, and lifelong
             friendships. As five-time National Champions (2013, 2014, 2020, 2021, 2022), we&apos;re proud to be a leading force in collegiate wakeboarding—driven
