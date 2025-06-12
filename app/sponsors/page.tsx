@@ -107,7 +107,7 @@ export default function SponsorsPage() {
       <Header />
       <main className="max-w-6xl mx-auto px-4 py-12 text-center">
         <h1 className="text-4xl font-bold mb-3 sm:mb-4">Our Sponsors</h1>
-        <p className="text-lg mb-6 sm:mb-8">
+        <p className="text-lg mb-7 sm:mb-8">
           Huge thanks to the brands that support the ASU Wake Devils!
         </p>
 
