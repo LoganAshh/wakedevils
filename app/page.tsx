@@ -51,6 +51,7 @@ export default function HomePage() {
     { src: 'hero2.PNG', position: 'center 48%' },
     { src: 'hero4.jpg', position: 'center 33%' },
     { src: 'hero3.jpg', position: 'center 57%' },
+    { src: 'hero7.jpg', position: 'center 44%' },
   ]
 
   return (

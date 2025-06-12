@@ -99,7 +99,7 @@ export default function SponsorsPage() {
           name="twitter:description"
           content="Thanks to our amazing sponsors for helping us shred! Want to sponsor? Reach out to ASU Wake Devils."
         />
-        <meta name="twitter:image" content="/images/heros/hero3.jpg" />
+        <meta name="twitter:image" content="/images/heros/hero7.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
