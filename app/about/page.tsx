@@ -139,7 +139,7 @@ export default function AboutPage() {
 
       <Header />
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <h1 className="text-4xl font-bold text-center mb-8">About Wake Devils</h1>
+        <h1 className="text-4xl font-bold text-center mb-4">About Wake Devils</h1>
 
         {/* Mission + History */}
         <section className="mb-8 text-center">
@@ -154,7 +154,7 @@ export default function AboutPage() {
 
         {/* Board Cards */}
         <section>
-          <h2 className="text-3xl font-semibold text-center mb-8">Meet the Board</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12">Meet the Board</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {board.map((member, idx) => (
               <div
