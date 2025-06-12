@@ -106,16 +106,16 @@ export default function SponsorsPage() {
 
       <Header />
       <main className="max-w-6xl mx-auto px-4 py-12 text-center">
-        <h1 className="text-4xl font-bold mb-4">Our Sponsors</h1>
-        <p className="text-lg mb-8">
+        <h1 className="text-4xl font-bold mb-3 sm:mb-4">Our Sponsors</h1>
+        <p className="text-lg mb-6 sm:mb-8">
           Huge thanks to the brands that support the ASU Wake Devils!
         </p>
 
         {renderSponsorGrid(currentSponsors)}
 
-        <div className="mt-10">
+        <div className="mt-8">
           <h2 className="text-3xl font-semibold mb-4">Interested in Sponsoring?</h2>
-          <p className="text-md text-gray-600 mb-6">
+          <p className="text-md text-gray-600 mb-8">
             We&apos;re always looking for new partnerships!
           </p>
 
