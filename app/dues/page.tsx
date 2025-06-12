@@ -71,7 +71,7 @@ export default function DuesPage() {
         </div>
 
         {/* Donation Section */}
-        <section className="mt-7 sm:mt-14 text-center">
+        <section className="mt-9 sm:mt-14 text-center">
           <h2 className="text-3xl sm:text-3xl font-semibold mb-2 sm:mb-4">Support the Club</h2>
           <p className="text-base sm:text-lg mb-4 sm:mb-8 px-2 sm:px-0">
             Even if you’re not a member, you can help us grow by making a donation. Thank you for supporting our lake days, gear, and competition travel — we truly appreciate it!
