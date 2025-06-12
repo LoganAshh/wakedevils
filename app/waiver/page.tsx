@@ -76,7 +76,7 @@ export default function WaiverPage() {
             <p className="mb-4">
               I agree to release, indemnify, and hold harmless Arizona State University, ASU Wake
               Devils, its officers, volunteers, members, sponsors, and affiliates from any and all
-              claims, demands, liabilities, losses, costs, and expenses (including attorney's fees)
+              claims, demands, liabilities, losses, costs, and expenses (including attorney&apos;s fees)
               arising from or related to participation in club activities.
             </p>
 
