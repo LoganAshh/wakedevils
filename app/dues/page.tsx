@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { useRouter } from 'next/navigation'
 
 export default function DuesPage() {
   const [loaded, setLoaded] = useState(false)
@@ -23,8 +24,6 @@ export default function DuesPage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://asuwakedevils.com/dues" />
-
-        {/* Open Graph */}
         <meta property="og:title" content="Pay Dues | ASU Wake Devils" />
         <meta
           property="og:description"
@@ -33,8 +32,6 @@ export default function DuesPage() {
         <meta property="og:image" content="/images/heros/hero4.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/dues" />
         <meta property="og:type" content="website" />
-
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pay Dues | ASU Wake Devils" />
         <meta
@@ -42,7 +39,6 @@ export default function DuesPage() {
           content="Make your dues payment online and help support ASU's wakeboarding club!"
         />
         <meta name="twitter:image" content="/images/heros/hero4.jpg" />
-
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -58,10 +54,7 @@ export default function DuesPage() {
 
         <div className="flex justify-center">
           <a
-            href="https://app.autobooks.co/pay/asu-wake-boarding-team"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ transitionDelay: '150ms' }}
+            href="/waiver"
             className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
               hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
               ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
