@@ -252,7 +252,8 @@ export default function HomePage() {
                   className="rounded-lg shadow-lg"
                 ></iframe>
               </div>
-              <div className="relative w-full h-64 md:h-48 overflow-hidden rounded-lg">
+              <p className="text-xl font-semibold text-center text-gray-800">Meet our Coach!</p>
+              <div className="relative w-full h-64 md:h-28 overflow-hidden rounded-lg">
                 <Image
                   src="/images/updated_logo.png"
                   alt="Wake Devils Logo"
