@@ -159,7 +159,7 @@ export default function HomePage() {
             >
               {heroImages.map((img, i) => (
                 <SwiperSlide key={i}>
-                  <div className="relative w-full h-[80vh]">
+                  <div className="relative w-full h-[80dvh]">
                     <Image
                       src={`/images/heros/${img.src}`}
                       alt={`Slide ${i + 1}`}
