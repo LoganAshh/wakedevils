@@ -63,6 +63,8 @@ export default function WaiverPage() {
           <h1 className="text-3xl font-bold mb-6">Read & Sign Waiver</h1>
           <p className="mb-4 text-gray-700 text-sm">
             Please scroll to the bottom to enable the agreement.
+	    <br />
+	    Note: These prices are tentative and will not be updated until the beginning of the semester.
           </p>
 
           <div

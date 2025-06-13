@@ -48,7 +48,6 @@ export default function DuesPage() {
           Help keep Wake Devils running strong! Dues help cover gas for lake trips, equipment upkeep and replacement, boat operation costs, team events, safety gear, and insurance.
         </p>
         <p className="mb-4 sm:mb-8 text-sm sm:text-base text-gray-600">
-          Note: These prices are tentative and will not be updated until the beginning of the semester. <br></br>
           Secure payment is handled through MidFirst Bank. Click below to pay online. 
         </p>
 
