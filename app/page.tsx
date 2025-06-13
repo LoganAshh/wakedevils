@@ -66,22 +66,45 @@ export default function HomePage() {
         <link rel="canonical" href="https://asuwakedevils.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preload" as="image" href="/images/heros/hero.PNG" />
+
+        {/* Open Graph */}
         <meta property="og:title" content="ASU Wake Devils | Official Wakeboarding Club at Arizona State" />
-        <meta
-          property="og:description"
-          content="Join ASU Wake Devils for unforgettable lake days, competitive wakeboarding, and an amazing community of ASU students."
-        />
+        <meta property="og:description" content="Join ASU Wake Devils for unforgettable lake days, competitive wakeboarding, and an amazing community of ASU students." />
         <meta property="og:image" content="/images/heros/hero.PNG" />
         <meta property="og:url" content="https://asuwakedevils.com" />
         <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ASU Wake Devils | Official Wakeboarding Club at Arizona State" />
-        <meta
-          name="twitter:description"
-          content="Lake days, tournaments, and a tight-knit ASU community. Ride with ASU Wake Devils."
-        />
+        <meta name="twitter:description" content="Lake days, tournaments, and a tight-knit ASU community. Ride with ASU Wake Devils." />
         <meta name="twitter:image" content="/images/heros/hero.PNG" />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SportsTeam",
+              "name": "ASU Wake Devils",
+              "url": "https://asuwakedevils.com",
+              "sport": "Wakeboarding",
+              "memberOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "Arizona State University",
+                "url": "https://asu.edu"
+              },
+              "sameAs": [
+                "https://instagram.com/wakedevils",
+                "https://tiktok.com/@wakedevils",
+                "https://www.youtube.com/@asuwakedevils"
+              ],
+              "description": "ASU Wake Devils is Arizona State University's official wakeboarding club, offering lake days, competitions, and a fun community on the water."
+            })
+          }}
+        />
       </Head>
 
       <style>{`
