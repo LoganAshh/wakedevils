@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/
+Disallow: /404
+Allow: /
+
+Sitemap: https://asuwakedevils.com/sitemap.xml
