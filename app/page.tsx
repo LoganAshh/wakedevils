@@ -205,7 +205,7 @@ export default function HomePage() {
                   <div className="relative w-full h-[80dvh]">
                     <Image
                       src={`/images/heros/${img.src}`}
-                      alt={`Slide ${i + 1}`}
+                      alt={`ASU Wake Devils Hero Slide ${i + 1}`}
                       fill
                       quality={100}
                       style={{ objectPosition: img.position }}
@@ -272,7 +272,7 @@ export default function HomePage() {
               <div className="relative w-full h-64 md:h-72 mt-8 overflow-hidden rounded-lg shadow-lg">
                 <Image
                   src="/images/lake-day.jpg"
-                  alt="Lake Day"
+                  alt="ASU Wake Devils enjoying a lake day together"
                   fill
                   quality={100}
                   className="object-cover"
@@ -299,7 +299,7 @@ export default function HomePage() {
               <div className="relative w-full h-64 md:h-28 overflow-hidden rounded-lg">
                 <Image
                   src="/images/updated_logo.png"
-                  alt="Wake Devils Logo"
+                  alt="ASU Wake Devils official logo"
                   fill
                   quality={100}
                   className="object-cover"
