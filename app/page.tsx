@@ -46,9 +46,10 @@ export default function HomePage() {
   const heroImages = [
     { src: 'hero.PNG', position: 'center 57%' },
     { src: 'hero1.PNG', position: 'center 80%' },
+    { src: 'hero2.PNG', position: 'center 48%' },
     { src: 'hero6.jpg', position: 'center 75%' },
     { src: 'hero5.jpg', position: 'center 40%' },
-    { src: 'hero2.PNG', position: 'center 48%' },
+    { src: 'hero8.jpg', position: 'center 32%' },
     { src: 'hero4.jpg', position: 'center 33%' },
     { src: 'hero3.jpg', position: 'center 57%' },
     { src: 'hero7.jpg', position: 'center 44%' },
