@@ -103,7 +103,7 @@ export default function HomePage() {
 
       <Header />
 
-      <section className="relative w-full h-[80vh] font-sans">
+      <section className="relative w-full h-[80dvh] font-sans">
         <button
           ref={prevRef}
           className={`swiper-button-prev-custom animate-arrow-left absolute left-4 top-1/2 -translate-y-1/2 z-30 text-white text-8xl cursor-pointer transition-all duration-700 ease-out ${
