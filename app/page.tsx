@@ -103,7 +103,7 @@ export default function HomePage() {
 
       <Header />
 
-      <section className="relative w-full h-[600px] md:h-[80vh] min-h-[600px] md:min-h-[80vh] max-h-[600px] md:max-h-[80vh] font-sans">
+      <section className="relative w-full h-[80vh] font-sans">
         <button
           ref={prevRef}
           className={`swiper-button-prev-custom animate-arrow-left absolute left-4 top-1/2 -translate-y-1/2 z-30 text-white text-8xl cursor-pointer transition-all duration-700 ease-out ${
@@ -159,7 +159,7 @@ export default function HomePage() {
             >
               {heroImages.map((img, i) => (
                 <SwiperSlide key={i}>
-                  <div className="relative w-full h-[600px] md:h-[80vh] min-h-[600px] md:min-h-[80vh] max-h-[600px] md:max-h-[80vh]">
+                  <div className="relative w-full h-[80vh]">
                     <Image
                       src={`/images/heros/${img.src}`}
                       alt={`Slide ${i + 1}`}
@@ -253,7 +253,7 @@ export default function HomePage() {
                 ></iframe>
               </div>
               <p className="text-xl font-semibold text-center text-gray-800">Meet our Coach!</p>
-              <div className="relative w-full h-64 md:h-28 overflow-hidden rounded-lg">
+              <div className="relative w-full h-64 md:h-38 overflow-hidden rounded-lg">
                 <Image
                   src="/images/updated_logo.png"
                   alt="Wake Devils Logo"
