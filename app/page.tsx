@@ -58,27 +58,28 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>ASU Wake Devils | Official Wakeboarding Club at Arizona State</title>
+        <title>ASU Wake Devils | Wakeboarding at Arizona State University</title>
         <meta
           name="description"
-          content="Ride the wave with ASU Wake Devils – Arizona State University's top wakeboarding club. Join us for epic lake days, tournaments, and community!"
+          content="ASU Wake Devils is the official wakeboarding club of Arizona State University. Join us for lake days, tournaments, and an awesome ASU watersports community!"
         />
-        <link rel="canonical" href="https://asuwakedevils.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://asuwakedevils.com/" />
         <link rel="preload" as="image" href="/images/heros/hero.PNG" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="ASU Wake Devils | Official Wakeboarding Club at Arizona State" />
-        <meta property="og:description" content="Join ASU Wake Devils for unforgettable lake days, competitive wakeboarding, and an amazing community of ASU students." />
-        <meta property="og:image" content="/images/heros/hero.PNG" />
-        <meta property="og:url" content="https://asuwakedevils.com" />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content="ASU Wake Devils | Wakeboarding at Arizona State University" />
+        <meta property="og:description" content="Join ASU Wake Devils for unforgettable lake days, competitive wakeboarding, and an amazing ASU community!" />
+        <meta property="og:image" content="https://asuwakedevils.com/images/heros/hero.PNG" />
+        <meta property="og:url" content="https://asuwakedevils.com/" />
 
-        {/* Twitter Card */}
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ASU Wake Devils | Official Wakeboarding Club at Arizona State" />
-        <meta name="twitter:description" content="Lake days, tournaments, and a tight-knit ASU community. Ride with ASU Wake Devils." />
-        <meta name="twitter:image" content="/images/heros/hero.PNG" />
+        <meta name="twitter:title" content="ASU Wake Devils | Wakeboarding at ASU" />
+        <meta name="twitter:description" content="Lake days, tournaments, and a tight-knit ASU community. Ride with ASU Wake Devils!" />
+        <meta name="twitter:image" content="https://asuwakedevils.com/images/heros/hero.PNG" />
+
         <link rel="icon" href="/favicon.ico" />
 
         {/* JSON-LD Structured Data */}
@@ -91,6 +92,8 @@ export default function HomePage() {
               "name": "ASU Wake Devils",
               "url": "https://asuwakedevils.com",
               "sport": "Wakeboarding",
+              "logo": "https://asuwakedevils.com/images/logo.png",
+              "description": "The ASU Wake Devils is Arizona State University's official wakeboarding club, hosting lake days, events, and tournaments.",
               "memberOf": {
                 "@type": "CollegeOrUniversity",
                 "name": "Arizona State University",
@@ -99,9 +102,25 @@ export default function HomePage() {
               "sameAs": [
                 "https://instagram.com/wakedevils",
                 "https://tiktok.com/@wakedevils",
-                "https://www.youtube.com/@asuwakedevils"
+                "https://www.youtube.com/@wakedevils"
               ],
-              "description": "ASU Wake Devils is Arizona State University's official wakeboarding club, offering lake days, competitions, and a fun community on the water."
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "asuwakedevils@gmail.com",
+                "contactType": "Club Contact",
+                "url": "https://asuwakedevils.com/contact"
+              },
+              "location": {
+                "@type": "Place",
+                "name": "Arizona State University",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Tempe",
+                  "addressRegion": "AZ",
+                  "postalCode": "85281",
+                  "addressCountry": "US"
+                }
+              }
             })
           }}
         />
