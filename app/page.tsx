@@ -311,7 +311,7 @@ export default function HomePage() {
         )}
       </section>
 
-      <Footer />
+      {loaded && showSwiper && showWhoSection && <Footer />}
     </>
   )
 }
