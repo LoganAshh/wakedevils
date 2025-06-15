@@ -17,17 +17,17 @@ export default function SponsorsPage() {
   const currentSponsors = [
     {
       name: 'Ronix',
-      logo: '/images/sponsors/ronix.png',
+      logo: '/images/sponsors/ronix.jpg',
       url: 'https://ronixwake.com',
     },
     {
       name: 'Action Water Sports',
-      logo: '/images/sponsors/aws.png',
+      logo: '/images/sponsors/aws.jpg',
       url: 'https://www.actionwatersportsaz.com',
     },
     {
       name: 'Manera',
-      logo: '/images/sponsors/manera.png',
+      logo: '/images/sponsors/manera.jpg',
       url: 'https://www.manera.com/en/home.html',
     },
   ]
