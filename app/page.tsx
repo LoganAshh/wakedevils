@@ -92,7 +92,7 @@ export default function HomePage() {
               "name": "ASU Wake Devils",
               "url": "https://asuwakedevils.com",
               "sport": "Wakeboarding",
-              "logo": "https://asuwakedevils.com/images/logo.png",
+              "logo": "https://asuwakedevils.com/images/logos/logo.jpg",
               "description": "The ASU Wake Devils is Arizona State University's official wakeboarding club, hosting lake days, events, and tournaments.",
               "memberOf": {
                 "@type": "CollegeOrUniversity",
@@ -298,7 +298,7 @@ export default function HomePage() {
               <p className="text-xl font-semibold text-center text-gray-800">Meet our Coach!</p>
               <div className="relative w-full h-64 md:h-28 overflow-hidden rounded-lg">
                 <Image
-                  src="/images/updated_logo.png"
+                  src="/images/logos/text_logo.jpg"
                   alt="ASU Wake Devils official logo"
                   fill
                   quality={100}
