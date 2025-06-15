@@ -51,8 +51,9 @@ export default function HomePage() {
     { src: 'hero4.jpg', position: 'center 40%' },
     { src: 'hero5.jpg', position: 'center 32%' },
     { src: 'hero6.jpg', position: 'center 33%' },
-    { src: 'hero7.jpg', position: 'center 57%' },
-    { src: 'hero8.jpg', position: 'center 44%' },
+    { src: 'hero7.jpg', position: 'center 33%' },
+    { src: 'hero8.jpg', position: 'center 57%' },
+    { src: 'hero9.jpg', position: 'center 44%' },
   ]
 
   return (
