@@ -28,7 +28,7 @@ export default function DuesPage() {
           property="og:description"
           content="Pay your Wake Devils membership dues securely online and stay part of the crew!"
         />
-        <meta property="og:image" content="/images/heros/hero4.jpg" />
+        <meta property="og:image" content="/images/heros/hero5.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/dues" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@ export default function DuesPage() {
           name="twitter:description"
           content="Make your dues payment online and help support ASU's wakeboarding club!"
         />
-        <meta name="twitter:image" content="/images/heros/hero4.jpg" />
+        <meta name="twitter:image" content="/images/heros/hero5.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

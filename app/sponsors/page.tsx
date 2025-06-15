@@ -88,7 +88,7 @@ export default function SponsorsPage() {
           property="og:description"
           content="Check out our current sponsors and find out how to support ASU's official wakeboarding club."
         />
-        <meta property="og:image" content="/images/heros/hero3.jpg" />
+        <meta property="og:image" content="/images/heros/hero7.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/sponsors" />
         <meta property="og:type" content="website" />
 

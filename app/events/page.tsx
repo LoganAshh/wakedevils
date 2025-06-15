@@ -39,7 +39,7 @@ export default function EventsPage() {
           property="og:description"
           content="Stay up to date with all upcoming lake days, socials, and tournaments hosted by ASU Wake Devils."
         />
-        <meta property="og:image" content="/images/heros/hero5.jpg" />
+        <meta property="og:image" content="/images/heros/hero3.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/events" />
         <meta property="og:type" content="website" />
 
@@ -50,7 +50,7 @@ export default function EventsPage() {
           name="twitter:description"
           content="Explore upcoming ASU Wake Devils events – from competitions to hangouts on the lake."
         />
-        <meta name="twitter:image" content="/images/heros/hero5.jpg" />
+        <meta name="twitter:image" content="/images/heros/hero3.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>

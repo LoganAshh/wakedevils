@@ -33,7 +33,7 @@ export default function JoinPage() {
           property="og:description"
           content="Join ASU Wake Devils and take part in lake days, tournaments, and the best wakeboarding crew at Arizona State University."
         />
-        <meta property="og:image" content="/images/heros/hero6.jpg" />
+        <meta property="og:image" content="/images/heros/hero2.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/join" />
         <meta property="og:type" content="website" />
 
@@ -44,7 +44,7 @@ export default function JoinPage() {
           name="twitter:description"
           content="Become a Wake Devil and make waves! Join the official wakeboarding club at ASU."
         />
-        <meta name="twitter:image" content="/images/heros/hero6.jpg" />
+        <meta name="twitter:image" content="/images/heros/hero2.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>

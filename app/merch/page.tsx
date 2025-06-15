@@ -28,7 +28,7 @@ export default function MerchPage() {
           property="og:description"
           content="Browse and buy official ASU Wake Devils gear. Show your support for ASU's premier wakeboarding club."
         />
-        <meta property="og:image" content="/images/heros/hero2.PNG" />
+        <meta property="og:image" content="/images/heros/hero4.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/merch" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@ export default function MerchPage() {
           name="twitter:description"
           content="Get your official ASU Wake Devils merch today. Limited drops, stylish designs, and club pride!"
         />
-        <meta name="twitter:image" content="/images/heros/hero2.PNG" />
+        <meta name="twitter:image" content="/images/heros/hero4.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="min-h-screen flex flex-col">

@@ -124,7 +124,7 @@ export default function AboutPage() {
           property="og:description"
           content="Discover ASU Wake Devils' story and meet the student leaders behind the scenes. We're more than a club – we're a wakeboarding family."
         />
-        <meta property="og:image" content="/images/heros/hero1.PNG" />
+        <meta property="og:image" content="/images/heros/hero1.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/about" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -133,7 +133,7 @@ export default function AboutPage() {
           name="twitter:description"
           content="Get to know the people and passion behind ASU Wake Devils – Arizona State University's official wakeboarding club."
         />
-        <meta name="twitter:image" content="/images/heros/hero1.PNG" />
+        <meta name="twitter:image" content="/images/heros/hero1.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

@@ -61,7 +61,7 @@ export default function ContactPage() {
           property="og:description"
           content="Shoot us a message if you're interested in joining or collaborating with ASU's premier wakeboarding club."
         />
-        <meta property="og:image" content="/images/heros/hero4.jpg" />
+        <meta property="og:image" content="/images/heros/hero6.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/contact" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -70,7 +70,7 @@ export default function ContactPage() {
           name="twitter:description"
           content="Get in touch with the ASU Wake Devils board and learn how to get involved."
         />
-        <meta name="twitter:image" content="/images/heros/hero3.jpg" />
+        <meta name="twitter:image" content="/images/heros/hero6.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

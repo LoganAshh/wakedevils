@@ -44,15 +44,15 @@ export default function HomePage() {
   }, [])
 
   const heroImages = [
-    { src: 'hero.PNG', position: 'center 57%' },
-    { src: 'hero1.PNG', position: 'center 80%' },
-    { src: 'hero2.PNG', position: 'center 48%' },
-    { src: 'hero6.jpg', position: 'center 75%' },
-    { src: 'hero5.jpg', position: 'center 40%' },
-    { src: 'hero8.jpg', position: 'center 32%' },
-    { src: 'hero4.jpg', position: 'center 33%' },
-    { src: 'hero3.jpg', position: 'center 57%' },
-    { src: 'hero7-min.jpg', position: 'center 44%' },
+    { src: 'hero.jpg', position: 'center 57%' },
+    { src: 'hero1.jpg', position: 'center 80%' },
+    { src: 'hero2.jpg', position: 'center 48%' },
+    { src: 'hero3.jpg', position: 'center 75%' },
+    { src: 'hero4.jpg', position: 'center 40%' },
+    { src: 'hero5.jpg', position: 'center 32%' },
+    { src: 'hero6.jpg', position: 'center 33%' },
+    { src: 'hero7.jpg', position: 'center 57%' },
+    { src: 'hero8.jpg', position: 'center 44%' },
   ]
 
   return (
@@ -65,20 +65,20 @@ export default function HomePage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://asuwakedevils.com/" />
-        <link rel="preload" as="image" href="/images/heros/hero.PNG" />
+        <link rel="preload" as="image" href="/images/heros/hero.jpg" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="ASU Wake Devils | Wakeboarding at Arizona State University" />
         <meta property="og:description" content="Join ASU Wake Devils for unforgettable lake days, competitive wakeboarding, and an amazing ASU community!" />
-        <meta property="og:image" content="https://asuwakedevils.com/images/heros/hero.PNG" />
+        <meta property="og:image" content="https://asuwakedevils.com/images/heros/hero.jpg" />
         <meta property="og:url" content="https://asuwakedevils.com/" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="ASU Wake Devils | Wakeboarding at ASU" />
         <meta name="twitter:description" content="Lake days, tournaments, and a tight-knit ASU community. Ride with ASU Wake Devils!" />
-        <meta name="twitter:image" content="https://asuwakedevils.com/images/heros/hero.PNG" />
+        <meta name="twitter:image" content="https://asuwakedevils.com/images/heros/hero.jpg" />
 
         <link rel="icon" href="/favicon.ico" />
 
@@ -168,7 +168,7 @@ export default function HomePage() {
         <div
           className="relative h-full"
           style={{
-            backgroundImage: "url('/images/hero.PNG')",
+            backgroundImage: "url('/images/hero.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center 57%',
             backgroundRepeat: 'no-repeat',
