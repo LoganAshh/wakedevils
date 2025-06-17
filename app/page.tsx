@@ -259,7 +259,12 @@ export default function HomePage() {
           aria-label="Scroll to Who Are We section"
           className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer active:scale-95 active:translate-y-[2px]"
           onClick={() => {
-            document.getElementById('who')?.scrollIntoView({ behavior: 'smooth' })
+            const target = document.getElementById('who')
+            if (target) {
+              const yOffset = window.innerWidth < 768 ? -100 : -20
+              const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset
+              window.scrollTo({ top: y, behavior: 'smooth' })
+            }
           }}
         >
           ↓
