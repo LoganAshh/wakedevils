@@ -11,7 +11,7 @@ import { trackClick } from './analytics'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export default function HomePage() {
   const prevRef = useRef(null)
