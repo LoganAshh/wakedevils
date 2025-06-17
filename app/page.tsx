@@ -253,8 +253,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Scroll Cue */}
+      <div className="w-full flex justify-center z-0 mt-3 -mb-12 relative">
+        <button
+          aria-label="Scroll to Who Are We section"
+          className="animate-bounce text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer active:scale-95 active:translate-y-[2px]"
+          onClick={() => {
+            document.getElementById('who')?.scrollIntoView({ behavior: 'smooth' })
+          }}
+        >
+          ↓
+        </button>
+      </div>
+
       <section>
         <div
+          id="who"
           ref={whoRef}
           className="max-w-screen-xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-12 font-serif items-start"
         >
