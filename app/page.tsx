@@ -170,7 +170,7 @@ export default function HomePage() {
         <div
           className="relative h-full"
           style={{
-            backgroundImage: "url('/images/hero.jpg')",
+            backgroundImage: "url('/images/heros/hero.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center 57%',
             backgroundRepeat: 'no-repeat',
