@@ -11,6 +11,7 @@ import { trackClick } from './analytics'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import { motion, useInView } from 'framer-motion'
 
 export default function HomePage() {
   const prevRef = useRef(null)
@@ -252,64 +253,80 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section ref={whoRef}>
-        {showWhoSection && (
-          <div className="max-w-screen-xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-12 font-serif items-start">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">Who Are We?</h2>
-              <p className="text-lg text-gray-700">
-                ASU Wake Devils is a tight-knit group of students who ride together, grow together, and have a blast on and off the lake. Whether you&apos;re new or experienced, you&apos;re welcome here!
-              </p>
-              <a
-                href="/about"
-                onClick={() => trackClick('click_learn_more_about', 'Homepage CTA')}
-                className="group inline-block mt-6 text-yellow-500 font-semibold transition-all duration-300 hover:brightness-110 active:translate-y-[2px]"
-              >
-                Learn More
-                <span className="inline-block ml-1 transform transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
-              <div className="relative w-full h-64 md:h-72 mt-8 overflow-hidden rounded-lg shadow-lg">
-                <Image
-                  src="/images/lake-day.jpg"
-                  alt="ASU Wake Devils enjoying a lake day together"
-                  fill
-                  quality={100}
-                  className="object-cover"
-                  style={{ objectPosition: 'center 63%' }}
-                />
-              </div>
+      <section>
+        <div
+          ref={whoRef}
+          className="max-w-screen-xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-12 font-serif items-start"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <h2 className="text-3xl font-bold mb-4">Who Are We?</h2>
+            <p className="text-lg text-gray-700">
+              ASU Wake Devils is a tight-knit group of students who ride together, grow together, and have a blast on and off the lake. Whether you&apos;re new or experienced, you&apos;re welcome here!
+            </p>
+            <a
+              href="/about"
+              onClick={() => trackClick('click_learn_more_about', 'Homepage CTA')}
+              className="group inline-block mt-6 text-yellow-500 font-semibold transition-all duration-300 hover:brightness-110 active:translate-y-[2px]"
+            >
+              Learn More
+              <span className="inline-block ml-1 transform transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+            <div className="relative w-full h-64 md:h-72 mt-8 overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/images/lake-day.jpg"
+                alt="ASU Wake Devils enjoying a lake day together"
+                fill
+                quality={100}
+                className="object-cover"
+                style={{ objectPosition: 'center 63%' }}
+              />
             </div>
+          </motion.div>
 
-            {/* Video + Logo Block */}
-            <div className="flex flex-col gap-4 items-center w-full">
-              <div className="w-full aspect-video rounded-lg overflow-hidden">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/npwPSMCpTHc"
-                  title="ASU Wake Devils"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="rounded-lg shadow-lg"
-                ></iframe>
-              </div>
-              <p className="text-xl font-semibold text-center text-gray-800">Meet our Coach!</p>
-              <div className="relative w-full h-64 md:h-28 overflow-hidden rounded-lg">
-                <Image
-                  src="/images/logos/text_logo.jpg"
-                  alt="ASU Wake Devils official logo"
-                  fill
-                  quality={100}
-                  className="object-cover"
-                  style={{ objectPosition: 'center' }}
-                />
-              </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay:
+                typeof window !== 'undefined' && window.innerWidth < 768 ? 0.3 : 0,
+              ease: 'easeOut',
+            }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex flex-col gap-4 items-center w-full"
+          >
+            <div className="w-full aspect-video rounded-lg overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/npwPSMCpTHc"
+                title="ASU Wake Devils"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-lg shadow-lg"
+              ></iframe>
             </div>
-          </div>
-        )}
+            <p className="text-xl font-semibold text-center text-gray-800">Meet our Coach!</p>
+            <div className="relative w-full h-64 md:h-28 overflow-hidden rounded-lg">
+              <Image
+                src="/images/logos/text_logo.jpg"
+                alt="ASU Wake Devils official logo"
+                fill
+                quality={100}
+                className="object-cover"
+                style={{ objectPosition: 'center' }}
+              />
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {loaded && showSwiper && showWhoSection && <Footer />}
