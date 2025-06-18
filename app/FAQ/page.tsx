@@ -22,37 +22,21 @@ const faqData = [
         ),
       },
       {
+        question: 'Do I need to be an ASU student to join?',
+        answer: 'You don’t have to be a full-time ASU student to join, but you must be affiliated with ASU (e.g. student, faculty, staff, or part of a sister college like MCC or SCC) and have access to ASU club insurance and liability policies.',
+      },
+      {
         question: 'What’s the difference between general, social, and comp team memberships?',
         answer:
-          'General members get access to all events and lake days. Social members can come to events but not ride. Comp team members are selected riders who compete nationally.',
+          'General members get access to all events and lake days. Social members can attend events but do not ride. Comp team members are selected to compete in collegiate tournaments and represent ASU nationally.',
       },
       {
         question: 'Do I need wakeboarding experience to join?',
-        answer: 'Nope! We welcome all skill levels, from beginners to seasoned riders.',
+        answer: 'Not at all! Many members are total beginners. We’ll teach you the basics and help you progress at your own pace.',
       },
       {
         question: 'Can I come try it out before joining?',
-        answer: 'Yes! We usually offer one free lake day to new students. DM us on Instagram to reserve a spot.',
-      },
-    ],
-  },
-  {
-    id: 'dues',
-    category: 'Dues & Costs',
-    faqs: [
-      {
-        question: 'What do dues cover?',
-        answer:
-          'Dues cover lake gas, equipment maintenance and replacement, boat operation, team events, insurance, and safety gear.',
-      },
-      {
-        question: 'How do I pay my dues?',
-        answer: (
-          <>
-            After completing the waiver, you’ll be redirected to our payment portal. You can also find the link on the{' '}
-            <Link href="/dues" className="text-blue-600 underline hover:text-blue-800">Dues</Link> page.
-          </>
-        ),
+        answer: 'Yes! We offer one free trial lake day for new members. Reach out on Instagram to reserve a spot before attending.',
       },
     ],
   },
@@ -61,12 +45,20 @@ const faqData = [
     category: 'Events & Lake Days',
     faqs: [
       {
+        question: 'How do I stay updated on events?',
+        answer: 'We post announcements in our GroupMe and on Instagram. Official events are also listed on our Events page with a calendar view.',
+      },
+      {
         question: 'How often do you have lake days?',
-        answer: 'Typically once a week during the semester, weather and scheduling permitting.',
+        answer: 'We usually go out once a week during the semester, depending on weather and rider availability.',
       },
       {
         question: 'Where do you usually ride?',
-        answer: 'Most of our lake days happen at Canyon Lake or Bartlett Lake.',
+        answer: 'Our most common spots are Canyon Lake and Bartlett Lake, both about an hour from Tempe.',
+      },
+      {
+        question: 'Is transportation provided to the lake?',
+        answer: 'Transportation is usually arranged through carpools. Riders often coordinate in the GroupMe to drive or get rides from other members.',
       },
       {
         question: 'Are lake days free?',
@@ -74,6 +66,43 @@ const faqData = [
           <>
             The first 5 rides are covered by your dues. After that, members chip in for gas. Learn more on the{' '}
             <Link href="/events" className="text-blue-600 underline hover:text-blue-800">Events</Link> page.
+          </>
+        ),
+      },
+      {
+        question: 'Do I need to bring my own gear?',
+        answer: 'Nope! The club provides boards, ropes, life vests, and more. But if you have your own gear, you’re welcome to use it.',
+      },
+      {
+        question: 'What should I bring to a lake day?',
+        answer: 'Bring a towel, sunscreen, water, snacks, a swimsuit, and a good attitude. Everything else is provided.',
+      },
+      {
+        question: 'Can I bring a friend to a ride?',
+        answer: 'Yes — non-members can attend one trial ride if approved in advance. Message us on Instagram to check availability.',
+      },
+    ],
+  },
+  {
+    id: 'dues',
+    category: 'Dues & Costs',
+    faqs: [
+      {
+        question: 'How much are dues?',
+        answer:
+          'Dues vary by membership type and semester. General is usually $100–$120, social is around $40, and comp team dues depend on travel costs. Exact prices are posted at the start of each semester.',
+      },
+      {
+        question: 'What do dues cover?',
+        answer:
+          'Dues cover gas for the boat and towing vehicles, equipment upkeep and replacement, insurance, safety gear, competition entry, and team events.',
+      },
+      {
+        question: 'How do I pay my dues?',
+        answer: (
+          <>
+            After completing the waiver, you’ll be redirected to our payment portal. You can also find the link on the{' '}
+            <Link href="/dues" className="text-blue-600 underline hover:text-blue-800">Dues</Link> page.
           </>
         ),
       },
@@ -103,14 +132,13 @@ export default function FAQPage() {
   useEffect(() => {
     setTimeout(() => setLoaded(true), 100)
 
-    // Scroll with header offset
     const handleHashScroll = () => {
       const { hash } = window.location
       if (hash) {
         const id = hash.replace('#', '')
         const el = document.getElementById(id)
         if (el) {
-          const yOffset = -100
+          const yOffset = -120
           const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
           setTimeout(() => window.scrollTo({ top: y, behavior: 'smooth' }), 0)
         }
@@ -169,7 +197,7 @@ export default function FAQPage() {
                     return (
                       <div key={j} className="border-b">
                         <button
-                          className="w-full flex justify-between items-center py-3 text-left active:scale-95 active:translate-y-[3px] transition"
+                          className="w-full flex justify-between items-center py-3 text-left active:scale-95 active:translate-y-[3px] transition cursor-pointer"
                           onClick={() => toggle(section.category, j)}
                           aria-expanded={isOpen}
                         >
@@ -200,8 +228,3 @@ export default function FAQPage() {
     </>
   )
 }
-
-
-
-
-
