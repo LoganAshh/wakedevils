@@ -1,11 +1,11 @@
-'use client'
+"use client";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 text-sm text-center mt-auto py-6 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto flex flex-col items-center space-y-3">
         <p>
-          Contact us at:{' '}
+          Contact us at:{" "}
           <a
             href="mailto:asuwakedevils@gmail.com"
             className="text-blue-600 hover:underline"
@@ -46,5 +46,5 @@ export default function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }
