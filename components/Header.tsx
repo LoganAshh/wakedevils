@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-  const routes = ['home', 'about', 'join', 'events', 'merch', 'dues', 'contact', 'sponsors']
+  const routes = ['home', 'about', 'join', 'events', 'FAQ', 'merch', 'dues', 'contact', 'sponsors']
 
   // Lock background scroll when menu is open (but allow menu scroll)
   useEffect(() => {

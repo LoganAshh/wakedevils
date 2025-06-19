@@ -128,6 +128,8 @@ const faqData = [
 export default function FAQPage() {
   const [loaded, setLoaded] = useState(false)
   const [openIndex, setOpenIndex] = useState<{ [key: string]: number | null }>({})
+  const [visibleSections, setVisibleSections] = useState<{ [key: string]: boolean }>({})
+  const [hideCue, setHideCue] = useState(false)
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 100)
@@ -138,7 +140,7 @@ export default function FAQPage() {
         const id = hash.replace('#', '')
         const el = document.getElementById(id)
         if (el) {
-          const yOffset = -120
+          const yOffset = -140
           const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset
           setTimeout(() => window.scrollTo({ top: y, behavior: 'smooth' }), 0)
         }
@@ -148,6 +150,27 @@ export default function FAQPage() {
     handleHashScroll()
     window.addEventListener('hashchange', handleHashScroll)
     return () => window.removeEventListener('hashchange', handleHashScroll)
+  }, [])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id
+            setVisibleSections((prev) => ({ ...prev, [id]: true }))
+          }
+        })
+      },
+      { threshold: 0.1 }
+    )
+
+    faqData.forEach((section) => {
+      const el = document.getElementById(section.id)
+      if (el) observer.observe(el)
+    })
+
+    return () => observer.disconnect()
   }, [])
 
   const toggle = (category: string, index: number) => {
@@ -174,7 +197,7 @@ export default function FAQPage() {
           <h1 className="text-4xl font-bold text-center mb-8">Frequently Asked Questions</h1>
 
           {/* Category Buttons */}
-          <nav className="mb-12 flex flex-wrap justify-center gap-4">
+          <nav className="mb-8 flex flex-wrap justify-center gap-4">
             {faqData.map((section) => (
               <a
                 key={section.id}
@@ -188,39 +211,70 @@ export default function FAQPage() {
 
           {/* FAQ Sections */}
           <div className="space-y-10">
-            {faqData.map((section, i) => (
-              <div key={i} id={section.id} className="scroll-mt-28">
-                <h2 className="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">{section.category}</h2>
-                <div className="space-y-4">
-                  {section.faqs.map((faq, j) => {
-                    const isOpen = openIndex[section.category] === j
-                    return (
-                      <div key={j} className="border-b">
-                        <button
-                          className="w-full flex justify-between items-center py-3 text-left active:scale-95 active:translate-y-[3px] transition cursor-pointer"
-                          onClick={() => toggle(section.category, j)}
-                          aria-expanded={isOpen}
-                        >
-                          <span className="text-lg font-medium">{faq.question}</span>
-                          <ChevronDownIcon
-                            className={`w-5 h-5 transform transition-transform duration-300 ${
-                              isOpen ? 'rotate-180' : ''
+            {faqData.map((section, i) => {
+              const isVisible = visibleSections[section.id]
+              return (
+                <div
+                  key={i}
+                  id={section.id}
+                  className={`scroll-mt-28 transition-all duration-700 ease-out ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                  }`}
+                >
+                  <h2 className="text-2xl font-semibold text-[#943728] border-b pb-2 mb-4">{section.category}</h2>
+
+                  <div className="space-y-4">
+                    {section.faqs.map((faq, j) => {
+                      const isOpen = openIndex[section.category] === j
+                      return (
+                        <div key={j} className="border-b">
+                          <button
+                            className="w-full flex justify-between items-center py-3 text-left active:scale-95 active:translate-y-[3px] transition cursor-pointer"
+                            onClick={() => toggle(section.category, j)}
+                            aria-expanded={isOpen}
+                          >
+                            <span className="text-lg font-medium">{faq.question}</span>
+                            <ChevronDownIcon
+                              className={`w-5 h-5 transform transition-transform duration-300 ${
+                                isOpen ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </button>
+                          <div
+                            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                              isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
                             }`}
-                          />
-                        </button>
-                        <div
-                          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                            isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-                          }`}
-                        >
-                          <div className="pb-4 pr-6 text-gray-700">{faq.answer}</div>
+                          >
+                            <div className="pb-4 pr-6 text-gray-700">{faq.answer}</div>
+                          </div>
                         </div>
-                      </div>
-                    )
-                  })}
+                      )
+                    })}
+                  </div>
+
+                  {/* Scroll Cue After Membership Section */}
+                  {section.id === 'membership' && !hideCue && (
+                    <div className="w-full flex justify-center z-0 mt-2 -mb-12 relative">
+                      <button
+                        aria-label="Scroll to Events section"
+                        className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer active:scale-95 active:translate-y-[2px]"
+                        onClick={() => {
+                          const target = document.getElementById('events')
+                          if (target) {
+                            const yOffset = window.innerWidth < 768 ? -120 : -120
+                            const y = target.offsetTop + yOffset
+                            window.scrollTo({ top: y, behavior: 'smooth' })
+                            setHideCue(true)
+                          }
+                        }}
+                      >
+                        ↓
+                      </button>
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </section>
       </main>
@@ -228,3 +282,4 @@ export default function FAQPage() {
     </>
   )
 }
+
