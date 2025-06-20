@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import { useEffect, useState } from "react";
 
 export default function MerchPage() {
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoaded(true), 100)
-    return () => clearTimeout(timeout)
-  }, [])
+    const timeout = setTimeout(() => setLoaded(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <>
@@ -43,15 +43,22 @@ export default function MerchPage() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex items-center justify-center flex-grow py-12 px-4 sm:px-6 text-center">
-          <div className={`transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">Merch Coming Soon 👀</h1>
+          <div
+            className={`transition-opacity duration-700 ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">
+              Merch Coming Soon 👀
+            </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto">
-              We&apos;re working on some fresh gear for the Wake Devils. Check back soon to get your hands on official merch!
+              We&apos;re working on some fresh gear for the Wake Devils. Check
+              back soon to get your hands on official merch!
             </p>
           </div>
         </main>
         <Footer />
       </div>
     </>
-  )
+  );
 }
