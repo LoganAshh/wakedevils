@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import Head from 'next/head'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import { useEffect, useState } from "react";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function DuesPage() {
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoaded(true), 100)
-    return () => clearTimeout(timeout)
-  }, [])
+    const timeout = setTimeout(() => setLoaded(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <>
@@ -43,12 +43,17 @@ export default function DuesPage() {
 
       <Header />
       <main className="max-w-3xl mx-auto px-4 py-12 sm:px-6 sm:py-16 text-center">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">Pay Your Dues</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-4">
+          Pay Your Dues
+        </h1>
         <p className="text-base sm:text-lg mb-2 sm:mb-4">
-          Help keep Wake Devils running strong! Dues help cover gas for lake trips, equipment upkeep and replacement, boat operation costs, team events, safety gear, and insurance.
+          Help keep Wake Devils running strong! Dues help cover gas for lake
+          trips, equipment upkeep and replacement, boat operation costs, team
+          events, safety gear, and insurance.
         </p>
         <p className="mb-4 sm:mb-8 text-sm sm:text-base text-gray-600">
-          Secure payment is handled through MidFirst Bank. Click below to pay online. 
+          Secure payment is handled through MidFirst Bank. Click below to pay
+          online.
         </p>
 
         <div className="flex justify-center">
@@ -56,7 +61,9 @@ export default function DuesPage() {
             href="/waiver"
             className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
               hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
-              ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              ${
+                loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
             Pay Now!
           </a>
@@ -64,9 +71,12 @@ export default function DuesPage() {
 
         {/* Donation Section */}
         <section className="mt-8 sm:mt-14 text-center">
-          <h2 className="text-3xl sm:text-3xl font-semibold mb-2 sm:mb-4">Support the Club</h2>
+          <h2 className="text-3xl sm:text-3xl font-semibold mb-2 sm:mb-4">
+            Support the Club
+          </h2>
           <p className="text-base sm:text-lg mb-4 sm:mb-8 px-2 sm:px-0">
-            Even if you’re not a member, you can still help us grow! <br></br>Thank you for supporting the Wake Devils — we truly appreciate it!
+            Even if you’re not a member, you can still help us grow! <br></br>
+            Thank you for supporting the Wake Devils — we truly appreciate it!
           </p>
 
           <div className="flex justify-center">
@@ -74,10 +84,14 @@ export default function DuesPage() {
               href="https://app.autobooks.co/pay/asu-wake-boarding-team"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ transitionDelay: '250ms' }}
+              style={{ transitionDelay: "250ms" }}
               className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
                 hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
-                ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                ${
+                  loaded
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
+                }`}
             >
               Donate Now!
             </a>
@@ -90,5 +104,5 @@ export default function DuesPage() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
