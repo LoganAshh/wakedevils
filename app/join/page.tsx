@@ -1,20 +1,20 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react'
-import Head from 'next/head'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import { useState, useEffect } from "react";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function JoinPage() {
-  const [isLoading, setIsLoading] = useState(true)
-  const [isVisible, setIsVisible] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     if (!isLoading) {
-      const timeout = setTimeout(() => setIsVisible(false), 300)
-      return () => clearTimeout(timeout)
+      const timeout = setTimeout(() => setIsVisible(false), 300);
+      return () => clearTimeout(timeout);
     }
-  }, [isLoading])
+  }, [isLoading]);
 
   return (
     <>
@@ -63,7 +63,7 @@ export default function JoinPage() {
           {isVisible && (
             <div
               className={`absolute inset-0 flex items-center justify-center bg-white z-10 transition-opacity duration-300 ${
-                isLoading ? 'opacity-100' : 'opacity-0'
+                isLoading ? "opacity-100" : "opacity-0"
               }`}
             >
               <div className="w-10 h-10 sm:w-12 sm:h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
@@ -81,7 +81,7 @@ export default function JoinPage() {
         </div>
 
         <p className="mt-4 text-center text-sm text-gray-600 px-2">
-          Trouble viewing the form?{' '}
+          Trouble viewing the form?{" "}
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform"
             target="_blank"
@@ -95,5 +95,5 @@ export default function JoinPage() {
 
       <Footer />
     </>
-  )
+  );
 }
