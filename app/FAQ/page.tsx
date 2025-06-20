@@ -23,8 +23,15 @@ const faqData = [
             >
               Join
             </Link>{" "}
-            page and fill out the waiver. After signing, you’ll be redirected to
-            pay dues to become a member.
+            page and fill out the form and waiver. After signing, you’ll be redirected to
+            a page for your free trial. If you want to become a member, head to our{" "}
+            <Link
+              href="/join"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Dues
+            </Link>{" "}
+            page to choose and pay for your membership.
           </>
         ),
       },
