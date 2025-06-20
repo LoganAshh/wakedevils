@@ -23,10 +23,11 @@ const faqData = [
             >
               Join
             </Link>{" "}
-            page and fill out the form and waiver. After signing, you’ll be redirected to
-            a page for your free trial. If you want to become a member, head to our{" "}
+            page and fill out the form and waiver. After signing, you’ll be
+            redirected to a page for your free trial. If you want to become a
+            member, head to our{" "}
             <Link
-              href="/join"
+              href="/dues"
               className="text-blue-600 underline hover:text-blue-800"
             >
               Dues
