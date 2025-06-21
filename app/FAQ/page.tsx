@@ -37,17 +37,6 @@ const faqData = [
         ),
       },
       {
-        question: "Can I join if I only want to wake surf?",
-        answer:
-          "Yes! While we focus primarily on wakeboarding, we welcome anyone who’s just interested in wake surfing. Our boats can accommodate both, and many members enjoy surfing too.",
-      },
-      {
-        question:
-          "What’s the difference between general, social, and comp team memberships?",
-        answer:
-          "General members get access to all events and lake days. Social members can attend events but do not ride. Comp team members are selected to compete in collegiate tournaments and represent ASU nationally.",
-      },
-      {
         question: "Do I need wakeboarding experience to join?",
         answer:
           "Not at all! Many members are total beginners. We’ll teach you the basics and help you progress at your own pace.",
@@ -66,6 +55,22 @@ const faqData = [
             page and fill out the form and waiver to reserve your spot.
           </>
         ),
+      },
+      {
+        question: "Can I join if I only want to wake surf?",
+        answer:
+          "Yes! While we focus primarily on wakeboarding, we welcome anyone who’s just interested in wake surfing. Our boats can accommodate both, and many members enjoy surfing too.",
+      },
+      {
+        question: "How do I get onto the competitive team?",
+        answer:
+          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men’s team, you’ll need to land either an invert or a spin. For the women’s team, you’ll need to successfully clear the wake.",
+      },
+      {
+        question:
+          "What’s the difference between general, social, and comp team memberships?",
+        answer:
+          "General members get access to all events and lake days. Social members can attend events but do not ride. Comp team members are selected to compete in collegiate tournaments and represent ASU nationally.",
       },
     ],
   },
