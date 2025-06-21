@@ -72,6 +72,24 @@ const faqData = [
         answer:
           "General members get access to all events and lake days. Social members can attend events but do not ride. Comp team members are selected to compete in collegiate tournaments and represent ASU nationally.",
       },
+      {
+        question:
+          "Can I join if I only want to go to events and ride on the boat?",
+        answer: (
+          <>
+            "Absolutely! That’s what our Social Membership is for. You’ll get
+            access to all the events, hangouts, and good vibes—no need to ride.
+            For more information, check out our{" "}
+            <Link
+              href="/dues"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Dues
+            </Link>{" "}
+            page.
+          </>
+        ),
+      },
     ],
   },
   {
