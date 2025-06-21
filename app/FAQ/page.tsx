@@ -54,8 +54,18 @@ const faqData = [
       },
       {
         question: "Can I come try it out before joining?",
-        answer:
-          "Yes! We offer one free trial lake day for new members. Reach out on Instagram to reserve a spot before attending.",
+        answer: (
+          <>
+            Yes! We offer one free trial lake day for new members. Head to our{" "}
+            <Link
+              href="/join"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Join
+            </Link>{" "}
+            page and fill out the form and waiver to reserve your spot.
+          </>
+        ),
       },
     ],
   },
