@@ -200,10 +200,14 @@ export default function FAQPage() {
         const id = hash.replace("#", "");
         const el = document.getElementById(id);
         if (el) {
-          const yOffset = -140;
+          let yOffset = -200;
+          if (id === "events") yOffset = -160;
           const y =
             el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          setTimeout(() => window.scrollTo({ top: y, behavior: "smooth" }), 0);
+
+          setTimeout(() => {
+            window.scrollTo({ top: y, behavior: "smooth" });
+          }, 0);
         }
       }
     };
@@ -276,15 +280,37 @@ export default function FAQPage() {
 
           {/* Category Buttons */}
           <nav className="mb-8 flex flex-wrap justify-center gap-4">
-            {faqData.map((section) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="px-4 py-2 rounded-md transition shadow-sm active:scale-95 active:translate-y-[3px] text-black hover:bg-[#943728] hover:text-white"
-              >
-                {section.category}
-              </a>
-            ))}
+            {faqData.map((section) => {
+              const isEvents = section.id === "events";
+              const isMembership = section.id === "membership";
+
+              return (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById(section.id);
+                    if (el) {
+                      const yOffset = isMembership
+                        ? -120
+                        : isEvents
+                        ? -160
+                        : -180;
+                      const y =
+                        el.getBoundingClientRect().top +
+                        window.pageYOffset +
+                        yOffset;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                      history.pushState(null, "", `#${section.id}`);
+                    }
+                  }}
+                  className="px-4 py-2 rounded-md transition shadow-sm cursor-pointer active:scale-95 active:translate-y-[3px] text-black hover:bg-[#943728] hover:text-white"
+                >
+                  {section.category}
+                </a>
+              );
+            })}
           </nav>
 
           {/* FAQ Sections */}
