@@ -77,7 +77,7 @@ const faqData = [
           "Can I join if I only want to go to events and ride on the boat?",
         answer: (
           <>
-            "Absolutely! That’s what our Social Membership is for. You’ll get
+            Absolutely! That’s what our Social Membership is for. You’ll get
             access to all the events, hangouts, and good vibes—no need to ride.
             For more information, check out our{" "}
             <Link
