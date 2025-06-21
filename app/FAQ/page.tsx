@@ -37,9 +37,9 @@ const faqData = [
         ),
       },
       {
-        question: "Do I need to be an ASU student to join?",
+        question: "Can I join if I only want to wake surf?",
         answer:
-          "You don’t have to be a full-time ASU student to join, but you must be affiliated with ASU (e.g. student, faculty, staff, or part of a sister college like MCC or SCC) and have access to ASU club insurance and liability policies.",
+          "Yes! While we focus primarily on wakeboarding, we welcome anyone who’s just interested in wake surfing. Our boats can accommodate both, and many members enjoy surfing too.",
       },
       {
         question:
