@@ -339,7 +339,7 @@ export default function FAQPage() {
                     <div className="w-full flex justify-center z-0 mt-2 -mb-12 relative">
                       <button
                         aria-label="Scroll to Events section"
-                        className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer active:scale-95 active:translate-y-[2px]"
+                        className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer animate-bounce active:scale-95 active:translate-y-[2px]"
                         onClick={() => {
                           const target = document.getElementById("events");
                           if (target) {
