@@ -336,7 +336,7 @@ export default function FAQPage() {
 
                   {/* Scroll Cue After Membership Section */}
                   {section.id === "membership" && !hideCue && (
-                    <div className="w-full flex justify-center z-0 mt-2 -mb-12 relative">
+                    <div className="w-full flex justify-center z-0 mt-6 -mb-12 relative">
                       <button
                         aria-label="Scroll to Events section"
                         className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer animate-bounce active:scale-95 active:translate-y-[2px]"
@@ -344,7 +344,7 @@ export default function FAQPage() {
                           const target = document.getElementById("events");
                           if (target) {
                             const yOffset =
-                              window.innerWidth < 768 ? -120 : -120;
+                              window.innerWidth < 768 ? -140 : -140;
                             const y = target.offsetTop + yOffset;
                             window.scrollTo({ top: y, behavior: "smooth" });
                             setHideCue(true);
