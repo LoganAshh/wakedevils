@@ -9,8 +9,8 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const faqData = [
   {
-    id: "membership",
-    category: "Membership",
+    id: "start",
+    category: "Getting Started",
     faqs: [
       {
         question: "How do I join ASU Wake Devils?",
@@ -65,12 +65,6 @@ const faqData = [
         question: "How do I get onto the competitive team?",
         answer:
           "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men’s team, you’ll need to land either an invert or a spin. For the women’s team, you’ll need to successfully clear the wake.",
-      },
-      {
-        question:
-          "What’s the difference between general, social, and comp team memberships?",
-        answer:
-          "General members get access to all events and lake days. Social members can attend events but do not ride. Comp team members are selected to compete in collegiate tournaments and represent ASU nationally.",
       },
       {
         question:
@@ -151,7 +145,7 @@ const faqData = [
   },
   {
     id: "dues",
-    category: "Dues & Costs",
+    category: "Dues & Memberships",
     faqs: [
       {
         question: "How much are dues?",
@@ -178,6 +172,12 @@ const faqData = [
             page.
           </>
         ),
+      },
+      {
+        question:
+          "What’s the difference between general, social, and comp team memberships?",
+        answer:
+          "General members get access to all events and lake days. Social members can attend events but do not ride. Comp team members are selected to compete in collegiate tournaments and represent ASU nationally.",
       },
     ],
   },
@@ -221,9 +221,9 @@ export default function FAQPage() {
   const [visibleSections, setVisibleSections] = useState<{
     [key: string]: boolean;
   }>({});
-  const [hideMembershipCue, setHideMembershipCue] = useState(false);
+  const [hideStartCue, setHideStartCue] = useState(false);
   const [hideEventsCue, setHideEventsCue] = useState(false);
-  const [showAllMembership, setShowAllMembership] = useState(false);
+  const [showAllStart, setShowAllStart] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 100);
@@ -250,13 +250,13 @@ export default function FAQPage() {
 
   useEffect(() => {
     const onScroll = () => {
-      if (!showAllMembership && window.scrollY > 1) {
-        setShowAllMembership(true);
+      if (!showAllStart && window.scrollY > 1) {
+        setShowAllStart(true);
       }
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, [showAllMembership]);
+  }, [showAllStart]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -266,8 +266,8 @@ export default function FAQPage() {
           if (entry.isIntersecting) {
             setVisibleSections((prev) => ({ ...prev, [id]: true }));
             if (id === "events") {
-              setHideMembershipCue(true);
-              setShowAllMembership(true);
+              setHideStartCue(true);
+              setShowAllStart(true);
             }
             if (id === "dues") setHideEventsCue(true);
           }
@@ -323,7 +323,7 @@ export default function FAQPage() {
           <nav className="mb-8 flex flex-wrap justify-center gap-4">
             {faqData.map((section) => {
               const isEvents = section.id === "events";
-              const isMembership = section.id === "membership";
+              const isStart = section.id === "start";
               return (
                 <a
                   key={section.id}
@@ -332,11 +332,7 @@ export default function FAQPage() {
                     e.preventDefault();
                     const el = document.getElementById(section.id);
                     if (el) {
-                      const yOffset = isMembership
-                        ? -120
-                        : isEvents
-                        ? -20
-                        : -180;
+                      const yOffset = isStart ? -120 : isEvents ? -20 : -180;
                       const y =
                         el.getBoundingClientRect().top +
                         window.pageYOffset +
@@ -356,10 +352,10 @@ export default function FAQPage() {
           {/* FAQ Sections */}
           <div className="space-y-10">
             {faqData.map((section) => {
-              const isMembership = section.id === "membership";
+              const isStart = section.id === "start";
               const isVisible = visibleSections[section.id];
               const faqs =
-                isMembership && !showAllMembership
+                isStart && !showAllStart
                   ? section.faqs.slice(0, 5)
                   : section.faqs;
 
@@ -413,29 +409,27 @@ export default function FAQPage() {
                   </div>
 
                   {/* Scroll Cue */}
-                  {section.id === "membership" &&
-                    !hideMembershipCue &&
-                    !showAllMembership && (
-                      <div className="w-full flex justify-center z-0 mt-6 -mb-12 relative">
-                        <button
-                          aria-label="Scroll to Events section"
-                          className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer animate-bounce active:scale-95 active:translate-y-[2px]"
-                          onClick={() => {
-                            const target = document.getElementById("events");
-                            if (target) {
-                              const yOffset =
-                                window.innerWidth < 768 ? -140 : -140;
-                              const y = target.offsetTop + yOffset;
-                              window.scrollTo({ top: y, behavior: "smooth" });
-                              setHideMembershipCue(true);
-                              setShowAllMembership(true);
-                            }
-                          }}
-                        >
-                          ↓
-                        </button>
-                      </div>
-                    )}
+                  {section.id === "start" && !hideStartCue && !showAllStart && (
+                    <div className="w-full flex justify-center z-0 mt-6 -mb-12 relative">
+                      <button
+                        aria-label="Scroll to Events section"
+                        className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer animate-bounce active:scale-95 active:translate-y-[2px]"
+                        onClick={() => {
+                          const target = document.getElementById("events");
+                          if (target) {
+                            const yOffset =
+                              window.innerWidth < 768 ? -140 : -140;
+                            const y = target.offsetTop + yOffset;
+                            window.scrollTo({ top: y, behavior: "smooth" });
+                            setHideStartCue(true);
+                            setShowAllStart(true);
+                          }
+                        }}
+                      >
+                        ↓
+                      </button>
+                    </div>
+                  )}
                   {section.id === "events" && !hideEventsCue && (
                     <div className="w-full flex justify-center z-0 mt-6 -mb-12 relative">
                       <button
