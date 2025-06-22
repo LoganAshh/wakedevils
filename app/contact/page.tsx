@@ -1,50 +1,50 @@
-'use client'
+"use client";
 
-import React, { useEffect, useState } from 'react'
-import Head from 'next/head'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import React, { useEffect, useState } from "react";
+import Head from "next/head";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function ContactPage() {
-  const [loading, setLoading] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState(false)
-  const [loaded, setLoaded] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoaded(true), 100)
-    return () => clearTimeout(timeout)
-  }, [])
+    const timeout = setTimeout(() => setLoaded(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setLoading(true)
-    setError(false)
+    e.preventDefault();
+    setLoading(true);
+    setError(false);
 
-    const form = e.target as HTMLFormElement
-    const formData = new FormData(form)
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://formspree.io/f/meokjlnz', {
-        method: 'POST',
+      const response = await fetch("https://formspree.io/f/meokjlnz", {
+        method: "POST",
         body: formData,
         headers: {
-          Accept: 'application/json',
+          Accept: "application/json",
         },
-      })
+      });
 
       if (response.ok) {
-        setSubmitted(true)
-        form.reset()
+        setSubmitted(true);
+        form.reset();
       } else {
-        setError(true)
+        setError(true);
       }
     } catch {
-      setError(true)
+      setError(true);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <>
@@ -99,7 +99,10 @@ export default function ContactPage() {
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-sm font-medium mb-1" htmlFor="name">
+                <label
+                  className="block text-sm font-medium mb-1"
+                  htmlFor="name"
+                >
                   Name
                 </label>
                 <input
@@ -110,7 +113,10 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-1" htmlFor="email">
+                <label
+                  className="block text-sm font-medium mb-1"
+                  htmlFor="email"
+                >
                   Email
                 </label>
                 <input
@@ -139,7 +145,9 @@ export default function ContactPage() {
                 type="submit"
                 disabled={loading}
                 className={`w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-700 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl cursor-pointer disabled:cursor-default ${
-                  loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                  loaded
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
                 } mt-4`}
               >
                 {loading ? (
@@ -167,7 +175,7 @@ export default function ContactPage() {
                     <span>Sending...</span>
                   </span>
                 ) : (
-                  'Send Message'
+                  "Send Message"
                 )}
               </button>
             </form>
@@ -177,5 +185,5 @@ export default function ContactPage() {
         <Footer />
       </div>
     </>
-  )
+  );
 }
