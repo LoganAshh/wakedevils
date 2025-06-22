@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -436,6 +436,26 @@ export default function FAQPage() {
                         </button>
                       </div>
                     )}
+                  {section.id === "events" && !hideEventsCue && (
+                    <div className="w-full flex justify-center z-0 mt-6 -mb-12 relative">
+                      <button
+                        aria-label="Scroll to Dues section"
+                        className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer animate-bounce active:scale-95 active:translate-y-[2px]"
+                        onClick={() => {
+                          const target = document.getElementById("dues");
+                          if (target) {
+                            const yOffset =
+                              window.innerWidth < 768 ? -140 : -140;
+                            const y = target.offsetTop + yOffset;
+                            window.scrollTo({ top: y, behavior: "smooth" });
+                            setHideEventsCue(true);
+                          }
+                        }}
+                      >
+                        ↓
+                      </button>
+                    </div>
+                  )}
                 </div>
               );
             })}
