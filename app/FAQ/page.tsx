@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -223,6 +223,7 @@ export default function FAQPage() {
   }>({});
   const [hideMembershipCue, setHideMembershipCue] = useState(false);
   const [hideEventsCue, setHideEventsCue] = useState(false);
+  const [showAllMembership, setShowAllMembership] = useState(false);
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 100);
@@ -237,10 +238,7 @@ export default function FAQPage() {
           if (id === "events") yOffset = -160;
           const y =
             el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-          setTimeout(() => {
-            window.scrollTo({ top: y, behavior: "smooth" });
-          }, 0);
+          setTimeout(() => window.scrollTo({ top: y, behavior: "smooth" }), 0);
         }
       }
     };
@@ -251,21 +249,31 @@ export default function FAQPage() {
   }, []);
 
   useEffect(() => {
+    const onScroll = () => {
+      if (!showAllMembership && window.scrollY > 1) {
+        setShowAllMembership(true);
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [showAllMembership]);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const id = entry.target.id;
-
           if (entry.isIntersecting) {
             setVisibleSections((prev) => ({ ...prev, [id]: true }));
-
-            // Hide scroll cues when the next section appears
-            if (id === "events") setHideMembershipCue(true);
+            if (id === "events") {
+              setHideMembershipCue(true);
+              setShowAllMembership(true);
+            }
             if (id === "dues") setHideEventsCue(true);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
     faqData.forEach((section) => {
@@ -316,7 +324,6 @@ export default function FAQPage() {
             {faqData.map((section) => {
               const isEvents = section.id === "events";
               const isMembership = section.id === "membership";
-
               return (
                 <a
                   key={section.id}
@@ -328,7 +335,7 @@ export default function FAQPage() {
                       const yOffset = isMembership
                         ? -120
                         : isEvents
-                        ? -160
+                        ? -20
                         : -180;
                       const y =
                         el.getBoundingClientRect().top +
@@ -348,11 +355,17 @@ export default function FAQPage() {
 
           {/* FAQ Sections */}
           <div className="space-y-10">
-            {faqData.map((section, i) => {
+            {faqData.map((section) => {
+              const isMembership = section.id === "membership";
               const isVisible = visibleSections[section.id];
+              const faqs =
+                isMembership && !showAllMembership
+                  ? section.faqs.slice(0, 5)
+                  : section.faqs;
+
               return (
                 <div
-                  key={i}
+                  key={section.id}
                   id={section.id}
                   className={`scroll-mt-28 transition-all duration-700 ease-out ${
                     isVisible
@@ -365,13 +378,13 @@ export default function FAQPage() {
                   </h2>
 
                   <div className="space-y-4">
-                    {section.faqs.map((faq, j) => {
-                      const isOpen = openIndex[section.category] === j;
+                    {faqs.map((faq, index) => {
+                      const isOpen = openIndex[section.category] === index;
                       return (
-                        <div key={j} className="border-b">
+                        <div key={index} className="border-b">
                           <button
                             className="w-full flex justify-between items-center py-3 text-left active:scale-95 active:translate-y-[3px] transition cursor-pointer"
-                            onClick={() => toggle(section.category, j)}
+                            onClick={() => toggle(section.category, index)}
                             aria-expanded={isOpen}
                           >
                             <span className="text-lg font-medium">
@@ -399,48 +412,30 @@ export default function FAQPage() {
                     })}
                   </div>
 
-                  {/* Scroll Cue After Membership Section */}
-                  {section.id === "membership" && !hideMembershipCue && (
-                    <div className="w-full flex justify-center z-0 mt-6 -mb-12 relative">
-                      <button
-                        aria-label="Scroll to Events section"
-                        className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer animate-bounce active:scale-95 active:translate-y-[2px]"
-                        onClick={() => {
-                          const target = document.getElementById("events");
-                          if (target) {
-                            const yOffset =
-                              window.innerWidth < 768 ? -140 : -140;
-                            const y = target.offsetTop + yOffset;
-                            window.scrollTo({ top: y, behavior: "smooth" });
-                            setHideMembershipCue(true);
-                          }
-                        }}
-                      >
-                        ↓
-                      </button>
-                    </div>
-                  )}
-
-                  {section.id === "events" && !hideEventsCue && (
-                    <div className="w-full flex justify-center z-0 mt-6 -mb-12 relative">
-                      <button
-                        aria-label="Scroll to Dues section"
-                        className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer animate-bounce active:scale-95 active:translate-y-[2px]"
-                        onClick={() => {
-                          const target = document.getElementById("dues");
-                          if (target) {
-                            const yOffset =
-                              window.innerWidth < 768 ? -140 : -140;
-                            const y = target.offsetTop + yOffset;
-                            window.scrollTo({ top: y, behavior: "smooth" });
-                            setHideEventsCue(true);
-                          }
-                        }}
-                      >
-                        ↓
-                      </button>
-                    </div>
-                  )}
+                  {/* Scroll Cue */}
+                  {section.id === "membership" &&
+                    !hideMembershipCue &&
+                    !showAllMembership && (
+                      <div className="w-full flex justify-center z-0 mt-6 -mb-12 relative">
+                        <button
+                          aria-label="Scroll to Events section"
+                          className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer animate-bounce active:scale-95 active:translate-y-[2px]"
+                          onClick={() => {
+                            const target = document.getElementById("events");
+                            if (target) {
+                              const yOffset =
+                                window.innerWidth < 768 ? -140 : -140;
+                              const y = target.offsetTop + yOffset;
+                              window.scrollTo({ top: y, behavior: "smooth" });
+                              setHideMembershipCue(true);
+                              setShowAllMembership(true);
+                            }
+                          }}
+                        >
+                          ↓
+                        </button>
+                      </div>
+                    )}
                 </div>
               );
             })}
