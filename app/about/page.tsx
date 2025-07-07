@@ -14,7 +14,7 @@ export default function AboutPage() {
     {
       name: "Logan Gregor",
       title: "President",
-      image: "/images/board/logan.jpg",
+      image: "/images/board/logan.jpg?v=2",
       bio: "Hi, my name is Logan and I’m majoring in mechanical engineering. I grew up boating on the lakes in Wisconsin and I love wakeboarding and wake surfing. When I can’t be on the lake, I spend my time lifting, studying, and snowboarding.",
     },
     {
@@ -44,7 +44,7 @@ export default function AboutPage() {
     {
       name: "Logan Ashamallah",
       title: "Event Coordinator",
-      image: "/images/board/loganash.jpg",
+      image: "/images/board/loganash.jpg?v=2",
       bio: "Hey I'm Logan. I am a third year majoring in Computer Science and I'm from Thousand Oaks, California. I love music, working out, and traveling. Can't wait for another year with the Wake Devils!",
     },
     {
@@ -56,19 +56,19 @@ export default function AboutPage() {
     {
       name: "Daniel Gensler",
       title: "2024 President / Recruitment Chair",
-      image: "/images/board/daniel.jpg",
+      image: "/images/board/daniel.jpg?v=2",
       bio: "Description",
     },
     {
       name: "Ellie Bjorgvinsdottir",
       title: "Recruitment Chair",
-      image: "/images/board/ellie.jpg",
+      image: "/images/board/ellie.jpg?v=2",
       bio: "Hi I’m Ellie! I’m from Connecticut and I’m a junior studying business finance. I love hiking, art, wakeboarding, and snowboarding. Looking forward to a great year with the wake devs!",
     },
     {
       name: "Luke Bloedel",
       title: "Marketing and Engagement",
-      image: "/images/board/luke.jpg",
+      image: "/images/board/luke.jpg?v=2",
       bio: "Hi I'm Luke. I like long walks on the beach and short naps at raves. I grew out of the ground like a plant and can be summoned by saying my name three times in a row.",
     },
     {
