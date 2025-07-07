@@ -15,13 +15,13 @@ export default function AboutPage() {
       name: "Logan Gregor",
       title: "President",
       image: "/images/board/logan.jpg",
-      bio: "Description",
+      bio: "Hi, my name is Logan and I’m majoring in mechanical engineering. I grew up boating on the lakes in Wisconsin and I love wakeboarding and wake surfing. When I can’t be on the lake, I spend my time lifting, studying, and snowboarding.",
     },
     {
       name: "Lukas Spucys",
       title: "Vice President",
       image: "/images/board/default.jpg",
-      bio: "Description",
+      bio: "Hi, I am Lukas and I’m the VP this year. I’m majoring in Gender Studies with a minor in Doorway Remodeling. I grew up in Chicago and my favorite thing to do is ride my Suzuki RE5 Motorcycle in circles all day.",
     },
     {
       name: "Bryce Hendrickson",
@@ -69,7 +69,7 @@ export default function AboutPage() {
       name: "Luke Bloedel",
       title: "Marketing and Engagement",
       image: "/images/board/luke.jpg",
-      bio: "Description",
+      bio: "Hi I'm Luke. I like long walks on the beach and short naps at raves. I grew out of the ground like a plant and can be summoned by saying my name three times in a row.",
     },
     {
       name: "Nick Hoskins",
@@ -161,7 +161,7 @@ export default function AboutPage() {
 
         {/* Board Cards */}
         <section>
-          <h2 className="text-3xl font-semibold text-center mb-12">
+          <h2 className="text-3xl font-semibold text-center mb-8">
             Meet the Board
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
