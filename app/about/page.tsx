@@ -62,8 +62,8 @@ export default function AboutPage() {
     {
       name: "Ellie Bjorgvinsdottir",
       title: "Recruitment Chair",
-      image: "/images/board/default.jpg",
-      bio: "Description",
+      image: "/images/board/ellie.jpg",
+      bio: "Hi I’m Ellie! I’m from Connecticut and I’m a junior studying business finance. I love hiking, art, wakeboarding, and snowboarding. Looking forward to a great year with the wake devs!",
     },
     {
       name: "Luke Bloedel",
