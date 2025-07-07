@@ -14,7 +14,7 @@ export default function AboutPage() {
     {
       name: "Logan Gregor",
       title: "President",
-      image: "/images/board/default.jpg",
+      image: "/images/board/logan.jpg",
       bio: "Description",
     },
     {
@@ -55,8 +55,8 @@ export default function AboutPage() {
     },
     {
       name: "Daniel Gensler",
-      title: "Recruitment Chair",
-      image: "/images/board/default.jpg",
+      title: "2024 President / Recruitment Chair",
+      image: "/images/board/daniel.jpg",
       bio: "Description",
     },
     {
@@ -68,12 +68,12 @@ export default function AboutPage() {
     {
       name: "Luke Bloedel",
       title: "Marketing and Engagement",
-      image: "/images/board/default.jpg",
+      image: "/images/board/luke.jpg",
       bio: "Description",
     },
     {
       name: "Nick Hoskins",
-      title: "Team Captain",
+      title: "2024 Vice President / Team Captain",
       image: "/images/board/default.jpg",
       bio: "Description",
     },
