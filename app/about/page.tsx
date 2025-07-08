@@ -24,12 +24,6 @@ export default function AboutPage() {
       bio: "Hi, I am Lukas and I’m the VP this year. I’m majoring in Gender Studies with a minor in Doorway Remodeling. I grew up in Chicago and my favorite thing to do is ride my Suzuki RE5 Motorcycle in circles all day.",
     },
     {
-      name: "Bryce Hendrickson",
-      title: "Head Coach",
-      image: "/images/board/default.jpg",
-      bio: "Description",
-    },
-    {
       name: "Sophia Ruger",
       title: "Treasurer",
       image: "/images/board/default.jpg",
