@@ -68,7 +68,7 @@ export default function AboutPage() {
     {
       name: "Nick Hoskins",
       title: "2024 Vice President / Team Captain",
-      image: "/images/board/default.jpg",
+      image: "/images/board/nick.jpg",
       bio: "Description",
     },
     {
