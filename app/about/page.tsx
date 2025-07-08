@@ -75,7 +75,7 @@ export default function AboutPage() {
       name: "Cooper Bassi",
       title: "Transportation Manager",
       image: "/images/board/cooper.jpg",
-      bio: "Description",
+      bio: "Hi I’m cooper. I was born on the boardwalk building better boards for the lords of board gorge. Every day I woke up and wakeboarded, snowboarded, skim boarded, skateboarded, water boarded, and paddle boarded before lunch. You know, boarding’s never boring when you’re boarding bigger boards forged for the lords of board gorge.",
     },
   ];
 
