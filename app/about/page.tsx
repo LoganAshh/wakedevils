@@ -20,7 +20,7 @@ export default function AboutPage() {
     {
       name: "Lukas Spucys",
       title: "Vice President",
-      image: "/images/board/default.jpg",
+      image: "/images/board/lukas.jpg",
       bio: "Hi, I am Lukas and I’m the VP this year. I’m majoring in Gender Studies with a minor in Doorway Remodeling. I grew up in Chicago and my favorite thing to do is ride my Suzuki RE5 Motorcycle in circles all day.",
     },
     {
