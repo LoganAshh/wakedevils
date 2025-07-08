@@ -33,7 +33,7 @@ export default function AboutPage() {
       name: "Jalen Artiles",
       title: "Secretary",
       image: "/images/board/default.jpg",
-      bio: "Description",
+      bio: "Hello! I am Jalen Von Atrillius III and I'm from Worcestershire England. My major is Computer Science and I spend my time advancing global understanding of cryptography and algorithmic number theory! Ask me about post-quantum cryptography… Or Pants Beers; I’m an expert in both.",
     },
     {
       name: "Logan Ashamallah",
