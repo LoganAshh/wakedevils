@@ -26,7 +26,7 @@ export default function AboutPage() {
     {
       name: "Sophia Ruger",
       title: "Treasurer",
-      image: "/images/board/default.jpg",
+      image: "/images/board/sophia.jpg",
       bio: "Description",
     },
     {
