@@ -51,7 +51,7 @@ export default function AboutPage() {
       name: "Daniel Gensler",
       title: "2024 President / Recruitment Chair",
       image: "/images/board/daniel.jpg?v=2",
-      bio: "Description",
+      bio: "My Name is Daniel! And Daniel is my name! If you don’t remember oh it would be a shame! Who wrote this song… Whoever is to blame ? Daniel Daniel Daniel… Daniel is his name!",
     },
     {
       name: "Ellie Bjorgvinsdottir",
