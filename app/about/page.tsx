@@ -73,7 +73,7 @@ export default function AboutPage() {
     },
     {
       name: "Cooper Bassi",
-      title: "Driver",
+      title: "Transportation Manager",
       image: "/images/board/default.jpg",
       bio: "Description",
     },
