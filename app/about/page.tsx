@@ -44,7 +44,7 @@ export default function AboutPage() {
     {
       name: "Tristan Krauskopf",
       title: "Social Media Chair",
-      image: "/images/board/default.jpg",
+      image: "/images/board/tristan.jpg",
       bio: "Description",
     },
     {
