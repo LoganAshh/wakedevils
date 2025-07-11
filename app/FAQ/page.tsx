@@ -115,12 +115,12 @@ const faqData = [
       {
         question: "How often do you have lake days?",
         answer:
-          "We usually go out once a week during the semester, depending on weather and rider availability.",
+          "We usually go out 2-3 times a week during the semester, depending on weather and rider availability.",
       },
       {
         question: "Where do you usually ride?",
         answer:
-          "Our most common spots are Canyon Lake and Bartlett Lake, both about an hour from Tempe.",
+          "Our most common spot is Bartlett Lake, about an hour from Tempe.",
       },
       {
         question: "Is transportation provided to the lake?",
