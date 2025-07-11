@@ -121,22 +121,17 @@ const faqData = [
         question: "Are lake days free?",
         answer: (
           <>
-            The first 5 rides are covered by your dues. After that, members chip
-            in for gas. Learn more on the{" "}
-            <Link
-              href="/events"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              Events
-            </Link>{" "}
-            page.
+            For general members, the first 5 rides are covered by your dues. For
+            comp members, the first 10 rides are covered. After that, members
+            chip in $15 per lake day for gas. NOTE: These numbers are not final
+            and will be updated at the start of the semester.
           </>
         ),
       },
       {
         question: "Is transportation provided to the lake?",
         answer:
-          "Transportation is usually arranged through carpools. Riders often coordinate in the Flare groupchat to drive or get rides from other members.",
+          "Yes! Transportation is usually arranged through carpools. Riders often coordinate in the Flare groupchat to drive or get rides from other members.",
       },
       {
         question: "Where do you usually ride?",
@@ -146,17 +141,28 @@ const faqData = [
       {
         question: "Do I need to bring my own gear?",
         answer:
-          "Nope! The club provides boards, ropes, life vests, and more. But if you have your own gear, you're welcome to use it.",
+          "Nope! The club provides boards, ropes, life vests, and more. But if you have your own gear, you're welcome to use it!",
       },
       {
         question: "What should I bring to a lake day?",
         answer:
-          "Bring a towel, sunscreen, water, snacks, a swimsuit, and a good attitude. Everything else is provided.",
+          "Bring a towel, sunscreen, water, snacks, a swimsuit, and a good attitude. Everything else is provided!",
       },
       {
         question: "Can I bring a friend to a ride?",
-        answer:
-          "Yes — non-members can attend one trial ride if approved in advance. Message us on Instagram to check availability.",
+        answer: (
+          <>
+            Yes! Non-members can attend one trial ride if approved in advance.
+            Have them fill out the form and waiver on our{" "}
+            <Link
+              href="/join"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Join
+            </Link>{" "}
+            page and reserve their spot in the Flare groupchat.
+          </>
+        ),
       },
     ],
   },
@@ -167,26 +173,26 @@ const faqData = [
       {
         question: "How much are dues?",
         answer:
-          "Dues vary by membership type and semester. General is usually $100–$120, social is around $40, and comp team dues depend on travel costs. Exact prices are posted at the start of each semester.",
+          "Dues are $200 for general members, $100 for social members, and $300 for comp members. NOTE: These prices are not final and will be updated at the start of the semester.",
       },
       {
         question: "What do dues cover?",
         answer:
-          "Dues cover gas for the boat and towing vehicles, equipment upkeep and replacement, insurance, safety gear, competition entry, and team events.",
+          "Dues help cover gas for lake trips, equipment upkeep and replacement, boat operation costs, team events, safety gear, and insurance.",
       },
       {
         question: "How do I pay my dues?",
         answer: (
           <>
-            After completing the waiver, you&apos;ll be redirected to our
-            payment portal. You can also find the link on the{" "}
+            On our{" "}
             <Link
               href="/dues"
               className="text-blue-600 underline hover:text-blue-800"
             >
               Dues
             </Link>{" "}
-            page.
+            page, fill out the waiver and select you membership type to be
+            redirected to our secure checkout through MidFirst Bank.
           </>
         ),
       },
