@@ -23,7 +23,7 @@ const faqData = [
             >
               Join
             </Link>{" "}
-            page and fill out the form and waiver. After signing, you'll be
+            page and fill out the form and waiver. After signing, you&apos;ll be
             redirected to a page for your free trial. If you want to become a
             member, head to our{" "}
             <Link
@@ -39,7 +39,7 @@ const faqData = [
       {
         question: "Do I need wakeboarding experience to join?",
         answer:
-          "Not at all! Many members are total beginners. We&apos;ll teach you the basics and help you progress at your own pace.",
+          "Not at all! Many members are total beginners. We'll teach you the basics and help you progress at your own pace.",
       },
       {
         question: "Can I come try it out before joining?",
@@ -79,7 +79,7 @@ const faqData = [
       {
         question: "How do I get onto the competitive team?",
         answer:
-          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men&apos;s team, you&apos;ll need to land either an invert or a spin. For the women&apos;s team, you&apos;ll need to successfully clear the wake.",
+          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men's team, you'll need to land either an invert or a spin. For the women's team, you'll need to successfully clear the wake.",
       },
     ],
   },
@@ -158,8 +158,8 @@ const faqData = [
         question: "How do I pay my dues?",
         answer: (
           <>
-            After completing the waiver, you'll be redirected to our payment
-            portal. You can also find the link on the{" "}
+            After completing the waiver, you&apos;ll be redirected to our
+            payment portal. You can also find the link on the{" "}
             <Link
               href="/dues"
               className="text-blue-600 underline hover:text-blue-800"
