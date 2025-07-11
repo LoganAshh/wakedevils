@@ -396,7 +396,7 @@ export default function FAQPage() {
                                 : "max-h-0 opacity-0"
                             }`}
                           >
-                            <div className="pb-4 pr-6 text-gray-700">
+                            <div className="pt-2 pb-4 pr-6 px-2 text-gray-700">
                               {faq.answer}
                             </div>
                           </div>
