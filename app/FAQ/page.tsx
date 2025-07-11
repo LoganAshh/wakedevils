@@ -376,7 +376,9 @@ export default function FAQPage() {
                       return (
                         <div key={index} className="border-b">
                           <button
-                            className="w-full flex justify-between items-center py-3 px-2 text-left active:scale-95 active:translate-y-[3px] transition-all duration-200 cursor-pointer hover:bg-gray-100 rounded-md"
+                            className={`w-full flex justify-between items-center py-3 px-2 text-left active:scale-95 active:translate-y-[3px] transition-all duration-200 cursor-pointer hover:bg-gray-100 rounded-md ${
+                              isOpen ? "bg-gray-100" : ""
+                            }`}
                             onClick={() => toggle(section.category, index)}
                             aria-expanded={isOpen}
                           >
