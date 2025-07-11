@@ -329,7 +329,7 @@ export default function FAQPage() {
                     e.preventDefault();
                     const el = document.getElementById(section.id);
                     if (el) {
-                      const yOffset = isStart ? -120 : isEvents ? -20 : -180;
+                      const yOffset = isStart ? -120 : isEvents ? -160 : -180;
                       const y =
                         el.getBoundingClientRect().top +
                         window.pageYOffset +
