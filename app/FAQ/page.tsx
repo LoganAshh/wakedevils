@@ -89,8 +89,25 @@ const faqData = [
     faqs: [
       {
         question: "How do I stay updated on events?",
-        answer:
-          "We post announcements in our GroupMe and on Instagram. Official events are also listed on our Events page with a calendar view.",
+        answer: (
+          <>
+            All events will be posted on our{" "}
+            <Link
+              href="/events"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Events
+            </Link>{" "}
+            page, as well as on our{" "}
+            <Link
+              href="https://calendar.google.com/calendar/u/3?cid=YXN1d2FrZWRldmlsc0BnbWFpbC5jb20"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Google Calendar
+            </Link>{" "}
+            . Once you have paid your dues, you will be given access to our Flare group chats where boats and events will also be announced.
+          </>
+        ),
       },
       {
         question: "How often do you have lake days?",
