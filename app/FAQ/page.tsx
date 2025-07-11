@@ -57,23 +57,15 @@ const faqData = [
         ),
       },
       {
-        question: "Can I join if I only want to wake surf?",
-        answer:
-          "Yes! While we focus primarily on wakeboarding, we welcome anyone who’s just interested in wake surfing. Our boats can accommodate both, and many members enjoy surfing too.",
-      },
-      {
-        question: "How do I get onto the competitive team?",
-        answer:
-          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men’s team, you’ll need to land either an invert or a spin. For the women’s team, you’ll need to successfully clear the wake.",
-      },
-      {
-        question:
-          "Can I join if I only want to go to events and ride on the boat?",
+        question: "Can I join if I only want to wake surf or attend events?",
         answer: (
           <>
-            Absolutely! That’s what our Social Membership is for. You’ll get
-            access to all the events, hangouts, and good vibes—no need to ride.
-            For more information, check out our{" "}
+            Yes! While we focus primarily on wakeboarding, we welcome anyone
+            who’s just interested in wake surfing. Our boats can accommodate
+            both, and many members enjoy surfing too. <br></br>If you only want
+            to attend events, we offer a Social Membership that gives you access
+            to all the events, hangouts, and good vibes—no need to ride. For
+            more information, check out our{" "}
             <Link
               href="/dues"
               className="text-blue-600 underline hover:text-blue-800"
@@ -83,6 +75,11 @@ const faqData = [
             page.
           </>
         ),
+      },
+      {
+        question: "How do I get onto the competitive team?",
+        answer:
+          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men’s team, you’ll need to land either an invert or a spin. For the women’s team, you’ll need to successfully clear the wake.",
       },
     ],
   },
