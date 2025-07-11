@@ -39,7 +39,7 @@ const faqData = [
       {
         question: "Do I need wakeboarding experience to join?",
         answer:
-          "Not at all! Many members are total beginners. We'll teach you the basics and help you progress at your own pace.",
+          "Not at all! Many members are total beginners. We&apos;ll teach you the basics and help you progress at your own pace.",
       },
       {
         question: "Can I come try it out before joining?",
@@ -61,11 +61,11 @@ const faqData = [
         answer: (
           <>
             Yes! While we focus primarily on wakeboarding, we welcome anyone
-            who's just interested in wake surfing. Our boats can accommodate
-            both, and many members enjoy surfing too. <br></br>If you only want
-            to attend events, we offer a Social Membership that gives you access
-            to all the events, hangouts, and good vibes—no need to ride. For
-            more information, check out our{" "}
+            who&apos;s just interested in wake surfing. Our boats can
+            accommodate both, and many members enjoy surfing too. <br></br>If
+            you only want to attend events, we offer a Social Membership that
+            gives you access to all the events, hangouts, and good vibes—no need
+            to ride. For more information, check out our{" "}
             <Link
               href="/dues"
               className="text-blue-600 underline hover:text-blue-800"
@@ -79,7 +79,7 @@ const faqData = [
       {
         question: "How do I get onto the competitive team?",
         answer:
-          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men's team, you'll need to land either an invert or a spin. For the women's team, you'll need to successfully clear the wake.",
+          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men&apos;s team, you&apos;ll need to land either an invert or a spin. For the women&apos;s team, you&apos;ll need to successfully clear the wake.",
       },
     ],
   },
