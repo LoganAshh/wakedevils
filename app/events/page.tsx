@@ -105,7 +105,7 @@ export default function EventsPage() {
           </div>
 
           {/* MOBILE content */}
-          <div className="block md:hidden flex flex-col justify-start pt-6 pb-8 gap-y-8">
+          <div className="md:hidden flex flex-col justify-start pt-6 pb-8 gap-y-8">
             <div className="text-center">
               <h1 className="text-3xl font-bold leading-tight">
                 Upcoming Events
