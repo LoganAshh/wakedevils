@@ -62,10 +62,10 @@ const faqData = [
           <>
             Yes! While we focus primarily on wakeboarding, we welcome anyone
             who&apos;s just interested in wake surfing. Our boats can
-            accommodate both, and many members enjoy surfing too. <br></br>If
-            you only want to attend events, we offer a Social Membership that
-            gives you access to all the events, hangouts, and good vibes—no need
-            to ride. For more information, check out our{" "}
+            accommodate both, and many members enjoy surfing too. <br></br>
+            <br></br>If you only want to attend events, we offer a Social
+            Membership that gives you access to all the events, hangouts, and
+            good vibes—no need to ride. For more information, check out our{" "}
             <Link
               href="/dues"
               className="text-blue-600 underline hover:text-blue-800"
@@ -101,11 +101,14 @@ const faqData = [
             page, as well as on our{" "}
             <Link
               href="https://calendar.google.com/calendar/u/3?cid=YXN1d2FrZWRldmlsc0BnbWFpbC5jb20"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 underline hover:text-blue-800"
             >
               Google Calendar
             </Link>{" "}
-            . Once you have paid your dues, you will be given access to our Flare group chats where boats and events will also be announced.
+            . Once you have paid your dues, you will be given access to our
+            Flare group chats where boats and events will also be announced.
           </>
         ),
       },
