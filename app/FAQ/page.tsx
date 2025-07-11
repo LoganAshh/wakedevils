@@ -23,7 +23,7 @@ const faqData = [
             >
               Join
             </Link>{" "}
-            page and fill out the form and waiver. After signing, you’ll be
+            page and fill out the form and waiver. After signing, you'll be
             redirected to a page for your free trial. If you want to become a
             member, head to our{" "}
             <Link
@@ -39,7 +39,7 @@ const faqData = [
       {
         question: "Do I need wakeboarding experience to join?",
         answer:
-          "Not at all! Many members are total beginners. We’ll teach you the basics and help you progress at your own pace.",
+          "Not at all! Many members are total beginners. We'll teach you the basics and help you progress at your own pace.",
       },
       {
         question: "Can I come try it out before joining?",
@@ -61,7 +61,7 @@ const faqData = [
         answer: (
           <>
             Yes! While we focus primarily on wakeboarding, we welcome anyone
-            who’s just interested in wake surfing. Our boats can accommodate
+            who's just interested in wake surfing. Our boats can accommodate
             both, and many members enjoy surfing too. <br></br>If you only want
             to attend events, we offer a Social Membership that gives you access
             to all the events, hangouts, and good vibes—no need to ride. For
@@ -79,7 +79,7 @@ const faqData = [
       {
         question: "How do I get onto the competitive team?",
         answer:
-          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men’s team, you’ll need to land either an invert or a spin. For the women’s team, you’ll need to successfully clear the wake.",
+          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men's team, you'll need to land either an invert or a spin. For the women's team, you'll need to successfully clear the wake.",
       },
     ],
   },
@@ -126,7 +126,7 @@ const faqData = [
       {
         question: "Do I need to bring my own gear?",
         answer:
-          "Nope! The club provides boards, ropes, life vests, and more. But if you have your own gear, you’re welcome to use it.",
+          "Nope! The club provides boards, ropes, life vests, and more. But if you have your own gear, you're welcome to use it.",
       },
       {
         question: "What should I bring to a lake day?",
@@ -158,7 +158,7 @@ const faqData = [
         question: "How do I pay my dues?",
         answer: (
           <>
-            After completing the waiver, you’ll be redirected to our payment
+            After completing the waiver, you'll be redirected to our payment
             portal. You can also find the link on the{" "}
             <Link
               href="/dues"
@@ -172,7 +172,7 @@ const faqData = [
       },
       {
         question:
-          "What’s the difference between general, social, and comp team memberships?",
+          "What's the difference between general, social, and comp team memberships?",
         answer:
           "General members get access to all events and lake days. Social members can attend events but do not ride. Comp team members are selected to compete in collegiate tournaments and represent ASU nationally.",
       },
@@ -376,7 +376,7 @@ export default function FAQPage() {
                       return (
                         <div key={index} className="border-b">
                           <button
-                            className="w-full flex justify-between items-center py-3 text-left active:scale-95 active:translate-y-[3px] transition cursor-pointer"
+                            className="w-full flex justify-between items-center py-3 px-2 text-left active:scale-95 active:translate-y-[3px] transition-all duration-200 cursor-pointer hover:bg-gray-100 rounded-md"
                             onClick={() => toggle(section.category, index)}
                             aria-expanded={isOpen}
                           >
