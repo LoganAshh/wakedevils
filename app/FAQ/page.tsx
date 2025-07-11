@@ -37,11 +37,6 @@ const faqData = [
         ),
       },
       {
-        question: "Do I need wakeboarding experience to join?",
-        answer:
-          "Not at all! Many members are total beginners. We'll teach you the basics and help you progress at your own pace.",
-      },
-      {
         question: "Can I come try it out before joining?",
         answer: (
           <>
@@ -55,6 +50,11 @@ const faqData = [
             page and fill out the form and waiver to reserve your spot.
           </>
         ),
+      },
+      {
+        question: "Do I need wakeboarding experience to join?",
+        answer:
+          "Not at all! Many members are total beginners. We'll teach you the basics and help you progress at your own pace.",
       },
       {
         question: "Can I join if I only want to wake surf or attend events?",
@@ -118,16 +118,6 @@ const faqData = [
           "We usually go out 2-3 times a week during the semester, depending on weather and rider availability.",
       },
       {
-        question: "Where do you usually ride?",
-        answer:
-          "Our most common spot is Bartlett Lake, about an hour from Tempe.",
-      },
-      {
-        question: "Is transportation provided to the lake?",
-        answer:
-          "Transportation is usually arranged through carpools. Riders often coordinate in the GroupMe to drive or get rides from other members.",
-      },
-      {
         question: "Are lake days free?",
         answer: (
           <>
@@ -142,6 +132,16 @@ const faqData = [
             page.
           </>
         ),
+      },
+      {
+        question: "Is transportation provided to the lake?",
+        answer:
+          "Transportation is usually arranged through carpools. Riders often coordinate in the Flare groupchat to drive or get rides from other members.",
+      },
+      {
+        question: "Where do you usually ride?",
+        answer:
+          "Our most common spot is Bartlett Lake, about an hour from Tempe.",
       },
       {
         question: "Do I need to bring my own gear?",
