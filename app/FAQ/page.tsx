@@ -47,7 +47,16 @@ const faqData = [
             >
               Join
             </Link>{" "}
-            page and fill out the form and waiver to reserve your spot.
+            page to let us know who you are and join our group on{" "}
+            <Link
+              href="https://flare-event.app.link/NVO1g2iFVUb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Flare
+            </Link>{" "}
+            to sign up for a boat!
           </>
         ),
       },
