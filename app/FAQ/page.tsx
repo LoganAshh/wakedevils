@@ -16,14 +16,14 @@ const faqData = [
         question: "How do I join ASU Wake Devils?",
         answer: (
           <>
-            Let us know who you are by filling out the form on our{" "}
+            Just head to our{" "}
             <Link
               href="/join"
               className="text-blue-600 underline hover:text-blue-800"
             >
               Join
             </Link>{" "}
-            page. For more updates, join our group on{" "}
+            page to let us know who you are. For more updates, join our group on{" "}
             <Link
               href="https://flare-event.app.link/NVO1g2iFVUb"
               target="_blank"
