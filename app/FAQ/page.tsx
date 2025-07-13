@@ -78,8 +78,16 @@ const faqData = [
       },
       {
         question: "How do I get onto the competitive team?",
-        answer:
-          "At the start of each semester, we hold tryouts for riders interested in joining our competitive team. To qualify for the men's team, you'll need to land either an invert or a spin. For the women's team, you'll need to successfully clear the wake.",
+        answer: (
+          <>
+            At the start of each semester, we hold tryouts for riders interested
+            in joining our competitive team. To qualify for the men's team,
+            you'll need to land either an invert or a spin. For the women's
+            team, you'll need to successfully clear the wake. To compete in Wake
+            surfing, you must be able to perform either a surface 360 or an
+            ollie.
+          </>
+        ),
       },
     ],
   },
