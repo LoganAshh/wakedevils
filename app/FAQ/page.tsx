@@ -16,23 +16,23 @@ const faqData = [
         question: "How do I join ASU Wake Devils?",
         answer: (
           <>
-            Just head to our{" "}
+            Let us know who you are by filling out the form on our{" "}
             <Link
               href="/join"
               className="text-blue-600 underline hover:text-blue-800"
             >
               Join
             </Link>{" "}
-            page and fill out the form and waiver. After signing, you&apos;ll be
-            redirected to a page for your free trial. If you want to become a
-            member, head to our{" "}
+            page. For more updates, join our group on{" "}
             <Link
-              href="/dues"
+              href="https://flare-event.app.link/NVO1g2iFVUb"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 underline hover:text-blue-800"
             >
-              Dues
+              Flare
             </Link>{" "}
-            page to choose and pay for your membership.
+            .
           </>
         ),
       },
