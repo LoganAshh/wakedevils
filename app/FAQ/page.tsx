@@ -128,10 +128,10 @@ const faqData = [
         question: "Are lake days free?",
         answer: (
           <>
-            Transportation, gas, and coaching is free for your first ride. Ten
-            rides are included in the general membership, and additional lake days
-            are $15 each. NOTE: These numbers are not final and will be updated
-            at the start of the semester.
+            Transportation, gas, and coaching are free for your first ride. Ten
+            rides are included in the general membership, and additional lake
+            days are $15 each. NOTE: These numbers are not final and will be
+            updated at the start of the semester.
           </>
         ),
       },
@@ -159,15 +159,8 @@ const faqData = [
         question: "Can I bring a friend to a ride?",
         answer: (
           <>
-            Yes! Non-members can attend one trial ride if approved in advance.
-            Have them fill out the form and waiver on our{" "}
-            <Link
-              href="/join"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              Join
-            </Link>{" "}
-            page and reserve their spot in the Flare groupchat.
+            Yes! Anyone can join if there is room on the boat. Just leave a note
+            when signing up in Flare.
           </>
         ),
       },
