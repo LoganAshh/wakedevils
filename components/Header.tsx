@@ -14,10 +14,11 @@ export default function Header() {
     "about",
     "join",
     "events",
-    "merch",
+    "FAQ",
     "dues",
-    "contact",
+    "merch",
     "sponsors",
+    "contact",
   ];
 
   // Lock background scroll when menu is open (but allow menu scroll)
