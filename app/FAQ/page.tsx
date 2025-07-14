@@ -106,17 +106,16 @@ const faqData = [
             >
               Events
             </Link>{" "}
-            page, as well as on our{" "}
+            page, and in our{" "}
             <Link
-              href="https://calendar.google.com/calendar/u/3?cid=YXN1d2FrZWRldmlsc0BnbWFpbC5jb20"
+              href="https://flare-event.app.link/NVO1g2iFVUb"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 underline hover:text-blue-800"
             >
-              Google Calendar
+              Flare
             </Link>{" "}
-            . Once you have paid your dues, you will be given access to our
-            Flare group chats where boats and events will also be announced.
+            groupchat. Boat signup and event info can be found in Flare!
           </>
         ),
       },
