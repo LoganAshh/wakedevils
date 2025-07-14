@@ -184,15 +184,14 @@ const faqData = [
         question: "How do I pay my dues?",
         answer: (
           <>
-            On our{" "}
+            Pay in person, through Zelle, or on our{" "}
             <Link
               href="/dues"
               className="text-blue-600 underline hover:text-blue-800"
             >
               Dues
             </Link>{" "}
-            page, fill out the waiver and select you membership type to be
-            redirected to our secure checkout through MidFirst Bank.
+            page with a secure checkout through MidFirst Bank.
           </>
         ),
       },
