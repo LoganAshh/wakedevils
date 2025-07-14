@@ -106,7 +106,7 @@ const faqData = [
             >
               Events
             </Link>{" "}
-            page, and in our{" "}
+            page and in our{" "}
             <Link
               href="https://flare-event.app.link/NVO1g2iFVUb"
               target="_blank"
@@ -128,10 +128,10 @@ const faqData = [
         question: "Are lake days free?",
         answer: (
           <>
-            For general members, the first 5 rides are covered by your dues. For
-            comp members, the first 10 rides are covered. After that, members
-            chip in $15 per lake day for gas. NOTE: These numbers are not final
-            and will be updated at the start of the semester.
+            Transportation, gas, and coaching is free for your first ride. Ten
+            rides are included in the general membership, and additional lake days
+            are $15 each. NOTE: These numbers are not final and will be updated
+            at the start of the semester.
           </>
         ),
       },
