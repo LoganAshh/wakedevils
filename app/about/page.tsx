@@ -21,7 +21,7 @@ export default function AboutPage() {
       name: "Lukas Spucys",
       title: "Vice President",
       image: "/images/board/lukas.jpg",
-      bio: "Hi, I am Lukas and I’m the VP this year. I’m majoring in Gender Studies with a minor in Doorway Remodeling. I grew up in Chicago and my favorite thing to do is ride my Suzuki RE5 Motorcycle in circles all day.",
+      bio: "Hey, I’m Lukas Spucys, a senior studying Finance at ASU. I’m Lithuanian and grew up playing hockey, which sparked my love for staying active and competitive. I’m into all types of board sports, obsessed with cars, and always chasing the next thrill—whether it’s motocross, skydiving, or cliff jumping. What I love most about Wake Devils is the combination of energy and community—it’s a place where everyone pushes each other to level up while having the best time out on the water.",
     },
     {
       name: "Sophia Ruger",
@@ -33,7 +33,7 @@ export default function AboutPage() {
       name: "Jalen Artiles",
       title: "Secretary",
       image: "/images/board/jalen.jpg",
-      bio: "Hi! My name is Jalen, and I’m a senior studying cybersecurity with an emphasis in business. I'm originally from California and I love to surf, snowboard, play guitar, hit the gym, socialize, cook pesto pasta, and create new vocabulary words. I love being a Wake Devil because everyone is super inclusive, brings great energy, and I can go on a boat whenever my heart desires.",
+      bio: "Hi! My name is Jalen, and I’m a senior studying cybersecurity with an emphasis in business. I'm originally from Southern California, and whenever I’m home, I love to surf and snowboard. Some of my other hobbies include playing guitar, hitting the gym, socializing, cooking pesto pasta, and creating new vocabulary words. I love being a Wake Devil because everyone is super inclusive and brings great energy. I also enjoy the fact that I can go out on a boat whenever my heart desires.",
     },
     {
       name: "Logan Ashamallah",
