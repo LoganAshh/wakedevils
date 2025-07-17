@@ -33,7 +33,7 @@ export default function AboutPage() {
       name: "Jalen Artiles",
       title: "Secretary",
       image: "/images/board/jalen.jpg",
-      bio: "Hello! I am Jalen Von Atrillius III and I'm from Worcestershire England. My major is Computer Science and I spend my time advancing global understanding of cryptography and algorithmic number theory! Ask me about post-quantum cryptography… Or Pants Beers; I’m an expert in both.",
+      bio: "Hi! My name is Jalen, and I’m a senior studying cybersecurity with an emphasis in business. I'm originally from Southern California and I love to surf, snowboard, play guitar, hit the gym, socialize, cook pesto pasta, and create new vocabulary words. I love being a Wake Devil because everyone is super inclusive, brings great energy, and I can go out on a boat whenever my heart desires.",
     },
     {
       name: "Logan Ashamallah",
