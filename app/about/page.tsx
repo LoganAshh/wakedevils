@@ -33,7 +33,7 @@ export default function AboutPage() {
       name: "Jalen Artiles",
       title: "Secretary",
       image: "/images/board/jalen.jpg",
-      bio: "Hi! My name is Jalen, and I’m a senior studying cybersecurity with an emphasis in business. I'm originally from Southern California, and whenever I’m home, I love to surf and snowboard. Some of my other hobbies include playing guitar, hitting the gym, socializing, cooking pesto pasta, and creating new vocabulary words. I love being a Wake Devil because everyone is super inclusive and brings great energy. I also enjoy the fact that I can go out on a boat whenever my heart desires.",
+      bio: "Hi! My name is Jalen, and I’m a senior studying cybersecurity with an emphasis in business. I'm originally from California, and I love to surf, snowboard, play guitar, hit the gym, socialize, cook pesto pasta, and create new vocabulary words. I love being a Wake Devil because everyone is super inclusive, brings great energy, and I can go out on a boat whenever my heart desires.",
     },
     {
       name: "Logan Ashamallah",
