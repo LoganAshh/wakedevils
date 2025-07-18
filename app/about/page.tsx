@@ -21,7 +21,7 @@ export default function AboutPage() {
       name: "Lukas Spucys",
       title: "Vice President",
       image: "/images/board/lukas.jpg?v=3",
-      bio: "Hey, I’m Lukas Spucys, a senior studying Finance at ASU. I’m Lithuanian and grew up playing hockey, which sparked my love for staying active and competitive. I’m into all types of board sports, obsessed with cars, and always chasing the next thrill—whether it’s motocross, skydiving, or cliff jumping. What I love most about Wake Devils is the combination of energy and community—it’s a place where everyone pushes each other to level up while having the best time out on the water.",
+      bio: "Hey, I’m Lukas Spucys, a senior Finance major at ASU. I’m Lithuanian, grew up playing hockey, and have always loved staying active. I’m into board sports, cars, and chasing adrenaline—motocross, skydiving, cliff jumping, you name it. What I love most about Wake Devils is the energy and community—everyone pushes each other to level up and have a blast on the water.",
     },
     {
       name: "Sophia Ruger",
