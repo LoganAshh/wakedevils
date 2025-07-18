@@ -27,7 +27,7 @@ export default function AboutPage() {
       name: "Sophia Ruger",
       title: "Treasurer",
       image: "/images/board/sophia.jpg",
-      bio: "Ayyy I’m Sophia and I forgot where I’m from. Washington? Maybe. Anyways I like to rock climb and like Wakeboard too I guess. I’m going to be a Senior this year and I’m studying underwater basket weaving!",
+      bio: "Hey, I’m Sophia! I’m a senior studying Sustainability, Urban Planning, and Geographic Information Science. When I’m not wakeboarding, I love rock climbing and making art!",
     },
     {
       name: "Jalen Artiles",
