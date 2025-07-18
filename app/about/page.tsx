@@ -15,7 +15,7 @@ export default function AboutPage() {
       name: "Logan Gregor",
       title: "President",
       image: "/images/board/logan.jpg?v=2",
-      bio: "Hi, my name is Logan and I’m majoring in mechanical engineering. I grew up boating on the lakes in Wisconsin and I love wakeboarding and wake surfing. When I can’t be on the lake, I spend my time lifting, studying, and snowboarding.",
+      bio: "Hi, my name is Logan, and I’m majoring in Mechanical Engineering. I grew up boating on the lakes in Wisconsin and love wakeboarding and wakesurfing. When I’m not on the lake, I spend my time lifting, studying, and snowboarding.",
     },
     {
       name: "Lukas Spucys",
