@@ -63,7 +63,7 @@ export default function AboutPage() {
       name: "Luke Bloedel",
       title: "Marketing and Engagement",
       image: "/images/board/luke.jpg?v=2",
-      bio: "Hi I'm Luke. I like long walks on the beach and short naps at raves. I grew out of the ground like a plant and can be summoned by saying my name three times in a row.",
+      bio: "Hey, I’m Luke. I’m a third-year Biomedical Engineering major from Scottsdale, Arizona. I love snow skiing, hitting the gym, traveling, and going out. Can’t wait for another season with the team!",
     },
     {
       name: "Nick Hoskins",
