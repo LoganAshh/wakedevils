@@ -39,7 +39,7 @@ export default function AboutPage() {
       name: "Logan Ashamallah",
       title: "Event Coordinator",
       image: "/images/board/loganash.jpg?v=2",
-      bio: "Hey I'm Logan. I am a third year majoring in Computer Science and I'm from Thousand Oaks, California. I love music, working out, and traveling. Can't wait for another year with the Wake Devils!",
+      bio: "Hey, I’m Logan. I’m a third-year Computer Science major from Thousand Oaks, California. I love music, working out, and traveling. Can’t wait for another year with the Wake Devils!",
     },
     {
       name: "Tristan Krauskopf",
