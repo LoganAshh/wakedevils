@@ -26,7 +26,7 @@ export default function AboutPage() {
     {
       name: "Sophia Ruger",
       title: "Treasurer",
-      image: "/images/board/sophia.jpg",
+      image: "/images/board/sophia.jpg?v=2",
       bio: "Hey, I’m Sophia! I’m a senior studying Sustainability, Urban Planning, and Geographic Information Science. When I’m not wakeboarding, I love rock climbing and making art!",
     },
     {
