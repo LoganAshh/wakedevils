@@ -49,12 +49,30 @@ export default function MerchPage() {
             }`}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">
-              Merch Coming Soon 👀
+              Official Wake Devils Merch
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto">
-              We&apos;re working on some fresh gear for the Wake Devils. Check
-              back soon to get your hands on official merch!
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8">
+              Rep the Wake Devils with our fresh gear! Whether it be clothes
+              or accessories, we&apos;ve got everything you need to show your
+              club pride.
             </p>
+
+            <div className="flex justify-center">
+              <a
+                href="https://asuwakedevils.shop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
+                  hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
+                  ${
+                    loaded
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+              >
+                Shop Now!
+              </a>
+            </div>
           </div>
         </main>
         <Footer />
