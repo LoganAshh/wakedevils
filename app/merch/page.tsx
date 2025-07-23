@@ -40,6 +40,14 @@ export default function MerchPage() {
         <meta name="twitter:image" content="/images/heros/hero4.jpg" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <style>{`
+        @keyframes subtle-bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-subtle-bounce { animation: subtle-bounce 3s infinite; }
+      `}</style>
+
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex items-center justify-center flex-grow py-12 px-4 sm:px-6 text-center">
@@ -52,9 +60,9 @@ export default function MerchPage() {
               Official Wake Devils Merch
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8">
-              Rep the Wake Devils with our fresh gear! Whether it be clothes
-              or accessories, we&apos;ve got everything you need to show your
-              club pride.
+              Rep the Wake Devils with our fresh gear! Whether it be clothes or
+              accessories, we&apos;ve got everything you need to show your club
+              pride.
             </p>
 
             <div className="flex justify-center">
@@ -63,7 +71,7 @@ export default function MerchPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
-                  hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
+                  hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl animate-subtle-bounce
                   ${
                     loaded
                       ? "opacity-100 translate-y-0"
