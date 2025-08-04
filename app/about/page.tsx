@@ -44,7 +44,7 @@ export default function AboutPage() {
     {
       name: "Tristan Krauskopf",
       title: "Social Media Chair",
-      image: "/images/board/tristan.jpg",
+      image: "/images/board/tristan.jpg?v=2",
       bio: "Hey I’m Tristan. I’m from Washington and I love washing… A ton. My major is Astronomy and I work as a salsa instructor over the summers. My hobbies include inclusion, exclusion, contusion, and confusion!",
     },
     {
