@@ -32,7 +32,7 @@ export default function AboutPage() {
     {
       name: "Jalen Artiles",
       title: "Secretary",
-      image: "/images/board/jalen.jpg",
+      image: "/images/board/jalen.jpg?v=2",
       bio: "Hi! My name is Jalen, and I’m a senior studying cybersecurity with an emphasis in business. I'm originally from California, and I love to surf, snowboard, play guitar, hit the gym, socialize, cook pesto pasta, and create new vocabulary words. I love being a Wake Devil because everyone is super inclusive, brings great energy, and I can go out on a boat whenever my heart desires.",
     },
     {
