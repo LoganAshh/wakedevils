@@ -85,8 +85,6 @@ const faqData = [
             in joining our competitive team. To qualify for the men&apos;s team,
             you&apos;ll need to land either an invert or a spin. For the
             women&apos;s team, you&apos;ll need to successfully clear the wake.
-            To compete in Wake surfing, you must be able to perform either a
-            surface 360 or an ollie.
           </>
         ),
       },
