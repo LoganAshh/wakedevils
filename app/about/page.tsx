@@ -45,7 +45,7 @@ export default function AboutPage() {
       name: "Tristan Krauskopf",
       title: "Social Media Chair",
       image: "/images/board/tristan.jpg?v=2",
-      bio: "Hey I’m Tristan. I’m from Washington and I love washing… A ton. My major is Astronomy and I work as a salsa instructor over the summers. My hobbies include inclusion, exclusion, contusion, and confusion!",
+      bio: "Hi, I’m Tristan. I’m a sophomore at ASU majoring in Supply Chain Management. I’m from Seattle, Washington, and I love being on the lake. Joining Wake Devils has been the best decision I’ve ever made—I’ve made tons of memories and friends in just my first year and can’t wait for my next semester with the team.",
     },
     {
       name: "Daniel Gensler",
