@@ -69,10 +69,11 @@ const faqData = [
         question: "Can I join if I only want to wake surf or attend events?",
         answer: (
           <>
-            Yes! We welcome anyone interested in wake surfing, hydro foiling, or
-            just social events! We compete in both wake surfing and wake
-            boarding events. We also have many social events both near campus
-            and on the lake.
+            Yes, we have many social events both near campus and on the lake.
+            While we currently don&apos;t have the boat capacity for
+            wakesurfing, we still encourage wakesurfers to join! Your board
+            skills and comfort behind the boat transfer well to wakeboarding,
+            and you&apos;ll enjoy the lake days and social events with our crew.
           </>
         ),
       },
