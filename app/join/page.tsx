@@ -6,15 +6,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export default function JoinPage() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(true);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    if (!isLoading) {
-      const timeout = setTimeout(() => setIsVisible(false), 300);
-      return () => clearTimeout(timeout);
-    }
-  }, [isLoading]);
+    const timeout = setTimeout(() => setLoaded(true), 100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <>
@@ -22,7 +19,7 @@ export default function JoinPage() {
         <title>Join | ASU Wake Devils</title>
         <meta
           name="description"
-          content="Ready to ride? Join ASU Wake Devils today and be part of Arizona State’s premier wakeboarding community."
+          content="Ready to ride? Join ASU Wake Devils today and be part of Arizona State's premier wakeboarding community."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://asuwakedevils.com/join" />
@@ -49,51 +46,51 @@ export default function JoinPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <style>{`
+        @keyframes subtle-bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-subtle-bounce { animation: subtle-bounce 3s infinite; }
+      `}</style>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-12">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
-          Join the Wake Devils!
-        </h1>
-        <p className="text-base sm:text-lg text-center mb-3 sm:mb-9">
-          Fill out the form below to become a part of the crew!
-        </p>
-
-        <div className="relative w-full h-[70vh] sm:h-[80vh] max-h-[900px]">
-          {isVisible && (
-            <div
-              className={`absolute inset-0 flex items-center justify-center bg-white z-10 transition-opacity duration-300 ${
-                isLoading ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        
+        <main className="flex items-center justify-center flex-grow py-12 px-4 sm:px-6 text-center">
+          <div
+            className={`transition-opacity duration-700 ${
+              loaded ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              Join the Wake Devils!
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8">
+              Ready to make waves? Join our group chat to connect with the crew and stay updated on all events and lake days!
+            </p>
+            
+            <div className="flex justify-center">
+              <a
+                href="https://flare-event.app.link/NVO1g2iFVUb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
+                  hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl animate-subtle-bounce
+                  ${
+                    loaded
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+              >
+                Join Now!
+              </a>
             </div>
-          )}
-
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform?embedded=true"
-            className="w-full h-full border-0 rounded-xl shadow-md"
-            onLoad={() => setIsLoading(false)}
-            loading="lazy"
-          >
-            Loading…
-          </iframe>
-        </div>
-
-        <p className="mt-4 text-center text-sm text-gray-600 px-2">
-          Trouble viewing the form?{" "}
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 underline hover:text-blue-800"
-          >
-            Open full form
-          </a>
-        </p>
-      </main>
-
-      <Footer />
+          </div>
+        </main>
+        
+        <Footer />
+      </div>
     </>
   );
 }
