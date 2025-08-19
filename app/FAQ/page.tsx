@@ -172,7 +172,7 @@ const faqData = [
       {
         question: "How much are dues?",
         answer:
-          "Dues are $200 for general members, $100 for social members, and $300 for comp members. NOTE: These prices are not final and will be updated at the start of the semester.",
+          "Dues are $300 for general members and $350 for comp members.",
       },
       {
         question: "What do dues cover?",
