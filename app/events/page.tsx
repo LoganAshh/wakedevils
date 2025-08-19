@@ -138,7 +138,7 @@ export default function EventsPage() {
                       : "opacity-0 translate-y-4"
                   }`}
               >
-                Open Calendar
+                Open Calendar!
               </a>
             </div>
           </div>
