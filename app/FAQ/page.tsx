@@ -418,7 +418,7 @@ export default function FAQPage() {
                           <div
                             className={`overflow-hidden transition-all duration-300 ease-in-out ${
                               isOpen
-                                ? "max-h-40 opacity-100"
+                                ? "max-h-screen opacity-100" // Use max-h-screen for unlimited height
                                 : "max-h-0 opacity-0"
                             }`}
                           >
