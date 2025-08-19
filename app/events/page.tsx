@@ -28,7 +28,7 @@ export default function EventsPage() {
         <title>Events | ASU Wake Devils</title>
         <meta
           name="description"
-          content="Check out upcoming ASU Wake Devils events including lake days, socials, and competitions. Don’t miss the fun!"
+          content="Check out upcoming ASU Wake Devils events including lake days, socials, and competitions. Don't miss the fun!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://asuwakedevils.com/events" />
@@ -54,6 +54,15 @@ export default function EventsPage() {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <style>{`
+        @keyframes subtle-bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        .animate-subtle-bounce { animation: subtle-bounce 3s infinite; }
+      `}</style>
+
       <div className="min-h-screen flex flex-col">
         <Header />
 
@@ -116,16 +125,18 @@ export default function EventsPage() {
               </p>
             </div>
 
-            <div className="text-center mt-8">
+            <div className="flex justify-center mt-8">
               <a
                 href="https://calendar.google.com/calendar/u/0/embed?src=asuwakedevils@gmail.com&ctz=America/Phoenix"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-block px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-700 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl ${
-                  loaded
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4"
-                }`}
+                className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
+                  hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl animate-subtle-bounce
+                  ${
+                    loaded
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
               >
                 Open Calendar
               </a>
