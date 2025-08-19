@@ -68,7 +68,9 @@ export default function EventsPage() {
 
         <main className="flex-grow max-w-4xl mx-auto px-4 py-8 md:py-8 w-full">
           {/* DESKTOP content */}
-          <div className="hidden md:block">
+          <div className={`hidden md:block transition-opacity duration-700 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}>
             <h1 className="text-4xl font-bold mb-3 text-center">
               Upcoming Events
             </h1>
@@ -114,7 +116,9 @@ export default function EventsPage() {
           </div>
 
           {/* MOBILE content */}
-          <div className="md:hidden flex flex-col justify-start pt-6 pb-8 gap-y-8">
+          <div className={`md:hidden flex flex-col justify-start pt-6 pb-8 gap-y-8 transition-opacity duration-700 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}>
             <div className="text-center">
               <h1 className="text-3xl font-bold leading-tight">
                 Upcoming Events
