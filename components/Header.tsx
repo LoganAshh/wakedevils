@@ -109,9 +109,9 @@ export default function Header() {
               exit={{ opacity: 0 }}
             />
 
-            {/* Slide-down Menu with scroll */}
+            {/* Slide-down Menu - no scroll needed */}
             <motion.div
-              className="fixed top-[88px] left-0 right-0 bg-white z-50 flex flex-col items-center gap-2 py-6 px-4 shadow-md overflow-y-auto max-h-[calc(100vh-88px)]"
+              className="fixed top-[88px] left-0 right-0 bg-white z-50 flex flex-col items-center justify-center gap-1 py-4 px-4 shadow-md h-[calc(100vh-88px)]"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -126,7 +126,7 @@ export default function Header() {
                     key={route}
                     href={href}
                     onClick={() => setIsOpen(false)}
-                    className={`w-full text-center py-4 text-base transition rounded-md active:scale-95 active:translate-y-[3px] ${
+                    className={`w-full text-center py-3 text-base transition rounded-md active:scale-95 active:translate-y-[3px] ${
                       isActive
                         ? "bg-[#943728] text-white font-semibold shadow-md"
                         : "text-black hover:bg-[#943728] hover:text-white"
