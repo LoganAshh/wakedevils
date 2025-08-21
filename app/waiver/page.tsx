@@ -17,7 +17,7 @@ export default function WaiverPage() {
   const checkoutLinks: Record<string, string> = {
     general: "https://checkout.page/s/SsbG5xcSyeLIK",
     social: "https://checkout.page/s/wj7FxtKwjQSzo",
-    comp: "https://checkout.page/s/n4kj89Do4v5aF ",
+    comp: "https://checkout.page/s/n4kj89Do4v5aF",
   };
 
   useEffect(() => {
