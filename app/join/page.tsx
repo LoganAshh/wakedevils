@@ -104,14 +104,20 @@ export default function JoinPage() {
 
               <a
                 href="/waiver"
-                className={`bg-red-500 hover:bg-red-600 text-white font-semibold text-base px-6 py-3 rounded border-b-4 border-red-600 shadow-xl transform transition-all duration-700 ease-out
+                className={`text-white font-semibold text-base px-6 py-3 rounded border-b-4 shadow-xl transform transition-all duration-700 ease-out
                   hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
                   ${
                     loaded
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-4"
                   }`}
-                style={{ transitionDelay: '200ms' }}
+                style={{ 
+                  backgroundColor: '#943728',
+                  borderBottomColor: '#7a2e22',
+                  transitionDelay: '200ms' 
+                }}
+                onMouseEnter={(e) => e.target.style.backgroundColor = '#7a2e22'}
+                onMouseLeave={(e) => e.target.style.backgroundColor = '#943728'}
               >
                 Sign Waiver
               </a>
