@@ -57,65 +57,78 @@ export default function JoinPage() {
       <div className="min-h-screen flex flex-col">
         <Header />
         
-        <main className="flex items-center justify-center flex-grow py-12 px-4 sm:px-6 text-center">
-          <div
-            className={`transition-opacity duration-700 ${
-              loaded ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              Join the Wake Devils!
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8">
-              Ready to make waves? Join our group chat to connect with the crew and stay updated on all events and lake days!
-            </p>
-            
-            <div className="flex flex-col items-center">
-              <a
-                href="https://flare-event.app.link/NVO1g2iFVUb"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
-                  hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl animate-subtle-bounce
-                  ${
-                    loaded
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-4"
-                  }`}
-              >
-                Join Now!
-              </a>
-
-              <div className="flex flex-col items-center space-y-4 mt-8">
+        <main className="flex-grow">
+          {/* First section - visible without scrolling */}
+          <section className="h-screen flex items-center justify-center py-12 px-4 sm:px-6 text-center relative">
+            <div
+              className={`transition-opacity duration-700 ${
+                loaded ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+                Join the Wake Devils!
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8">
+                Ready to make waves? Join our group chat to connect with the crew and stay updated on all events and lake days!
+              </p>
+              
+              <div className="flex flex-col items-center">
                 <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform?usp=header"
+                  href="https://flare-event.app.link/NVO1g2iFVUb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`bg-blue-500 hover:bg-blue-600 text-white font-semibold text-base px-6 py-3 rounded border-b-4 border-blue-600 shadow-xl transform transition-all duration-700 ease-out
-                    hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
+                  className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
+                    hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl animate-subtle-bounce
                     ${
                       loaded
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-4"
                     }`}
-                  style={{ transitionDelay: '100ms' }}
+                >
+                  Join Now!
+                </a>
+              </div>
+            </div>
+
+            {/* Scroll indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+              <p className="text-sm text-gray-500 mb-2">
+                Scroll down for member form & waiver
+              </p>
+              <div className="animate-bounce">
+                <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+            </div>
+          </section>
+
+          {/* Second section - requires scrolling */}
+          <section className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 text-center bg-gray-50">
+            <div className="flex flex-col items-center space-y-6">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                Complete Your Registration
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto mb-8">
+                Fill out our member form and sign the waiver to become an official Wake Devil!
+              </p>
+              
+              <div className="flex flex-col items-center space-y-4">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-base px-6 py-3 rounded border-b-4 border-blue-600 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
                 >
                   Fill Out Member Form
                 </a>
 
                 <a
                   href="/waiver"
-                  className={`text-white font-semibold text-base px-6 py-3 rounded border-b-4 shadow-xl transform transition-all duration-700 ease-out
-                    hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
-                    ${
-                      loaded
-                        ? "opacity-100 translate-y-0"
-                        : "opacity-0 translate-y-4"
-                    }`}
+                  className="text-white font-semibold text-base px-6 py-3 rounded border-b-4 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
                   style={{ 
                     backgroundColor: '#943728',
-                    borderBottomColor: '#7a2e22',
-                    transitionDelay: '200ms' 
+                    borderBottomColor: '#7a2e22'
                   }}
                   onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#7a2e22'}
                   onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#943728'}
@@ -124,7 +137,7 @@ export default function JoinPage() {
                 </a>
               </div>
             </div>
-          </div>
+          </section>
         </main>
         
         <Footer />
