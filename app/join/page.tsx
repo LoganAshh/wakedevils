@@ -70,7 +70,7 @@ export default function JoinPage() {
               Ready to make waves? Join our group chat to connect with the crew and stay updated on all events and lake days!
             </p>
             
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center space-y-4">
               <a
                 href="https://flare-event.app.link/NVO1g2iFVUb"
                 target="_blank"
@@ -84,6 +84,36 @@ export default function JoinPage() {
                   }`}
               >
                 Join Now!
+              </a>
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-blue-500 hover:bg-blue-600 text-white font-semibold text-base px-6 py-3 rounded border-b-4 border-blue-600 shadow-xl transform transition-all duration-700 ease-out
+                  hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
+                  ${
+                    loaded
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                style={{ transitionDelay: '100ms' }}
+              >
+                Fill Out Member Form
+              </a>
+
+              <a
+                href="/waiver"
+                className={`bg-red-500 hover:bg-red-600 text-white font-semibold text-base px-6 py-3 rounded border-b-4 border-red-600 shadow-xl transform transition-all duration-700 ease-out
+                  hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
+                  ${
+                    loaded
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4"
+                  }`}
+                style={{ transitionDelay: '200ms' }}
+              >
+                Sign Waiver
               </a>
             </div>
           </div>
