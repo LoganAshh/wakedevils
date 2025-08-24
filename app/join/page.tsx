@@ -116,8 +116,8 @@ export default function JoinPage() {
                   borderBottomColor: '#7a2e22',
                   transitionDelay: '200ms' 
                 }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#7a2e22'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = '#943728'}
+                onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#7a2e22'}
+                onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#943728'}
               >
                 Sign Waiver
               </a>
