@@ -104,7 +104,7 @@ export default function JoinPage() {
           </section>
 
           {/* Second section - requires scrolling */}
-          <section className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 text-center bg-gray-50">
+          <section className="min-h-screen flex items-start justify-center pt-16 py-12 px-4 sm:px-6 text-center bg-gray-50">
             <div className="flex flex-col items-center space-y-6">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                 Complete Your Registration
