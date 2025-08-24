@@ -93,18 +93,27 @@ export default function JoinPage() {
                   <p className="text-base text-gray-500 mb-3">
                     Scroll down for member form & waiver
                   </p>
-                  <div>
-                    <svg className="w-8 h-8 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                    </svg>
-                  </div>
+                  <button
+                    aria-label="Scroll to Complete Your Registration section"
+                    className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer active:scale-95 active:translate-y-[2px]"
+                    onClick={() => {
+                      const target = document.querySelector('section:nth-child(2)');
+                      if (target) {
+                        const yOffset = -50;
+                        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({ top: y, behavior: "smooth" });
+                      }
+                    }}
+                  >
+                    ↓
+                  </button>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Second section - requires scrolling */}
-          <section className="min-h-screen flex items-start justify-center pt-16 py-12 px-4 sm:px-6 text-center bg-gray-50 -mt-24">
+          <section className="flex items-start justify-center pt-16 pb-60 px-4 sm:px-6 text-center bg-gray-50 -mt-24">
             <div className="flex flex-col items-center space-y-6">
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                 Complete Your Registration
