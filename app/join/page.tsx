@@ -99,7 +99,7 @@ export default function JoinPage() {
                     onClick={() => {
                       const target = document.querySelector('section:nth-child(2)');
                       if (target) {
-                        const yOffset = window.innerWidth < 768 ? -80 : -50;
+                        const yOffset = window.innerWidth < 768 ? -100 : -50;
                         const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
                         window.scrollTo({ top: y, behavior: "smooth" });
                       }
