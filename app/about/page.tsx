@@ -51,7 +51,7 @@ export default function AboutPage() {
       name: "Daniel Gensler",
       title: "2024 President / Recruitment Chair",
       image: "/images/board/daniel.jpg?v=3",
-      bio: "My Name is Daniel! And Daniel is my name! If you don’t remember oh it would be a shame! Who wrote this song… Whoever is to blame ? Daniel Daniel Daniel… Daniel is his name!",
+      bio: "Hi everyone, my name is Daniel Gensler. I am going into my senior year and serve as the Recruitment Chair for the Wake Devils. I enjoy spending time outdoors. If you have any questions, feel free to reach out!",
     },
     {
       name: "Ellie Bjorgvinsdottir",
