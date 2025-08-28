@@ -56,7 +56,7 @@ export default function MerchPage() {
               loaded ? "opacity-100" : "opacity-0"
             }`}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Official Wake Devils Merch
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8">
