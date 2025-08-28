@@ -74,7 +74,7 @@ export default function AboutPage() {
     {
       name: "Cooper Bassi",
       title: "Transportation Manager",
-      image: "/images/board/cooper.jpg",
+      image: "/images/board/cooper.jpg?v=2",
       bio: "How’s it going? I’m Cooper. I’m from Santa Cruz, California, and I’m going into my third year as a financial planning major. I love to wakeboard and fish, and I’m super stoked for another year!",
     },
   ];
