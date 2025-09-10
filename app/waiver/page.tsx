@@ -172,7 +172,7 @@ export default function WaiverPage() {
                 </p>
                 <button
                   onClick={goToJoinBottom}
-                  className="mt-4 w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium px-5 py-2 rounded-lg transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                  className="mt-4 w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium px-5 py-2 rounded-lg transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                 >
                   OK
                 </button>
