@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,15 +9,7 @@ export default function WaiverPage() {
   const [name, setName] = useState("");
   const [scrolledToBottom, setScrolledToBottom] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [membershipType, setMembershipType] = useState("");
   const waiverRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
-
-  const checkoutLinks: Record<string, string> = {
-    general: "https://checkout.page/s/SsbG5xcSyeLIK",
-    social: "https://checkout.page/s/wj7FxtKwjQSzo",
-    comp: "https://checkout.page/s/n4kj89Do4v5aF",
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,20 +25,20 @@ export default function WaiverPage() {
   }, []);
 
   const handleSubmit = async () => {
-    if (!name || !scrolledToBottom || !membershipType) return;
+    if (!name || !scrolledToBottom) return;
     setSubmitting(true);
 
     await fetch("/api/consent-log", {
       method: "POST",
       body: JSON.stringify({
         name,
-        membershipType,
         timestamp: new Date().toISOString(),
       }),
       headers: { "Content-Type": "application/json" },
     });
 
-    router.push(checkoutLinks[membershipType]);
+    setSubmitting(false);
+    alert("Waiver submitted successfully!");
   };
 
   return (
@@ -56,7 +47,7 @@ export default function WaiverPage() {
         <title>Waiver | ASU Wake Devils</title>
         <meta
           name="description"
-          content="Review and agree to the waiver before paying dues."
+          content="Review and agree to the waiver before submitting."
         />
       </Head>
 
@@ -66,9 +57,6 @@ export default function WaiverPage() {
           <h1 className="text-3xl font-bold mb-6">Read & Sign Waiver</h1>
           <p className="mb-4 text-gray-700 text-sm">
             Please scroll to the bottom to enable the agreement.
-            <br />
-            Note: These prices are tentative and will not be updated until the
-            beginning of the semester.
           </p>
 
           <div
@@ -134,31 +122,16 @@ export default function WaiverPage() {
             />
           </div>
 
-          <div className="mb-6">
-            <select
-              value={membershipType}
-              onChange={(e) => setMembershipType(e.target.value)}
-              className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md shadow-sm"
-            >
-              <option value="">Select membership type</option>
-              <option value="general">General Membership</option>
-              <option value="social">Social Membership</option>
-              <option value="comp">Comp Team Membership</option>
-            </select>
-          </div>
-
           <button
             onClick={handleSubmit}
-            disabled={
-              !scrolledToBottom || !name || !membershipType || submitting
-            }
+            disabled={!scrolledToBottom || !name || submitting}
             className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-md transition-all duration-300 cursor-pointer ${
-              !scrolledToBottom || !name || !membershipType
+              !scrolledToBottom || !name
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:scale-105 active:scale-95 active:translate-y-[3px]"
             }`}
           >
-            {submitting ? "Submitting..." : "Agree and Continue to Payment"}
+            {submitting ? "Submitting..." : "Submit Waiver"}
           </button>
         </main>
         <Footer />
