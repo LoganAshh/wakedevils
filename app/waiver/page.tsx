@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,7 +10,10 @@ export default function WaiverPage() {
   const [name, setName] = useState("");
   const [scrolledToBottom, setScrolledToBottom] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const waiverRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +22,6 @@ export default function WaiverPage() {
         setScrolledToBottom(true);
       }
     };
-
     const el = waiverRef.current;
     if (el) el.addEventListener("scroll", handleScroll);
     return () => el?.removeEventListener("scroll", handleScroll);
@@ -27,18 +30,33 @@ export default function WaiverPage() {
   const handleSubmit = async () => {
     if (!name || !scrolledToBottom) return;
     setSubmitting(true);
+    setError(null);
 
-    await fetch("/api/consent-log", {
-      method: "POST",
-      body: JSON.stringify({
-        name,
-        timestamp: new Date().toISOString(),
-      }),
-      headers: { "Content-Type": "application/json" },
-    });
+    try {
+      const res = await fetch("/api/consent-log", {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          timestamp: new Date().toISOString(),
+        }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    setSubmitting(false);
-    alert("Waiver submitted successfully!");
+      if (!res.ok) {
+        throw new Error(`Request failed: ${res.status}`);
+      }
+
+      setSubmitted(true); // show inline confirmation
+    } catch (e: any) {
+      setError("Something went wrong submitting your waiver. Please try again.");
+      console.error(e);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  const goToJoinBottom = () => {
+    router.push("/join#bottom");
   };
 
   return (
@@ -53,7 +71,7 @@ export default function WaiverPage() {
 
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-grow max-w-3xl mx-auto px-4 py-8 text-center">
+        <main className="flex-grow max-w-3xl mx-auto px-4 py-12 text-center">
           <h1 className="text-3xl font-bold mb-6">Read & Sign Waiver</h1>
           <p className="mb-4 text-gray-700 text-sm">
             Please scroll to the bottom to enable the agreement.
@@ -112,27 +130,55 @@ export default function WaiverPage() {
             </p>
           </div>
 
-          <div className="mb-4">
-            <input
-              type="text"
-              placeholder="Type your full name to agree"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md shadow-sm"
-            />
-          </div>
+          {!submitted && (
+            <>
+              <div className="mb-4">
+                <input
+                  type="text"
+                  placeholder="Type your full name to agree"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md shadow-sm"
+                />
+              </div>
 
-          <button
-            onClick={handleSubmit}
-            disabled={!scrolledToBottom || !name || submitting}
-            className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-md transition-all duration-300 cursor-pointer ${
-              !scrolledToBottom || !name
-                ? "opacity-50 cursor-not-allowed"
-                : "hover:scale-105 active:scale-95 active:translate-y-[3px]"
-            }`}
-          >
-            {submitting ? "Submitting..." : "Submit Waiver"}
-          </button>
+              {error && (
+                <div className="mb-4 text-sm text-red-600">{error}</div>
+              )}
+
+              <button
+                onClick={handleSubmit}
+                disabled={!scrolledToBottom || !name || submitting}
+                className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-md transition-all duration-300 cursor-pointer ${
+                  !scrolledToBottom || !name || submitting
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:scale-105 active:scale-95 active:translate-y-[3px]"
+                }`}
+              >
+                {submitting ? "Submitting..." : "Submit Waiver"}
+              </button>
+            </>
+          )}
+
+          {submitted && (
+            <div className="mt-6 mx-auto max-w-md text-left">
+              <div className="rounded-xl border border-green-300 bg-green-50 p-5 shadow-sm">
+                <h2 className="text-lg font-semibold text-green-800 mb-1">
+                  Waiver submitted successfully
+                </h2>
+                <p className="text-green-900 text-sm">
+                  Thanks, <span className="font-medium">{name}</span>! Your
+                  waiver has been recorded.
+                </p>
+                <button
+                  onClick={goToJoinBottom}
+                  className="mt-4 w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium px-5 py-2 rounded-lg transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  OK
+                </button>
+              </div>
+            </div>
+          )}
         </main>
         <Footer />
       </div>
