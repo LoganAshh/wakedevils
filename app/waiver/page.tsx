@@ -47,9 +47,14 @@ export default function WaiverPage() {
       }
 
       setSubmitted(true); // show inline confirmation
-    } catch (e: any) {
-      setError("Something went wrong submitting your waiver. Please try again.");
-      console.error(e);
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : String(e);
+      setError(
+        "Something went wrong submitting your waiver. Please try again."
+      );
+      // Keep a detailed message in the console for debugging:
+      // eslint-disable-next-line no-console
+      console.error("Waiver submit error:", msg);
     } finally {
       setSubmitting(false);
     }
