@@ -76,7 +76,7 @@ export default function WaiverPage() {
 
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-grow max-w-3xl mx-auto px-4 py-12 text-center">
+        <main className="flex-grow max-w-3xl mx-auto px-4 py-8 text-center">
           <h1 className="text-3xl font-bold mb-6">Read & Sign Waiver</h1>
           <p className="mb-4 text-gray-700 text-sm">
             Please scroll to the bottom to enable the agreement.
