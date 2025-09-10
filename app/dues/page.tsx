@@ -52,20 +52,47 @@ export default function DuesPage() {
           events, safety gear, and insurance.
         </p>
         <p className="mb-4 sm:mb-8 text-sm sm:text-base text-gray-600">
-          Secure payment is handled through MidFirst Bank. Click below to pay
-          online.
+          Secure payment is handled via MidFirst Bank. Choose your membership
+          below.
         </p>
 
-        <div className="flex justify-center">
+        {/* Dues Options */}
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 justify-center ${
+            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+          } transition-all duration-700 ease-out`}
+        >
+          {/* Social Membership (left) */}
           <a
-            href="/waiver"
-            className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
-              hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
-              ${
-                loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              }`}
+            href="https://checkout.page/s/wj7FxtKwjQSzo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pay Social Membership Dues"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
           >
-            Pay Now!
+            Social Membership
+          </a>
+
+          {/* General Membership (center) */}
+          <a
+            href="https://checkout.page/s/SsbG5xcSyeLIK"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pay General Membership Dues"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
+          >
+            General Membership
+          </a>
+
+          {/* Competitive Membership (right, smaller text) */}
+          <a
+            href="https://checkout.page/s/n4kj89Do4v5aF"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pay Competitive Membership Dues"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-sm px-4 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
+          >
+            Competitive Membership
           </a>
         </div>
 
@@ -75,7 +102,7 @@ export default function DuesPage() {
             Support the Club
           </h2>
           <p className="text-base sm:text-lg mb-4 sm:mb-8 px-2 sm:px-0">
-            Even if you’re not a member, you can still help us grow! <br></br>
+            Even if you’re not a member, you can still help us grow! <br />
             Thank you for supporting the Wake Devils — we truly appreciate it!
           </p>
 
@@ -84,14 +111,19 @@ export default function DuesPage() {
               href="https://app.autobooks.co/pay/asu-wake-boarding-team"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ transitionDelay: "250ms" }}
-              className={`bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-700 ease-out
-                hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
-                ${
-                  loaded
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-4"
-                }`}
+              className={`text-white font-semibold text-base px-6 py-3 rounded border-b-4 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl
+      ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              style={{
+                backgroundColor: "#943728",
+                borderBottomColor: "#7a2e22",
+                transitionDelay: "250ms",
+              }}
+              onMouseEnter={(e) =>
+                ((e.target as HTMLElement).style.backgroundColor = "#7a2e22")
+              }
+              onMouseLeave={(e) =>
+                ((e.target as HTMLElement).style.backgroundColor = "#943728")
+              }
             >
               Donate Now!
             </a>
