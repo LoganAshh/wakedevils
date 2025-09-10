@@ -90,7 +90,7 @@ export default function DuesPage() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Pay Competitive Membership Dues"
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-sm px-4 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-sm px-4 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl flex items-center justify-center"
           >
             Competitive Membership
           </a>
