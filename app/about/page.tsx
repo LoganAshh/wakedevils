@@ -69,7 +69,7 @@ export default function AboutPage() {
       name: "Nick Hoskins",
       title: "2024 Vice President / Team Captain",
       image: "/images/board/nick.jpg",
-      bio: "I’m Nick. I come from Toronto, Canada and my favorite pastimes are being nice to people, speaking French, and freezing in the cold. I’m a Junior majoring in film, with a minor in interpretive dance! I play the drums but my real passion is to sing and dance!",
+      bio: "Hi! My name is Nick Hoskins. I’m from Spokane, Washington, and I’m a junior majoring in Film and Media Production. In my free time, I enjoy snow skiing, making music with my band, spending time with my dog, and, of course, wakeboarding. I can’t wait for another great year with the Wake Devils!",
     },
     {
       name: "Cooper Bassi",
