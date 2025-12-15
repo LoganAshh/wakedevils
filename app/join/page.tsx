@@ -56,7 +56,7 @@ export default function JoinPage() {
 
       <div className="min-h-screen flex flex-col">
         <Header />
-        
+
         <main className="flex-grow">
           {/* First section - visible without scrolling */}
           <section className="h-screen flex items-center justify-center py-12 px-4 sm:px-6 text-center relative">
@@ -69,9 +69,10 @@ export default function JoinPage() {
                 Join the Wake Devils!
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-xl mx-auto mb-8">
-                Ready to make waves? Join our group chat to connect with the crew and stay updated on all events and lake days!
+                Ready to make waves? Join our group chat to connect with the
+                crew and stay updated on all events and lake days!
               </p>
-              
+
               <div className="flex flex-col items-center">
                 <a
                   href="https://flare-event.app.link/NVO1g2iFVUb"
@@ -97,10 +98,15 @@ export default function JoinPage() {
                     aria-label="Scroll to Complete Your Registration section"
                     className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer active:scale-95 active:translate-y-[2px]"
                     onClick={() => {
-                      const target = document.querySelector('section:nth-child(2)');
+                      const target = document.querySelector(
+                        "section:nth-child(2)"
+                      );
                       if (target) {
                         const yOffset = window.innerWidth < 768 ? -100 : -50;
-                        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        const y =
+                          target.getBoundingClientRect().top +
+                          window.pageYOffset +
+                          yOffset;
                         window.scrollTo({ top: y, behavior: "smooth" });
                       }
                     }}
@@ -119,9 +125,10 @@ export default function JoinPage() {
                 Complete Your Registration
               </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto mb-8">
-                Fill out our member form and sign the waiver to become an official Wake Devil!
+                Fill out our member form and sign the waiver to become an
+                official Wake Devil!
               </p>
-              
+
               <div className="flex flex-col items-center space-y-4">
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform?usp=header"
@@ -135,12 +142,18 @@ export default function JoinPage() {
                 <a
                   href="/waiver"
                   className="text-white font-semibold text-base px-6 py-3 rounded border-b-4 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
-                  style={{ 
-                    backgroundColor: '#943728',
-                    borderBottomColor: '#7a2e22'
+                  style={{
+                    backgroundColor: "#943728",
+                    borderBottomColor: "#7a2e22",
                   }}
-                  onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = '#7a2e22'}
-                  onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = '#943728'}
+                  onMouseEnter={(e) =>
+                    ((e.target as HTMLElement).style.backgroundColor =
+                      "#7a2e22")
+                  }
+                  onMouseLeave={(e) =>
+                    ((e.target as HTMLElement).style.backgroundColor =
+                      "#943728")
+                  }
                 >
                   Sign Waiver
                 </a>
@@ -148,7 +161,7 @@ export default function JoinPage() {
             </div>
           </section>
         </main>
-        
+
         <Footer />
       </div>
     </>
