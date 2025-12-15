@@ -14,55 +14,55 @@ export default function AboutPage() {
     {
       name: "Logan Gregor",
       title: "President",
-      image: "/images/board/logan.jpg?v=2",
+      image: "/images/board/logan.jpg",
       bio: "Hi, my name is Logan, and I’m majoring in Mechanical Engineering. I grew up boating on the lakes in Wisconsin and love wakeboarding and wakesurfing. When I’m not on the lake, I spend my time lifting, studying, and snowboarding.",
     },
     {
       name: "Lukas Spucys",
       title: "Vice President",
-      image: "/images/board/lukas.jpg?v=3",
+      image: "/images/board/lukas.jpg",
       bio: "Hey, I’m Lukas Spucys, a senior Finance major at ASU. I’m Lithuanian, grew up playing hockey, and have always loved staying active. I’m into board sports, cars, and chasing adrenaline—motocross, skydiving, cliff jumping, you name it. What I love most about Wake Devils is the energy and community—everyone pushes each other to level up and have a blast on the water.",
     },
     {
       name: "Sophia Ruger",
       title: "Treasurer",
-      image: "/images/board/sophia.jpg?v=2",
+      image: "/images/board/sophia.jpg",
       bio: "Hey, I’m Sophia! I’m a senior studying Sustainability, Urban Planning, and Geographic Information Science. When I’m not wakeboarding, I love rock climbing and making art!",
     },
     {
       name: "Jalen Artiles",
       title: "Secretary",
-      image: "/images/board/jalen.jpg?v=2",
+      image: "/images/board/jalen.jpg",
       bio: "Hi! My name is Jalen, and I’m a senior studying cybersecurity with an emphasis in business. I'm originally from California, and I love to surf, snowboard, play guitar, hit the gym, socialize, cook pesto pasta, and create new vocabulary words. I love being a Wake Devil because everyone is super inclusive, brings great energy, and I can go out on a boat whenever my heart desires.",
     },
     {
       name: "Logan Ashamallah",
       title: "Event Coordinator",
-      image: "/images/board/loganash.jpg?v=3",
+      image: "/images/board/loganash.jpg",
       bio: "Hey, I’m Logan. I’m a third-year Computer Science major from Thousand Oaks, California. I love music, working out, and traveling. Can’t wait for another year with the Wake Devils!",
     },
     {
       name: "Tristan Krauskopf",
       title: "Social Media Chair",
-      image: "/images/board/tristan.jpg?v=2",
+      image: "/images/board/tristan.jpg",
       bio: "Hi, I’m Tristan. I’m a sophomore at ASU majoring in Supply Chain Management. I’m from Seattle, Washington, and I love being on the lake. Joining Wake Devils has been the best decision I’ve ever made—I’ve made tons of memories and friends in just my first year and can’t wait for my next semester with the team.",
     },
     {
       name: "Daniel Gensler",
       title: "2024 President / Recruitment Chair",
-      image: "/images/board/daniel.jpg?v=3",
+      image: "/images/board/daniel.jpg",
       bio: "Hi everyone, my name is Daniel Gensler. I am going into my senior year and serve as the Recruitment Chair for the Wake Devils. I enjoy spending time outdoors. If you have any questions, feel free to reach out!",
     },
     {
       name: "Ellie Bjorgvinsdottir",
       title: "Recruitment Chair",
-      image: "/images/board/ellie.jpg?v=2",
+      image: "/images/board/ellie.jpg",
       bio: "Hi, I’m Ellie! I’m from Connecticut and a junior studying Business Finance. I love hiking, art, wakeboarding, and snowboarding. Looking forward to a great year with the Wake Devils!",
     },
     {
       name: "Luke Bloedel",
       title: "Marketing and Engagement",
-      image: "/images/board/luke.jpg?v=2",
+      image: "/images/board/luke.jpg",
       bio: "Hey, I’m Luke. I’m a third-year Biomedical Engineering major from Scottsdale, Arizona. I love snow skiing, hitting the gym, traveling, and going out. Can’t wait for another season with the team!",
     },
     {
@@ -74,7 +74,7 @@ export default function AboutPage() {
     {
       name: "Cooper Bassi",
       title: "Transportation Manager",
-      image: "/images/board/cooper.jpg?v=2",
+      image: "/images/board/cooper.jpg",
       bio: "How’s it going? I’m Cooper. I’m from Santa Cruz, California, and I’m going into my third year as a financial planning major. I love to wakeboard and fish, and I’m super stoked for another year!",
     },
   ];
