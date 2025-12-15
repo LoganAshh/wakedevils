@@ -127,10 +127,9 @@ const faqData = [
         question: "Are lake days free?",
         answer: (
           <>
-            Transportation, gas, and coaching are free for your first ride. Ten
+            Transportation, gas, and coaching are free for your first ride. Five
             rides are included in the general membership, and additional lake
-            days are $15 each. NOTE: These numbers are not final and will be
-            updated at the start of the semester.
+            days are $15 each.
           </>
         ),
       },
@@ -171,8 +170,7 @@ const faqData = [
     faqs: [
       {
         question: "How much are dues?",
-        answer:
-          "Dues are $300 for general members and $350 for comp members.",
+        answer: "Dues are $300 for general members and $350 for comp members.",
       },
       {
         question: "What do dues cover?",
@@ -418,7 +416,7 @@ export default function FAQPage() {
                           <div
                             className={`overflow-hidden transition-all duration-300 ease-in-out ${
                               isOpen
-                                ? "max-h-screen opacity-100" // Use max-h-screen for unlimited height
+                                ? "max-h-screen opacity-100"
                                 : "max-h-0 opacity-0"
                             }`}
                           >
