@@ -45,17 +45,17 @@ export default function HomePage() {
   }, []);
 
   const heroImages = [
-    { src: "hero.jpg?v=2", position: "center 57%" },
-    { src: "hero1.jpg?v=2", position: "center 80%" },
-    { src: "hero2.jpg?v=2", position: "center 48%" },
-    { src: "hero3.jpg?v=2", position: "center 75%" },
-    { src: "hero4.jpg?v=2", position: "center 40%" },
-    { src: "hero5.jpg?v=2", position: "center 32%" },
-    { src: "hero6.jpg?v=2", position: "center 33%" },
-    { src: "hero7.jpg?v=2", position: "center 33%" },
-    { src: "hero8.jpg?v=3", position: "center 52%" },
-    { src: "hero9.jpg?v=2", position: "center 44%" },
-    { src: "hero10.jpg?v=2", position: "center 56%" },
+    { src: "hero.jpg", position: "center 57%" },
+    { src: "hero1.jpg", position: "center 80%" },
+    { src: "hero2.jpg", position: "center 48%" },
+    { src: "hero3.jpg", position: "center 75%" },
+    { src: "hero4.jpg", position: "center 40%" },
+    { src: "hero5.jpg", position: "center 32%" },
+    { src: "hero6.jpg", position: "center 33%" },
+    { src: "hero7.jpg", position: "center 33%" },
+    { src: "hero8.jpg", position: "center 52%" },
+    { src: "hero9.jpg", position: "center 44%" },
+    { src: "hero10.jpg", position: "center 56%" },
   ];
 
   return (
