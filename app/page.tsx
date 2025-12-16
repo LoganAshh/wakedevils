@@ -318,18 +318,23 @@ export default function HomePage() {
               together, grow together, and have a blast on and off the lake.
               Whether you&apos;re new or experienced, you&apos;re welcome here!
             </p>
+
+            {/* State Press link */}
             <a
-              href="/about"
+              href="https://www.statepress.com/article/2025/10/sports-asu-wake-devils-2025-team#"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() =>
-                trackClick("click_learn_more_about", "Homepage CTA")
+                trackClick("click_state_press_article", "Homepage CTA")
               }
               className="group inline-block mt-6 text-yellow-500 font-semibold transition-all duration-300 hover:brightness-110 active:translate-y-[2px]"
             >
-              Learn More
+              Read our feature in The State Press
               <span className="inline-block ml-1 transform transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
             </a>
+
             <div className="relative w-full h-64 md:h-72 mt-8 overflow-hidden rounded-lg shadow-lg">
               <Image
                 src="/images/lake-day.jpg"
