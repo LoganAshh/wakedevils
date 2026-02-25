@@ -34,7 +34,7 @@ export default function HomePage() {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (whoRef.current) {
@@ -255,25 +255,44 @@ export default function HomePage() {
           </div>
 
           <div
-            className={`absolute top-[70%] w-full z-20 flex justify-center gap-4 transition-all duration-700 ease-out ${
+            className={`absolute top-[70%] w-full z-20 flex flex-col items-center gap-4 transition-all duration-700 ease-out ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
+            <div className="flex gap-4">
+              <a
+                href="/join"
+                onClick={() => trackClick("click_join_now", "Homepage CTA")}
+                className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 active:translate-y-[3px] animate-subtle-bounce hover:shadow-2xl"
+              >
+                Join Now
+              </a>
+
+              <a
+                href="/events"
+                onClick={() =>
+                  trackClick("click_upcoming_events", "Homepage CTA")
+                }
+                className="bg-white text-black font-semibold px-6 py-3 rounded border-b-4 border-gray-300 shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
+              >
+                Upcoming Events
+              </a>
+            </div>
+
+            {/* Fundraiser CTA */}
             <a
-              href="/join"
-              onClick={() => trackClick("click_join_now", "Homepage CTA")}
-              className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 active:translate-y-[3px] animate-subtle-bounce hover:shadow-2xl"
-            >
-              Join Now
-            </a>
-            <a
-              href="/events"
+              href="https://www.givecampus.com/schools/ArizonaStateUniversity/make-waves-at-cactus-classic-2026"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() =>
-                trackClick("click_upcoming_events", "Homepage CTA")
+                trackClick(
+                  "click_fundraiser_cactus_classic",
+                  "Homepage Fundraiser",
+                )
               }
-              className="bg-white text-black font-semibold px-6 py-3 rounded border-b-4 border-gray-300 shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
+              className="mt-2 bg-[#943728] text-white font-semibold px-6 py-3 rounded border-b-4 border-[#7a2d22] shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
             >
-              Upcoming Events
+              Support Our Competition!
             </a>
           </div>
         </div>
