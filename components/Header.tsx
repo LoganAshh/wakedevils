@@ -15,7 +15,6 @@ export default function Header() {
     "join",
     "events",
     "FAQ",
-    "dues",
     "merch",
     "sponsors",
     "contact",

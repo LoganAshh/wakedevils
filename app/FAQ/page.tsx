@@ -179,18 +179,8 @@ const faqData = [
       },
       {
         question: "How do I pay my dues?",
-        answer: (
-          <>
-            Pay in person, through Zelle, or on our{" "}
-            <Link
-              href="/dues"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              Dues
-            </Link>{" "}
-            page with a secure checkout through MidFirst Bank.
-          </>
-        ),
+        answer:
+          "Dues collection is currently paused. We'll share payment details when collection reopens.",
       },
       {
         question:
@@ -235,7 +225,7 @@ const faqData = [
 export default function FAQPage() {
   const [loaded, setLoaded] = useState(false);
   const [openIndex, setOpenIndex] = useState<{ [key: string]: number | null }>(
-    {}
+    {},
   );
   const [visibleSections, setVisibleSections] = useState<{
     [key: string]: boolean;
@@ -292,7 +282,7 @@ export default function FAQPage() {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     faqData.forEach((section) => {
