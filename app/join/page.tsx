@@ -57,9 +57,9 @@ export default function JoinPage() {
       <div className="min-h-screen flex flex-col">
         <Header />
 
-        <main className="flex-grow">
-          {/* First section - visible without scrolling */}
-          <section className="h-screen flex items-center justify-center py-12 px-4 sm:px-6 text-center relative">
+        <main className="flex-grow flex">
+          {/* Join section */}
+          <section className="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 text-center relative">
             <div
               className={`transition-opacity duration-700 ${
                 loaded ? "opacity-100" : "opacity-0"
@@ -87,75 +87,6 @@ export default function JoinPage() {
                     }`}
                 >
                   Join Now!
-                </a>
-
-                {/* Scroll indicator - positioned below the button */}
-                <div className="text-center mt-12">
-                  <p className="text-base text-gray-500 mb-3">
-                    Scroll down for member form & waiver
-                  </p>
-                  <button
-                    aria-label="Scroll to Complete Your Registration section"
-                    className="text-black text-3xl opacity-70 hover:opacity-100 transition cursor-pointer active:scale-95 active:translate-y-[2px]"
-                    onClick={() => {
-                      const target = document.querySelector(
-                        "section:nth-child(2)"
-                      );
-                      if (target) {
-                        const yOffset = window.innerWidth < 768 ? -100 : -50;
-                        const y =
-                          target.getBoundingClientRect().top +
-                          window.pageYOffset +
-                          yOffset;
-                        window.scrollTo({ top: y, behavior: "smooth" });
-                      }
-                    }}
-                  >
-                    ↓
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Second section - requires scrolling */}
-          <section className="flex items-start justify-center pt-16 pb-60 px-4 sm:px-6 text-center bg-gray-50 -mt-24">
-            <div className="flex flex-col items-center space-y-6">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                Complete Your Registration
-              </h2>
-              <p className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto mb-8">
-                Fill out our member form and sign the waiver to become an
-                official Wake Devil!
-              </p>
-
-              <div className="flex flex-col items-center space-y-4">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSeHU1Q60bdm88jXwN4wY2d_u-D9aNoMIVyF60riukO1WsFMyA/viewform?usp=header"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-base px-6 py-3 rounded border-b-4 border-blue-600 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
-                >
-                  Fill Out Member Form
-                </a>
-
-                <a
-                  href="/waiver"
-                  className="text-white font-semibold text-base px-6 py-3 rounded border-b-4 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
-                  style={{
-                    backgroundColor: "#943728",
-                    borderBottomColor: "#7a2e22",
-                  }}
-                  onMouseEnter={(e) =>
-                    ((e.target as HTMLElement).style.backgroundColor =
-                      "#7a2e22")
-                  }
-                  onMouseLeave={(e) =>
-                    ((e.target as HTMLElement).style.backgroundColor =
-                      "#943728")
-                  }
-                >
-                  Sign Waiver
                 </a>
               </div>
             </div>
