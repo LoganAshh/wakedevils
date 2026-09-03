@@ -170,7 +170,7 @@ const faqData = [
     faqs: [
       {
         question: "How much are dues?",
-        answer: "Dues are $300 for general members and $350 for comp members.",
+        answer: "Dues are $400 for both general and competitive members.",
       },
       {
         question: "What do dues cover?",
@@ -184,9 +184,9 @@ const faqData = [
       },
       {
         question:
-          "What's the difference between general, social, and comp team memberships?",
+          "What's the difference between general and competitive memberships?",
         answer:
-          "General members get access to all events and lake days. Social members can attend events but do not ride. Comp team members are selected to compete in collegiate tournaments and represent ASU nationally.",
+          "General members get access to all events and lake days. Competitive team members are selected to compete in collegiate tournaments and represent ASU nationally.",
       },
     ],
   },
