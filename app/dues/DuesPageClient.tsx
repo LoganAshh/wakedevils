@@ -25,12 +25,12 @@ export default function DuesPageClient() {
           events, safety gear, and insurance.
         </p>
         <p className="mb-4 sm:mb-8 text-sm sm:text-base text-gray-600">
-          Secure payment is handled via MidFirst Bank. Choose your membership
-          below.
+          Secure payment is handled via MidFirst Bank. Use the button below to
+          pay.
         </p>
 
         <div
-          className={`flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 ${
+          className={`flex items-center justify-center ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           } transition-all duration-700 ease-out`}
         >
@@ -38,20 +38,10 @@ export default function DuesPageClient() {
             href="https://checkout.page/s/SsbG5xcSyeLIK"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Pay General Membership Dues"
-            className="w-full max-w-64 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
+            aria-label="Pay Membership Dues"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
           >
-            General Membership
-          </a>
-
-          <a
-            href="https://checkout.page/s/n4kj89Do4v5aF"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Pay Competitive Membership Dues"
-            className="w-full max-w-64 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-base px-6 py-3 rounded border-b-4 border-yellow-500 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl"
-          >
-            Competitive Membership
+            Pay Here!
           </a>
         </div>
 
@@ -69,7 +59,7 @@ export default function DuesPageClient() {
               href="https://app.autobooks.co/pay/asu-wake-boarding-team"
               target="_blank"
               rel="noopener noreferrer"
-              className={`w-full max-w-64 text-white font-semibold text-base px-6 py-3 rounded border-b-4 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl ${
+              className={`text-white font-semibold text-base px-6 py-3 rounded border-b-4 shadow-xl transform transition-all duration-300 ease-out hover:scale-105 active:scale-95 active:translate-y-[3px] hover:shadow-2xl ${
                 loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{
